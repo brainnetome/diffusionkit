@@ -214,7 +214,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'mrdiffusion', u'mrdiffusion Documentation',
-     [u'Sangma Xie, Liangfu Chen, Nianming Zuo, Tianzi Jiang'], 1)
+     [u'Brainnetome Center, CASIA'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -228,7 +228,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'mrdiffusion', u'mrdiffusion Documentation',
-   u'Sangma Xie, Liangfu Chen, Nianming Zuo, Tianzi Jiang', 'mrdiffusion', 'One line description of project.',
+   u'Brainnetome Center, CASIA', 'mrdiffusion', 'One line description of project.',
    'Miscellaneous'),
 ]
 
