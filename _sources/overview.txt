@@ -13,6 +13,15 @@ Overview
 .. toctree::
    :maxdepth: 3
 
+.. raw:: html
+
+ <script type="text/javascript" 
+ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+ <script type="text/x-mathjax-config">
+ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+ </script>
+
 MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK [1]_ for computation, VTK [2]_ for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake [3]_, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden [4]_ and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix [5]_, were adopted with improved interface and user experience.
 
 System requirement
@@ -158,11 +167,28 @@ DTI reconstruction
 
 The classical diffusion gradient sequence used in dMRI is the pulsed gradient spin-echo (PGSE) sequence proposed by Stejskal and Tanner. This sequence has 90o and 180o gradient pulses with duration time δ and separation time Δ. To eliminate the dependence of spin density, we need at least two measurements of diffusion weighted imaging (DWI) signals, i.e. S(b) with the diffusion weighting factor b in Eq. (1) introduced by Le Bihan etc, and S(0) with b = 0 which is the baseline signal without any gradient. 
 
-In the b-value in Eq. (1), γ is the proton gyromagnetic ratio,  is the diffusion sensitizing gradient pulse with norm  and direction u.  is normally used to describe the effective diffusion time. Using the PGSE sequence with S(b), the diffusion weighted signal attenuation E(b) is given by Stejskal-Tanner equation,
+.. raw:: html
 
-where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor [12]_ to represent ADC as D(u) = uTDu, where D is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
+ $$ \begin{equation}\tag{1}
+ b=\gamma^2 \delta^2 (\Delta-\frac{\delta}{3}){||\bf{G}||}^2
+ \end{equation} $$
 
-Tensor field			  FA map			 MD map				RGB map
+In the b-value in Eq. (1), $\\gamma$ is the proton gyromagnetic ratio, $\\bf{G}=||\\bf{G}||\\bf{u}$ is the diffusion sensitizing gradient pulse with norm $||{\\bf G}||$ and direction ${\\bf u}$. $\\tau=\\Delta-\\frac{1}{3}\\delta$ is normally used to describe the effective diffusion time. Using the PGSE sequence with S(b), the diffusion weighted signal attenuation E(b) is given by Stejskal-Tanner equation,
+
+.. raw:: html
+
+ $$ \begin{equation}\tag{2}
+ E(b)=\frac{S({b})}{S(0)}=\exp(-{b}D)
+ \end{equation} $$
+
+where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor [12]_ to represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
+
+.. raw:: html
+
+ $$ \begin{equation}\tag{3}
+ E(b)=\exp(-b{\bf u^{T}}{\bf D}\bf{u})
+ \end{equation} $$
+
 
 .. figure:: images/scalarmaps.png
    :width: 800 px
@@ -173,20 +199,24 @@ Tensor field			  FA map			 MD map				RGB map
 
 The diffusion tensor D can be estimated from measured diffusion signal samples  through a simple least square method or weighted least square method [12]_, or more complex methods that consider positive deﬁnite constraint or Rician noise. If single b-value is used, the optimal b-value for tensor estimation was reported to in the range of (0.7, 1.5) × 10−3 s/mm2, and normally about twenty DWI images are used in DTI in clinical study. ome useful indices can be obtained from tensor D. The most important three indices are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
 
-<code>
-\begin{equation}\tag{4}
-{\rm{FA}}=\frac{\sqrt{3}||{\rm{D}}-\frac{1}{3}Trace({\rm{D}}) I ||}{\sqrt{2}||{\rm{D}}||}
-=\sqrt{\frac{3}{2}}\sqrt{\frac{(\lambda_1-\bar{\lambda})^2+(\lambda_2-\bar{\lambda})^2+(\lambda_3-\bar{\lambda})^2}{\lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}}}
-\end{equation}
+.. raw:: html
 
-\begin{equation}\tag{5}
-{\rm{MD}}=\bar{\lambda}=\frac{1}{3}Trace({\rm{D}})=\frac{\lambda_1+\lambda_2+\lambda_3}{3}
-\end{equation}
+ $$ \begin{equation}\tag{4}
+ {\rm{FA}}=\frac{\sqrt{3}||{\rm{D}}-\frac{1}{3}Trace({\rm{D}}) I ||}{\sqrt{2}||{\rm{D}}||}
+ =\sqrt{\frac{3}{2}}\sqrt{\frac{(\lambda_1-\bar{\lambda})^2+(\lambda_2-\bar{\lambda})^2+(\lambda_3-\bar{ \lambda})^2}{\lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}}}
+ \end{equation} $$
 
-\begin{equation}\tag{6}
-{\rm{RA}}=\sqrt{\frac{(\lambda_1-\bar{\lambda})^2+(\lambda_2-\bar{\lambda})^2+(\lambda_3-\bar{\lambda})^2}{3\bar{\lambda}}}
-\end{equation}
-</code>
+.. raw:: html
+ 
+ $$ \begin{equation}\tag{5}
+ {\rm{MD}}=\bar{\lambda}=\frac{1}{3}Trace({\rm{D}})=\frac{\lambda_1+\lambda_2+\lambda_3}{3}
+ \end{equation} $$ 
+
+.. raw:: html
+ 
+ $$ \begin{equation}\tag{6}
+ {\rm{RA}}=\sqrt{\frac{(\lambda_1-\bar{\lambda})^2+(\lambda_2-\bar{\lambda})^2+(\lambda_3-\bar{\lambda})^2}{3\bar{\lambda}}}
+ \end{equation} $$ 
 
 where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA have been used in many clinical applications. For example, MD is known to be useful in stroke study. For more detailed information please refer to our review paper [13]_.
 
