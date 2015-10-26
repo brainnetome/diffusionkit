@@ -12,7 +12,6 @@ Overview
 
 .. toctree::
    :maxdepth: 3
-   :local:
 
 MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK [1]_ for computation, VTK [2]_ for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake [3]_, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden [4]_ and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix [5]_, were adopted with improved interface and user experience.
 
@@ -152,7 +151,7 @@ This module is to strip the brain skull and extract the brain tissue, including 
 Reconstruction of the diffusion model
 =====================================
 
-The reconstruction for diffusion model within pixels is one of the key topics in diffusion MRI research and it is also one of key modules of the software. At the current stage, we have integrated three modeling methods: one is the traditional Gaussian model (commonly known as DTI, diffusion tensor imaging), and the other two are for high angular resolution diffusion imaging (HARDI). For more detailed information please refer to our review paper [11,13].
+The reconstruction for diffusion model within pixels is one of the key topics in diffusion MRI research and it is also one of key modules of the software. At the current stage, we have integrated three modeling methods: one is the traditional Gaussian model (commonly known as DTI, diffusion tensor imaging), and the other two are for high angular resolution diffusion imaging (HARDI). For more detailed information please refer to our review paper [11,13]_.
 
 DTI reconstruction
 ------------------
@@ -161,7 +160,7 @@ The classical diffusion gradient sequence used in dMRI is the pulsed gradient sp
 
 In the b-value in Eq. (1), γ is the proton gyromagnetic ratio,  is the diffusion sensitizing gradient pulse with norm  and direction u.  is normally used to describe the effective diffusion time. Using the PGSE sequence with S(b), the diffusion weighted signal attenuation E(b) is given by Stejskal-Tanner equation,
 
-where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor [12] to represent ADC as D(u) = uTDu, where D is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
+where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor [12]_ to represent ADC as D(u) = uTDu, where D is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
 
 Tensor field			  FA map			 MD map				RGB map
 
@@ -172,7 +171,7 @@ Tensor field			  FA map			 MD map				RGB map
 
    Figure 4. Tensor field and the scalar maps estimated from a monkey data with b = 1500s/mm2.
 
-The diffusion tensor D can be estimated from measured diffusion signal samples  through a simple least square method or weighted least square method [12], or more complex methods that consider positive deﬁnite constraint or Rician noise. If single b-value is used, the optimal b-value for tensor estimation was reported to in the range of (0.7, 1.5) × 10−3 s/mm2, and normally about twenty DWI images are used in DTI in clinical study. ome useful indices can be obtained from tensor D. The most important three indices are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
+The diffusion tensor D can be estimated from measured diffusion signal samples  through a simple least square method or weighted least square method [12]_, or more complex methods that consider positive deﬁnite constraint or Rician noise. If single b-value is used, the optimal b-value for tensor estimation was reported to in the range of (0.7, 1.5) × 10−3 s/mm2, and normally about twenty DWI images are used in DTI in clinical study. ome useful indices can be obtained from tensor D. The most important three indices are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
 
 <code>
 \begin{equation}\tag{4}
@@ -210,7 +209,7 @@ where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA ha
 SPFI reconstruction
 -------------------
 
-It was proposed that the SPFI method has more powerful capability to identify the tangling fibers [8]. In SPFI [8]_, the diffusion signal  is represented by spherical polar Fourier (SPF) basis functions in Eq. 7. 
+It was proposed that the SPFI method has more powerful capability to identify the tangling fibers [8]_. In SPFI [8]_, the diffusion signal  is represented by spherical polar Fourier (SPF) basis functions in Eq. 7. 
 
 The SPF basis denoted by  is a 3D orthonormal basis with spherical harmonics in the spherical portion and the Gaussian-Laguerre function in the radial portion. Furthermore, Cheng and his colleagues proposed a uniform analytical solution to transform the coefficients  of  to the coefficients  of ODF (orientation distribution function) represented by the spherical harmonics basis, as in Eq. 8. 
 
@@ -243,7 +242,7 @@ It is a model-free, regularized, fast and robust reconstruction method which can
 CSD reconstruction
 ------------------
 
-The CSD method was proposed by Tournier et al. [9], which expresses the diffusion signal as in Eq. 9,
+The CSD method was proposed by Tournier et al. [9]_, which expresses the diffusion signal as in Eq. 9,
 
 where  is called the fiber orientation density function (fODF), which needs to be estimated, and  is the response function, which is the typical signal generated from one fiber. The response function can be directly estimated from diffusion weighted image (DWI) data by measuring the diffusion profile in the voxels with the highest fractional anisotropy values, indicating that a single coherently oriented fiber population is contained in these voxels. When the response function is obtained, we can utilize the deconvolution of  from  to estimate the fiber ODF. The computation of the fiber ODF was carried out using the software MRtrix (J-D Tournier, Brain Research Institute, Melbourne, Australia, http://www.brain.org.au/software/). We thank Dr. Jacques-Donald Tournier for sharing MATLAB code of the CSD method, which inspired a quick C/C++ implementation.
 
@@ -272,7 +271,7 @@ where  is called the fiber orientation density function (fODF), which needs to b
 Fiber tracking and attributes extraction
 ========================================
 
-Fiber tracking is a critical way to construct the anatomical connectivity matrix. For the tracking based on tensors from DTI, an intuitive way is to link the neighboring voxels following their main directions (e.g. V1 in the eigenvector of the DTI) given a set of some stop criteria, such as maximum bending angle of the curve and minimum FA value, which is to ensure the target voxel is indeed white matter microstructure. This is the so called deterministic streamline tractography [15], as illustrated in Figure 5.
+Fiber tracking is a critical way to construct the anatomical connectivity matrix. For the tracking based on tensors from DTI, an intuitive way is to link the neighboring voxels following their main directions (e.g. V1 in the eigenvector of the DTI) given a set of some stop criteria, such as maximum bending angle of the curve and minimum FA value, which is to ensure the target voxel is indeed white matter microstructure. This is the so called deterministic streamline tractography [15]_, as illustrated in Figure 5.
 
 .. figure:: images/tractography.png
    :width: 800 px
@@ -348,7 +347,7 @@ Several useful tools
 Image registration
 ------------------
 
-This module is implemented by elastix [10], which integrates a collection of functions from ITK [1]. In our software, the registration module is customized to auto-configure the parameter settings between different image modalities, e.g., two DWI images (for eddy current correction in current version), standard space and T1 space (for mapping ROIs to the individual space), DWI space and standard space (for statistical comparisons across subjects). This module contains two separate submodules, <code>elastix</code> for computing the transform matrix and <code>transformix</code> for applying the existing transform matrix to an image.
+This module is implemented by elastix [10]_, which integrates a collection of functions from ITK [1]_. In our software, the registration module is customized to auto-configure the parameter settings between different image modalities, e.g., two DWI images (for eddy current correction in current version), standard space and T1 space (for mapping ROIs to the individual space), DWI space and standard space (for statistical comparisons across subjects). This module contains two separate submodules, <code>elastix</code> for computing the transform matrix and <code>transformix</code> for applying the existing transform matrix to an image.
 
 .. code-block:: bash
 
@@ -473,7 +472,7 @@ bnfiber_stats, to extract statistical properties of the fiber bundle, such as me
  (Sep 17 2015, 14:47:12)
     -fiber                                    Input fiber file, then output mean FA/MD, number of fibers et al.
 
-bnfiber_map, to compute the fiber density map which is used in track density imaging [16].
+bnfiber_map, to compute the fiber density map which is used in track density imaging [16]_.
 
 .. code-block:: bash
 
@@ -521,12 +520,12 @@ Data format
 Input
 -----
 
-Since we apply the dcm2nii to unify the format of input data, it can support most types of DICOM files (in folders). Please refer to the author’s webpage for more information [4] . Please also get back to us if you encounter any problems.
+Since we apply the dcm2nii to unify the format of input data, it can support most types of DICOM files (in folders). Please refer to the author’s webpage for more information [4]_. Please also get back to us if you encounter any problems.
 
 Output
 ------
 
-All the intermediate files are in compressed NIFTI format (.nii.gz). The final track file is in .fiber/.fbr or .trk format, where the former is a short version of the later one. The .trk format is from the TrackVis [17]. 
+All the intermediate files are in compressed NIFTI format (.nii.gz). The final track file is in .fiber/.fbr or .trk format, where the former is a short version of the later one. The .trk format is from the TrackVis [17]_. 
 
 The .fiber format is as following,
 
@@ -547,9 +546,9 @@ The first and second line indicates who produces the file and the version of the
 TO-DO list
 ==========
 
- 1. To smooth the ODF/FOD/EAP for a smoother tract;
- 2. To add more efficient tracking algorithms;
- 3. To optimize the 3D rendering function;
+1. To smooth the ODF/FOD/EAP for a smoother tract;
+2. To add more efficient tracking algorithms;
+3. To optimize the 3D rendering function;
 
 Suggestions/Feedback
 ====================

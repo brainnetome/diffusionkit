@@ -12,7 +12,6 @@ Tutorial
 
 .. toctree::
    :maxdepth: 3
-   :local:
 
 Example Data
 ============
@@ -38,7 +37,7 @@ For Chinese users
 2. http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html, python and advanced
 3. http://woodpecker.org.cn/abyteofpython_cn/chinese/, a complete reference
 
-If you prefer to use shell script, like Bash, you can also find some entrances for tutorials. The shell script itself is easy to follow and it is a powerful tool to concatenate the underlying execution functions. It should be noted that the Bash script is only for *NUX system, so it is not suitable form cross-platforms. Several tutorial links are listed here:
+If you prefer to use shell script, like Bash, you can also find some entrances for tutorials. The shell script itself is easy to follow and it is a powerful tool to concatenate the underlying execution functions. It should be noted that the Bash script is only for * NUX system, so it is not suitable form cross-platforms. Several tutorial links are listed here:
 
 For English users
 
