@@ -38,7 +38,11 @@ For MS Windows OS
 -----------------
 
 Double click the ``MRDiffusionSetup-vxxx.exe`` file and then choose the destination path according to the wizard. You may need to provide administrator permission if you want to put the files into the system path. Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.
-For Linux OS :code:`Glibc>=2.2` is required. Download the ``MRDiffusionSetup-vxxx.tar.gz``, and then
+
+For Linux OS
+------------
+
+:code:`Glibc>=2.2` is required. Download the ``MRDiffusionSetup-vxxx.tar.gz``, and then
 
 .. code-block:: bash
 
