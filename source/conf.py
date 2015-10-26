@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'mrdiffusion'
-copyright = u'2015, Sangma Xie, Liangfu Chen, Nianming Zuo, Tianzi Jiang'
+copyright = u'2015, Brainnetome Center, CASIA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -184,7 +184,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'mrdiffusion.tex', u'mrdiffusion Documentation',
-   u'Sangma Xie, Liangfu Chen, Nianming Zuo, Tianzi Jiang', 'manual'),
+   u'Brainnetome Center, CASIA', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
