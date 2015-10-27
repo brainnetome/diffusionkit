@@ -12,13 +12,11 @@ Table of Contents
 .. toctree::
    :maxdepth: 3
 	 
-   overview
-   tutorial
-
-Indices and tables
-------------------
-
- * :ref:`genindex`
- * :ref:`modindex`
- * :ref:`search`
+   overview.rst
+   userguide.rst
+   tutorial.rst
+   fileformat.rst
+   todo.rst
+   feedback.rst
+   reference.rst
 
