@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>User Guide &mdash; mrdiffusion 1.0 documentation</title>
+  <title>User Guide &mdash; mrdiffusion 1.1 beta documentation</title>
   
 
   
@@ -31,7 +31,8 @@
   
 
   
-    <link rel="top" title="mrdiffusion 1.0 documentation" href="index.html"/>
+    <link rel="top" title="mrdiffusion 1.1 beta documentation" href="index.html"/>
+        <link rel="up" title="Document" href="document.html"/>
         <link rel="next" title="Tutorial" href="tutorial.html"/>
         <link rel="prev" title="Overview" href="overview.html"/> 
 
@@ -61,7 +62,7 @@
             
             
               <div class="version">
-                1.0
+                1.1
               </div>
             
           
@@ -83,34 +84,36 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#eddy-and-motion-correction">Eddy and motion correction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#brain-stripping">Brain stripping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reconstruction-of-the-diffusion-model">Reconstruction of the diffusion model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#dti-reconstruction">DTI reconstruction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#spfi-reconstruction">SPFI reconstruction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#csd-reconstruction">CSD reconstruction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">User Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eddy-and-motion-correction">Eddy and motion correction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brain-stripping">Brain stripping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reconstruction-of-the-diffusion-model">Reconstruction of the diffusion model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dti-reconstruction">DTI reconstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spfi-reconstruction">SPFI reconstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#csd-reconstruction">CSD reconstruction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#fiber-tracking-and-attributes-extraction">Fiber tracking and attributes extraction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#visualization-for-various-images">Visualization for various images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#several-useful-tools">Several useful tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#image-registration">Image registration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#need-further-help">Need further help?</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#image-calculation-and-roi-generation">Image calculation and ROI generation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fiber-manipulation">Fiber manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fiber-tracking-and-attributes-extraction">Fiber tracking and attributes extraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization-for-various-images">Visualization for various images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#several-useful-tools">Several useful tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#image-registration">Image registration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-calculation-and-roi-generation">Image calculation and ROI generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fiber-manipulation">Fiber manipulation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fileformat.html">Data format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TO-DO List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="feedback.html">Suggestions/Feedback</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">TO-DO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Support</a></li>
 </ul>
 
             
@@ -141,6 +144,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
+          <li><a href="document.html">Document</a> &raquo;</li>
+      
     <li>User Guide</li>
       <li class="wy-breadcrumbs-aside">
         
@@ -157,12 +162,7 @@
             
   <div class="section" id="user-guide">
 <h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
-<script type="text/javascript"
-src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script><div class="section" id="eddy-and-motion-correction">
+<div class="section" id="eddy-and-motion-correction">
 <h2>Eddy and motion correction<a class="headerlink" href="#eddy-and-motion-correction" title="Permalink to this headline">¶</a></h2>
 <p>During the MRI scanning, many factors can cause magnetic field inhomogeneity, including changing magnetic fields from the imaging gradients and the radiofrequency (RF) coils and yielded biological effects. These effects usually degrade the imaging quality, resulting in artifacts including shearing and blurring (<a class="reference external" href="http://mri-q.com/eddy-current-problems.html">http://mri-q.com/eddy-current-problems.html</a>). Another type of artifacts is caused by head motion. Most of the artifacts described above could be amended by post-processing. In the eddy correction module, we apply a rigid registration method to address most of the shearing and motion artifacts. For the blurring artifacts, it still needs further investigation. Additional solutions would be added to reduce the magnetic field inhomogeneity by field mapping.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ccm@:bin<span class="nv">$ </span>./bneddy -h
@@ -534,7 +534,19 @@ Mr. Diffusion <span class="o">(</span>v1.0<span class="o">)</span>, http://www.b
    -i                                        Nifti/ANALYZE/DICOM file.
 </pre></div>
 </div>
-</div>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+$('.wy-breadcrumbs-aside').hide();
+$('.wy-table-responsive').css('margin-bottom','0px');
+});
+</script>
+<script type="text/javascript"
+src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script></div>
 </div>
 </div>
 
@@ -579,7 +591,7 @@ Mr. Diffusion <span class="o">(</span>v1.0<span class="o">)</span>, http://www.b
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0',
+            VERSION:'1.1 beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

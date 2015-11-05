@@ -14,15 +14,6 @@ User Guide
    :maxdepth: 3
    :local:
 
-.. raw:: html
-
- <script type="text/javascript" 
- src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
- <script type="text/x-mathjax-config">
- MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- </script>
-
 
 Eddy and motion correction
 ==========================
@@ -455,6 +446,6 @@ bninfo, to display a short head information of the input image. Supported input 
  (Jul 15 2015, 11:50:01)
     -i                                        Nifti/ANALYZE/DICOM file.
 
-
+.. include:: common.txt
 
 

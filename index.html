@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to MR.Diffusion’s documentation! &mdash; mrdiffusion 1.0 documentation</title>
+  <title>Homepage &mdash; mrdiffusion 1.1 beta documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
 
   
-    <link rel="top" title="mrdiffusion 1.0 documentation" href="#"/>
-        <link rel="next" title="Overview" href="overview.html"/> 
+    <link rel="top" title="mrdiffusion 1.1 beta documentation" href="#"/>
+        <link rel="next" title="Document" href="document.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                1.0
+                1.1
               </div>
             
           
@@ -81,13 +81,10 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fileformat.html">Data format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TO-DO List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="feedback.html">Suggestions/Feedback</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Support</a></li>
 </ul>
 
             
@@ -118,7 +115,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="#">Docs</a> &raquo;</li>
       
-    <li>Welcome to MR.Diffusion&#8217;s documentation!</li>
+    <li>Homepage</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -132,68 +129,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-mr-diffusion-s-documentation">
-<h1>Welcome to MR.Diffusion&#8217;s documentation!<a class="headerlink" href="#welcome-to-mr-diffusion-s-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="table-of-contents">
-<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="homepage">
+<h1>Homepage<a class="headerlink" href="#homepage" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#system-requirement">System requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#install-uninstall">Install/Uninstall</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#for-ms-windows-os">For MS Windows OS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#for-linux-os">For Linux OS</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#key-functions-of-the-software">Key functions of the software</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#eddy-and-motion-correction">Eddy and motion correction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#brain-stripping">Brain stripping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#reconstruction-of-the-diffusion-model">Reconstruction of the diffusion model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#dti-reconstruction">DTI reconstruction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#spfi-reconstruction">SPFI reconstruction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#csd-reconstruction">CSD reconstruction</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#fiber-tracking-and-attributes-extraction">Fiber tracking and attributes extraction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#visualization-for-various-images">Visualization for various images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#several-useful-tools">Several useful tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#image-registration">Image registration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#image-calculation-and-roi-generation">Image calculation and ROI generation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#fiber-manipulation">Fiber manipulation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#example-data">Example Data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorial.html#basic-source-for-bash-b-shell-and-python">Basic source for Bash (B-shell) and Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial.html#how-to-compute-fa-md-tensor-et-al-for-a-group-subjects">How to compute FA/MD/tensor et al for a group subjects?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial.html#how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group">How to generate the anatomical connectivity matrix for a given ROI group?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial.html#advanced-topics-how-to-generate-figures-in-the-paper">Advanced topics: How to generate figures in the paper?</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#reference">Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#indices-and-tables">Indices and tables</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fileformat.html">Data format</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fileformat.html#input">Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fileformat.html#output">Output</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TO-DO List</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="todo.html#id1">TO-DO list</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="feedback.html">Suggestions/Feedback</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Support</a></li>
 </ul>
 </div>
-</div>
+<p>MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK <a class="footnote-reference" href="#id6" id="id1">[1]</a> for computation, VTK <a class="footnote-reference" href="#id7" id="id2">[2]</a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a class="footnote-reference" href="#id8" id="id3">[3]</a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a class="footnote-reference" href="#id9" id="id4">[4]</a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a class="footnote-reference" href="#id10" id="id5">[5]</a>, were adopted with improved interface and user experience.</p>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://www.itk.org">http://www.itk.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="http://www.vtk.org">http://www.vtk.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td><a class="reference external" href="http://www.cmake.org">http://www.cmake.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td><a class="reference external" href="http://www.mccauslandcenter.sc.edu/mricro">http://www.mccauslandcenter.sc.edu/mricro</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td><a class="reference external" href="http://www.nitrc.org/projects/mrtrix">http://www.nitrc.org/projects/mrtrix</a></td></tr>
+</tbody>
+</table>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+$('.wy-breadcrumbs-aside').hide();
+$('.wy-table-responsive').css('margin-bottom','0px');
+});
+</script>
+<script type="text/javascript"
+src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script></div>
 
 
            </div>
@@ -202,7 +191,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="document.html" class="btn btn-neutral float-right" title="Document" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -234,7 +223,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0',
+            VERSION:'1.1 beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

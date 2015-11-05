@@ -10,15 +10,6 @@
    :maxdepth: 3
 	 :local:
 
-.. raw:: html
-
- <script type="text/javascript" 
- src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
- <script type="text/x-mathjax-config">
- MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- </script>
-
 ---------
 Reference
 ---------
@@ -26,9 +17,7 @@ Reference
 .. [1] http://www.itk.org
 .. [2] http://www.vtk.org
 .. [3] http://www.cmake.org
-
 .. [4] http://www.mccauslandcenter.sc.edu/mricro
-
 .. [5] http://www.nitrc.org/projects/mrtrix
 .. [6] https://github.com/dgobbi/AIRS
 .. [7] Smith SM. Fast robust automated brain extraction. Human Brain Mapping, 17(3):143-155, 2002.
@@ -42,4 +31,7 @@ Reference
 .. [15] Alexander, A.L., Lee, J.E., Lazar, M., Field, A.S., 2007. Diffusion tensor imaging of the brain. Neurotherapeutics 4, 316-329.
 .. [16] Calamante F., Tournier J.D., Heidemann R.M., Anwander A., Jackson G.D., Connelly A., 2011. Track density imaging (TDI): validation of super resolution property. Neuroimage, 56, 1259-66.
 .. [17] http://trackvis.org
+
+.. include:: common.txt
+
 

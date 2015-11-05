@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; mrdiffusion 1.0 documentation</title>
+  <title>Overview &mdash; mrdiffusion 1.1 beta documentation</title>
   
 
   
@@ -31,9 +31,10 @@
   
 
   
-    <link rel="top" title="mrdiffusion 1.0 documentation" href="index.html"/>
+    <link rel="top" title="mrdiffusion 1.1 beta documentation" href="index.html"/>
+        <link rel="up" title="Document" href="document.html"/>
         <link rel="next" title="User Guide" href="userguide.html"/>
-        <link rel="prev" title="Welcome to MR.Diffusion’s documentation!" href="index.html"/> 
+        <link rel="prev" title="Document" href="document.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,7 +62,7 @@
             
             
               <div class="version">
-                1.0
+                1.1
               </div>
             
           
@@ -83,22 +84,21 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#system-requirement">System requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-uninstall">Install/Uninstall</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#for-ms-windows-os">For MS Windows OS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#for-linux-os">For Linux OS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#key-functions-of-the-software">Key functions of the software</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#key-functions-of-the-software">Key functions of the software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">TO-DO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fileformat.html">Data format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TO-DO List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="feedback.html">Suggestions/Feedback</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Support</a></li>
 </ul>
 
             
@@ -129,6 +129,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
+          <li><a href="document.html">Document</a> &raquo;</li>
+      
     <li>Overview</li>
       <li class="wy-breadcrumbs-aside">
         
@@ -145,39 +147,7 @@
             
   <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<script type="text/javascript"
-src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script><p>MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK <a href="#id9"><span class="problematic" id="id10"><span id="id1"></span>[1]_</span></a> for computation, VTK <a href="#id11"><span class="problematic" id="id12"><span id="id2"></span>[2]_</span></a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a href="#id13"><span class="problematic" id="id14"><span id="id3"></span>[3]_</span></a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a href="#id15"><span class="problematic" id="id16"><span id="id4"></span>[4]_</span></a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a href="#id17"><span class="problematic" id="id18"><span id="id5"></span>[5]_</span></a>, were adopted with improved interface and user experience.</p>
-<div class="section" id="system-requirement">
-<h2>System requirement<a class="headerlink" href="#system-requirement" title="Permalink to this headline">¶</a></h2>
-<p>Basically this software can run in any system, including 32/64-bit MS Windows/Linux OS, although currently we only tested and released the binary packages for Windows/Linux OS. The software is developed based on C/C++, and some platform independent packages, including ITK, VTK, and OpenCV, etc. However, for high-performance data processing and visualization, we recommend using 64-bit OS with multi-core CPU and standalone video card.</p>
-</div>
-<div class="section" id="install-uninstall">
-<h2>Install/Uninstall<a class="headerlink" href="#install-uninstall" title="Permalink to this headline">¶</a></h2>
-<p>Please download the package from <a class="reference external" href="http://brainnetome.org/en/brat-dMRI">http://brainnetome.org/en/brat-dMRI</a> , according to your own OS. Unpack the files to where you want and you can enjoy the software. The 64-bit OS is recommended for high-performance data processing. Each installation package is completely standalone so you DO NOT need to install ANY other dependency to run the software. If you encounter any dependency problem please DO <a class="reference external" href="mailto:mr&#46;diffusion&#37;&#52;&#48;nlpr&#46;ia&#46;ac&#46;cn">contact us</a>.</p>
-<div class="section" id="for-ms-windows-os">
-<h3>For MS Windows OS<a class="headerlink" href="#for-ms-windows-os" title="Permalink to this headline">¶</a></h3>
-<p>Double click the <code class="docutils literal"><span class="pre">MRDiffusionSetup-vxxx.exe</span></code> file and then choose the destination path according to the wizard. You may need to provide administrator permission if you want to put the files into the system path. Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.</p>
-</div>
-<div class="section" id="for-linux-os">
-<h3>For Linux OS<a class="headerlink" href="#for-linux-os" title="Permalink to this headline">¶</a></h3>
-<p><code class="code docutils literal"><span class="pre">Glibc&gt;=2.2</span></code> is required. Download the <code class="docutils literal"><span class="pre">MRDiffusionSetup-vxxx.tar.gz</span></code>, and then</p>
-<div class="highlight-bash"><div class="highlight"><pre>tar zxvf mrdiffusion.tar.gz
-<span class="nb">cd </span>mrdiffusion
-./xxxx <span class="o">(</span>you can run the <span class="nb">command </span>in this way<span class="o">)</span>
-</pre></div>
-</div>
-<p>If you do not want to type the full path every time, you could add the path to the $PATH. Edit the ~/.bashrc file, then add the following line,</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export</span> <span class="nv">$PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/your/path/to/mrdiffusion
-</pre></div>
-</div>
-<p>To uninstall the software, just manually remove the entire folder where you untar-ed the .tar.gz file.</p>
-<p>That’s it! Enjoy the software now!</p>
-</div>
-</div>
+<p>MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK <a href="#id9"><span class="problematic" id="id10"><span id="id1"></span>[1]_</span></a> for computation, VTK <a href="#id11"><span class="problematic" id="id12"><span id="id2"></span>[2]_</span></a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a href="#id13"><span class="problematic" id="id14"><span id="id3"></span>[3]_</span></a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a href="#id15"><span class="problematic" id="id16"><span id="id4"></span>[4]_</span></a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a href="#id17"><span class="problematic" id="id18"><span id="id5"></span>[5]_</span></a>, were adopted with improved interface and user experience.</p>
 <div class="section" id="key-functions-of-the-software">
 <h2>Key functions of the software<a class="headerlink" href="#key-functions-of-the-software" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id6">
@@ -224,7 +194,19 @@ Examples :
 Example output filename: &#39;/DTI.nii.gz&#39;
 </pre></div>
 </div>
-</div>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+$('.wy-breadcrumbs-aside').hide();
+$('.wy-table-responsive').css('margin-bottom','0px');
+});
+</script>
+<script type="text/javascript"
+src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script></div>
 </div>
 
 
@@ -237,7 +219,7 @@ Example output filename: &#39;/DTI.nii.gz&#39;
         <a href="userguide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to MR.Diffusion’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="document.html" class="btn btn-neutral" title="Document" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -268,7 +250,7 @@ Example output filename: &#39;/DTI.nii.gz&#39;
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0',
+            VERSION:'1.1 beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

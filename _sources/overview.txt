@@ -14,52 +14,7 @@ Overview
    :maxdepth: 3
    :local:
 
-.. raw:: html
-
- <script type="text/javascript" 
- src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
- <script type="text/x-mathjax-config">
- MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- </script>
-
 MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK [1]_ for computation, VTK [2]_ for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake [3]_, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden [4]_ and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix [5]_, were adopted with improved interface and user experience.
-
-System requirement
-==================
-
-Basically this software can run in any system, including 32/64-bit MS Windows/Linux OS, although currently we only tested and released the binary packages for Windows/Linux OS. The software is developed based on C/C++, and some platform independent packages, including ITK, VTK, and OpenCV, etc. However, for high-performance data processing and visualization, we recommend using 64-bit OS with multi-core CPU and standalone video card.
-
-Install/Uninstall
-=================
-
-Please download the package from http://brainnetome.org/en/brat-dMRI , according to your own OS. Unpack the files to where you want and you can enjoy the software. The 64-bit OS is recommended for high-performance data processing. Each installation package is completely standalone so you DO NOT need to install ANY other dependency to run the software. If you encounter any dependency problem please DO `contact us <mailto:mr.diffusion@nlpr.ia.ac.cn>`_.
-
-For MS Windows OS
------------------
-
-Double click the ``MRDiffusionSetup-vxxx.exe`` file and then choose the destination path according to the wizard. You may need to provide administrator permission if you want to put the files into the system path. Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.
-
-For Linux OS
-------------
-
-:code:`Glibc>=2.2` is required. Download the ``MRDiffusionSetup-vxxx.tar.gz``, and then
-
-.. code-block:: bash
-
- tar zxvf mrdiffusion.tar.gz 
- cd mrdiffusion
- ./xxxx (you can run the command in this way)
-
-If you do not want to type the full path every time, you could add the path to the $PATH. Edit the ~/.bashrc file, then add the following line,
-
-.. code-block:: bash
-
- export $PATH=$PATH:/your/path/to/mrdiffusion
-
-To uninstall the software, just manually remove the entire folder where you untar-ed the .tar.gz file.
-
-That’s it! Enjoy the software now!
 
 Key functions of the software
 =============================
@@ -121,5 +76,5 @@ where the 0 in the first column indicates the b0 images in the scan and certainl
   dcm2nii -o "~/dir with spaces/dir" ~/dicomdir
  Example output filename: '/DTI.nii.gz'
 
-
+.. include:: common.txt
 
