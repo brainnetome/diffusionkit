@@ -9,15 +9,6 @@
 .. toctree::
    :maxdepth: 3
 
-.. raw:: html
-
- <script type="text/javascript" 
- src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
- <script type="text/x-mathjax-config">
- MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- </script>
-
 -----------
 Data format
 -----------
@@ -46,4 +37,7 @@ The .fiber format is as following ::
  111.253 148.68 123.688 0.198468 0.25
 
 The first and second line indicates who produces the file and the version of the file format, and line 3 to line 7 characterize several main attributes of this fiber bundle. From line 8, fiber-wise node descriptions are presented; for example, for one fiber on line 8, [80 101.378 0.5 0.1] corresponds to the total number of nodes, length, mean FA and mean MD of this fiber. Starting from line 9, properties of each node of the fiber are described, e.g., [110.758 148.574 124.982 0.166754 0.3] denote x-, y- and z-coordinate, FA and MD of this node.
+
+.. include:: common.txt
+
 

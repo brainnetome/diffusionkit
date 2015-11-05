@@ -3,16 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. meta::
-   :description: Overivew of MR.Diffusion
+========
+Document
+========
+
+Table of Contents
 
 .. toctree::
    :maxdepth: 3
-
--------
-Support
--------
-
-If you encounter any problems or have any suggestions, please feel free to get back to us, mr.diffusion@nlpr.ia.ac.cn .
+	 
+   overview.rst
+   userguide.rst
+   tutorial.rst
+   fileformat.rst
+   todo.rst
+   reference.rst
 
 .. include:: common.txt

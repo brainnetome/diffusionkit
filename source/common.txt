@@ -1,0 +1,17 @@
+.. raw:: html
+
+ <script type="text/javascript" src="_static/jquery.js"></script>
+ <script type="text/javascript">
+ $(window).load(function(){
+ $('.wy-breadcrumbs-aside').hide();
+ $('.wy-table-responsive').css('margin-bottom','0px');
+ });
+ </script>
+ <script type="text/javascript" 
+ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+ <script type="text/x-mathjax-config">
+ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+ </script>
+
+

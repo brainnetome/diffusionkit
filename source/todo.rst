@@ -13,19 +13,12 @@ TO-DO List
 .. toctree::
    :maxdepth: 3
 
-.. raw:: html
-
- <script type="text/javascript" 
- src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
- <script type="text/x-mathjax-config">
- MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- </script>
-
 TO-DO list
 ==========
 
 1. To smooth the ODF/FOD/EAP for a smoother tract;
 2. To add more efficient tracking algorithms;
 3. To optimize the 3D rendering function;
+
+.. include:: common.txt
 
