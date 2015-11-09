@@ -1,4 +1,4 @@
-.. mrdiffusion documentation master file, created by
+.. diffusionkit documentation master file, created by
    sphinx-quickstart on Mon Oct 26 10:48:55 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -8,7 +8,7 @@ Tutorial
 --------
 
 .. meta::
-   :description: Tutorial on MR.Diffusion
+   :description: Tutorial on Diffusion Kit
 
 .. toctree::
    :maxdepth: 3
@@ -56,17 +56,17 @@ For Chinese users
 How to compute FA/MD/tensor et al for a group subjects?
 -------------------------------------------------------
 
-Done! Please refer to the mrdiffusion/extern/script folder.
+Done! Please refer to the diffusionkit/extern/script folder.
 
 How to generate the anatomical connectivity matrix for a given ROI group?
 -------------------------------------------------------------------------
 
-Done! Please refer to the mrdiffusion/extern/script folder.
+Done! Please refer to the diffusionkit/extern/script folder.
 
 Advanced topics: How to generate figures in the paper?
 ---------------------------------------------------------------------------------------------
 
-Done! Please refer to the mrdiffusion/extern/script folder [1]_.
+Done! Please refer to the diffusionkit/extern/script folder [1]_.
 
 (Xie et al, Journal of Neuroscience Methods, submitted)
 

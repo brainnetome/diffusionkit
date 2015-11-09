@@ -14,13 +14,13 @@ Download Links
 .. |rellogo| image:: images/rellogo.jpg
 
 |winlogo| `Windows Installer (x86-64) 
-<http://www.brainnetome.org/dmri/DiffusionKitSetup_WIN64-v1.1.0.exe>`_
+<static/DiffusionKitSetup-WIN64-v1.1-r151109.exe>`_
 
 |winlogo| `Windows Installer (x86) 
-<http://www.brainnetome.org/dmri/DiffusionKitSetup_WIN32-v1.1.0.exe>`_
+<static/DiffusionKitSetup-WIN32-v1.1-r151109.exe>`_
 
 |rellogo| `Linux Binary Package (x86) 
-<http://www.brainnetome.org/dmri/DiffusionKitSetup_Linux_x86-64-v1.1.0.tar.gz>`_
+<static/DiffusionKitSetup-x86_64-v1.1-r151109.tar.gz>`_
 
 System requirement
 ==================

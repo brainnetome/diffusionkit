@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta content="Welcome to Brainnetome Diffusion Kit's Homepage" name="description" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Homepage &mdash; diffusionkit 1.1 beta documentation</title>
@@ -120,8 +119,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -132,6 +129,25 @@
             
   <div class="section" id="homepage">
 <h1>Homepage<a class="headerlink" href="#homepage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="welcome-to-brainnetome-diffusion-kit-s-homepage">
+<h2>Welcome to Brainnetome Diffusion Kit&#8217;s Homepage<a class="headerlink" href="#welcome-to-brainnetome-diffusion-kit-s-homepage" title="Permalink to this headline">¶</a></h2>
+<p>Brainnetome Diffusion Kit is a light one-stop cross-platform solution to dMRI data analysis.
+The package delivers a complete pipeline from data format conversion to preprocessing,
+from local reconstruction to fiber tracking, and from fiber statistics to visualization.</p>
+<p>It was developed as a cross-platform framework,
+using ITK <a class="footnote-reference" href="#id6" id="id1">[1]</a> for computation, VTK <a class="footnote-reference" href="#id7" id="id2">[2]</a> for visualization, and Qt for GUI design.
+Both GPU and CPU computing were implemented for visualization to achieve high frame-rate,
+for rendering complex scene like whole brain tractographs in particular.
+The project was managed using the compiler-independent CMake <a class="footnote-reference" href="#id8" id="id3">[3]</a>,
+which is compatible with gcc/g++ and MS Visual Studio, etc.
+Well-established algorithms, such as the DICOM conversion tool dcm2nii by
+Chris Rorden <a class="footnote-reference" href="#id9" id="id4">[4]</a> and the constrained spherical deconvolution (CSD) for
+HARDI reconstruction in MRtrix <a class="footnote-reference" href="#id10" id="id5">[5]</a>, were adopted with improved interface and user experience.</p>
+<p>For new users, and/or for an overview of Diffusion Kit’s basic functionality,
+please see the <a class="reference external" href="tutorial.html">Tutorial</a>.
+The rest of the documentation will assume you’re at least passingly familiar with the
+material contained within.</p>
+<p><em>Please see the navigation sidebar to the left to begin.</em></p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="document.html">Homepage</a></li>
@@ -140,7 +156,8 @@
 <li class="toctree-l1"><a class="reference internal" href="feedback.html">Support</a></li>
 </ul>
 </div>
-<p>Diffusion Kit is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK <a class="footnote-reference" href="#id6" id="id1">[1]</a> for computation, VTK <a class="footnote-reference" href="#id7" id="id2">[2]</a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a class="footnote-reference" href="#id8" id="id3">[3]</a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a class="footnote-reference" href="#id9" id="id4">[4]</a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a class="footnote-reference" href="#id10" id="id5">[5]</a>, were adopted with improved interface and user experience.</p>
+<div class="section" id="reference">
+<h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
 <table class="docutils footnote" frame="void" id="id6" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -186,8 +203,14 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
 </script><script type="text/javascript">
 $(window).load(function(){
 $('.toctree-wrapper').hide();
+$('.reference').css('font-size','10pt');
+$('.fn-backref').css('font-size','10pt');
+$('h1').hide();
+$('td').css('padding','2px');
 });
 </script></div>
+</div>
+</div>
 
 
            </div>
@@ -209,8 +232,7 @@ $('.toctree-wrapper').hide();
         &copy; Copyright 2015, Brainnetome Center, CASIA.
 
     </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  </div> 
 
 </footer>
 

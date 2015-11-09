@@ -8,7 +8,7 @@ TO-DO List
 ----------
 
 .. meta::
-   :description: Overivew of MR.Diffusion
+   :description: Overivew of Diffusion Kit
 
 .. toctree::
    :maxdepth: 3
