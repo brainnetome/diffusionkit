@@ -5,11 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta content="Overivew of MR.Diffusion" name="description" />
+  <meta content="Overivew of Brainnetome Diffusion Kit" name="description" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; mrdiffusion 1.1 beta documentation</title>
+  <title>Overivew &mdash; diffusionkit 1.1 beta documentation</title>
   
 
   
@@ -31,10 +31,10 @@
   
 
   
-    <link rel="top" title="mrdiffusion 1.1 beta documentation" href="index.html"/>
-        <link rel="up" title="Document" href="document.html"/>
+    <link rel="top" title="diffusionkit 1.1 beta documentation" href="index.html"/>
+        <link rel="up" title="Homepage" href="document.html"/>
         <link rel="next" title="User Guide" href="userguide.html"/>
-        <link rel="prev" title="Document" href="document.html"/> 
+        <link rel="prev" title="Homepage" href="document.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> mrdiffusion
+            <a href="index.html" class="icon icon-home"> diffusionkit
           
 
           
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.1
+                1.1.151109
               </div>
             
           
@@ -84,8 +84,8 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Overview</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="document.html">Homepage</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Overivew</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#key-functions-of-the-software">Key functions of the software</a></li>
 </ul>
 </li>
@@ -112,7 +112,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">mrdiffusion</a>
+        <a href="index.html">diffusionkit</a>
       </nav>
 
 
@@ -129,9 +129,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-          <li><a href="document.html">Document</a> &raquo;</li>
+          <li><a href="document.html">Homepage</a> &raquo;</li>
       
-    <li>Overview</li>
+    <li>Overivew</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -145,22 +145,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<p>MR. Diffusion is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK <a href="#id9"><span class="problematic" id="id10"><span id="id1"></span>[1]_</span></a> for computation, VTK <a href="#id11"><span class="problematic" id="id12"><span id="id2"></span>[2]_</span></a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a href="#id13"><span class="problematic" id="id14"><span id="id3"></span>[3]_</span></a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a href="#id15"><span class="problematic" id="id16"><span id="id4"></span>[4]_</span></a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a href="#id17"><span class="problematic" id="id18"><span id="id5"></span>[5]_</span></a>, were adopted with improved interface and user experience.</p>
+  <div class="section" id="overivew">
+<h1>Overivew<a class="headerlink" href="#overivew" title="Permalink to this headline">¶</a></h1>
+<p>Brainnetome Diffusion Kit is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. MR. Diffusion was developed as a cross-platform framework, using ITK <a class="footnote-reference" href="#id6" id="id1">[1]</a> for computation, VTK <a class="footnote-reference" href="#id7" id="id2">[2]</a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a class="footnote-reference" href="#id8" id="id3">[3]</a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a class="footnote-reference" href="#id9" id="id4">[4]</a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a class="footnote-reference" href="#id10" id="id5">[5]</a>, were adopted with improved interface and user experience.</p>
 <div class="section" id="key-functions-of-the-software">
 <h2>Key functions of the software<a class="headerlink" href="#key-functions-of-the-software" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id11">
 <a class="reference internal image-reference" href="_images/overall.png"><img alt="The overall design framework of MR. Diffusion" src="_images/overall.png" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-text">Figure 1. The overall design framework of MR. Diffusion.</span></p>
 </div>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id12">
 <a class="reference internal image-reference" href="_images/mainwindow.png"><img alt="The main window of the software" src="_images/mainwindow.png" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-text">Figure 2. The main window of the software.</span></p>
 </div>
 <p>It should be noteworthy that, for all the computing steps provided in GUI, the called commands with the complete parameter list are displayed in a separate log window. Such a design is special for the users to keep in mind what he/she is doing, and furthermore, it could be directly copied into script (Bash, Python …) for batch processing.
 Preprocessing</p>
-<div class="figure align-center" id="id8">
+<div class="figure align-center" id="id13">
 <a class="reference internal image-reference" href="_images/preprocessing.png"><img alt="Data preprocessing steps" src="_images/preprocessing.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">Figure 3. Data preprocessing steps, including data format conversion, eddy current correction and brain extraction.</span></p>
 </div>
@@ -206,7 +206,37 @@ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script></div>
+</script><table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://www.itk.org">http://www.itk.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="http://www.vtk.org">http://www.vtk.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td><a class="reference external" href="http://www.cmake.org">http://www.cmake.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td><a class="reference external" href="http://www.mccauslandcenter.sc.edu/mricro">http://www.mccauslandcenter.sc.edu/mricro</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td><a class="reference external" href="http://www.nitrc.org/projects/mrtrix">http://www.nitrc.org/projects/mrtrix</a></td></tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -219,7 +249,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
         <a href="userguide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="document.html" class="btn btn-neutral" title="Document" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="document.html" class="btn btn-neutral" title="Homepage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

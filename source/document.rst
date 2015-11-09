@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 ========
-Document
+Homepage
 ========
 
 Table of Contents

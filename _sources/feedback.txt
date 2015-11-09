@@ -13,6 +13,25 @@
 Support
 -------
 
-If you encounter any problems or have any suggestions, please feel free to get back to us, mr.diffusion@nlpr.ia.ac.cn .
+Contact Us
+----------
+
+**Tianzi Jiang, PhD, Professor** (Coordinator of Brainnetome) |br|
+ Brainnetome Center and National Laboratory of Pattern Recognition(NLPR) |br|
+ Institute of Automation,The Chinese Academy of Sciences(CASIA) |br|
+ Tel:+(86)010-8254-4778 |br|
+ Fax:+(86)010-6255-1993 |br|
+ Email: jiangtz@nlpr.ia.ac.cn 
+
+**Nianming Zuo, PhD, Associate professor** |br|
+ Brainnetome Center & CASIA |br|
+ Tel:+(86)010-8254-4768 |br|
+ Email: nmzuo@nlpr.ia.ac.cn
+
+Feedback
+--------
+
+If you encounter any problems or have any suggestions, 
+please feel free to get back to us, diffusion.kit@nlpr.ia.ac.cn .
 
 .. include:: common.txt
