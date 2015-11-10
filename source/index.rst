@@ -65,6 +65,7 @@ material contained within.
    document.rst
    screenshot.rst
    download.rst
+   license.rst
    feedback.rst
 
 Reference

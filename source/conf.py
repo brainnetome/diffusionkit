@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'diffusionkit'
-copyright = u'2015, Brainnetome Center, CASIA'
+copyright = u'2013-2015, Brainnetome Center, CASIA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

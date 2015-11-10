@@ -18,3 +18,5 @@
 .. |br| raw:: html
 
  <br/>
+
+.. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN

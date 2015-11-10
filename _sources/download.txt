@@ -19,23 +19,36 @@ Download Links
 |winlogo| `Windows Installer (x86) 
 <static/DiffusionKitSetup-WIN32-v1.1-r151109.exe>`_
 
-|rellogo| `Linux Binary Package (x86) 
+|rellogo| `Linux Binary Package (x86-64) 
 <static/DiffusionKitSetup-x86_64-v1.1-r151109.tar.gz>`_
 
 System requirement
 ==================
 
-Basically this software can run in any system, including 32/64-bit MS Windows/Linux OS, although currently we only tested and released the binary packages for Windows/Linux OS. The software is developed based on C/C++, and some platform independent packages, including ITK, VTK, and OpenCV, etc. However, for high-performance data processing and visualization, we recommend using 64-bit OS with multi-core CPU and standalone video card.
+Basically this software can run in any system, including 32/64-bit MS Windows/Linux OS, 
+although currently we only tested and released the binary packages for Windows/Linux OS. 
+The software is developed based on C/C++, and some platform independent packages, 
+including ITK, VTK, and OpenCV, etc. 
+However, for high-performance data processing and visualization, 
+we recommend using 64-bit OS with multi-core CPU and standalone video card.
 
 Install/Uninstall
 =================
 
-Please download the package from http://brainnetome.org/dmri , according to your own OS. Unpack the files to where you want and you can enjoy the software. The 64-bit OS is recommended for high-performance data processing. Each installation package is completely standalone so you DO NOT need to install ANY other dependency to run the software. If you encounter any dependency problem please DO `contact us <mailto:diffusion.kit@nlpr.ia.ac.cn>`_.
+Please download the package from http://diffusion.brainnetome.org , 
+according to your own OS. Unpack the files to where you want and you can enjoy the software. 
+The 64-bit OS is recommended for high-performance data processing. 
+Each installation package is completely standalone so you DO NOT need to 
+install ANY other dependency to run the software. 
+If you encounter any dependency problem please DO `contact us <mailto:diffusion.kit@nlpr.ia.ac.cn>`_.
 
 For MS Windows OS
 -----------------
 
-Double click the ``DiffusionKitSetup-v1.1.exe`` file and then choose the destination path according to the wizard. You may need to provide administrator permission if you want to put the files into the system path. Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.
+Double click the ``DiffusionKitSetup-v1.1.exe`` file and then choose the destination path 
+according to the wizard. You may need to provide administrator permission 
+if you want to put the files into the system path. 
+Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.
 
 For Linux OS
 ------------
