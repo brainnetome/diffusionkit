@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'diffusionkit'
+project = u'Diffusion Kit'
 copyright = u'2013-2015, Brainnetome Center, CASIA'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'diffusionkit', u'Diffusion Kit Documentation',
-   u'Brainnetome Center, CASIA', 'diffusionkit', 'One line description of project.',
+  ('index', 'Diffusion Kit', u'Diffusion Kit Documentation',
+   u'Brainnetome Center, CASIA', 'Diffusion Kit', 'One line description of project.',
    'Miscellaneous'),
 ]
 

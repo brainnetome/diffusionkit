@@ -12,7 +12,7 @@ Tutorial
 
 .. toctree::
    :maxdepth: 3
-	 :local:
+   :local:
 
 Example Data
 ============

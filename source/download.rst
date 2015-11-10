@@ -14,13 +14,13 @@ Download Links
 .. |rellogo| image:: images/rellogo.jpg
 
 |winlogo| `Windows Installer (x86-64) 
-<static/DiffusionKitSetup-WIN64-v1.1-r151109.exe>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1/DiffusionKitSetup-WIN64-v1.1.exe>`_
 
 |winlogo| `Windows Installer (x86) 
-<static/DiffusionKitSetup-WIN32-v1.1-r151109.exe>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1/DiffusionKitSetup-WIN32-v1.1.exe>`_
 
 |rellogo| `Linux Binary Package (x86-64) 
-<static/DiffusionKitSetup-x86_64-v1.1-r151109.tar.gz>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1/DiffusionKitSetup-x86_64-v1.1.tar.gz>`_
 
 System requirement
 ==================
