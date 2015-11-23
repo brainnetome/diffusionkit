@@ -14,6 +14,7 @@ Table of Contents
 	 
    overview.rst
    userguide.rst
+   visualization.rst
    tutorial.rst
    fileformat.rst
    todo.rst
