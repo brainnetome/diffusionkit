@@ -138,7 +138,12 @@ data property panel.
   :align: center
 
   property panel showing mni152 as background image
-  
+
+The widget below the data property panel is the color table for :ref:`Volume_Rendering`.
+The horizontal axis indicates intensity values of a target image, while 
+the vertical axis of the widget indicate the opacity value that maps the intensity values
+onto visible planes in volume rendering. One can adjust opacity map (by dragging blue opacity nodes) 
+as well as color map to get proper renderering results.
 
 Image Contrast Enhancement
 --------------------------
@@ -149,13 +154,21 @@ By narrow down the range of image intensity values, one can the enhance image co
 
 Note that this functionality is currently applied for 2d sliced views only.
 
+.. _Volume_Image_Overlay:
+
 Volume Image Overlay
 --------------------
 
-By loading multiple image throught **Load Background** menu, one can 
-This enables the user to make slice to slice comparison to find out image registration errors.
+By loading multiple image throught **Load Background** menu, one can place one image over another,
+Therefore, it's easy to make slice-to-slice comparison to find out image registration errors 
+by adjusting opacity values of the upper level image.
+
+This feature can be quite useful for verifying :ref:`Skull_Stripping` results.
+After performing skull stripping, ...
 
 .. todo:: PUT OVERLAY IMAGE HERE!
+
+.. _Volume_Rendering:
 
 Volume Rendering
 ----------------
@@ -179,17 +192,49 @@ Region of Interest (ROI) Layer
 To describe the location of a specific region, we employ the ROI layer. 
 It outlines surface of the region on 3d view, along with a filled area on 2d slice views.
 
+To open a ROI file, click on 'Load ROI' from either menu or toolbar.
+Note that loading multiple ROI data files that located within the same directory is allowed.
+Therefore, one don't have load splitted brain atlas files one-by-one.
+
+To change the color of a selected ROI files, set Color to different value from 
+the data properties panel. This is useful when more than one ROI file is loaded, 
+and it's hard to distinguish them by appearance.
+
+To adjust transparency of the surface or the filled area in 2d views, 
+set opacity value of the selected fiber file to a value range form 0 to 1.
+
 .. todo:: 
   compute the voxel-level volume size of a region, as well as its size in millimeters
   (by multiplying spacing).
 
-Once the image data is loaded
-
-Besides, loading multiple ROI data that located within the same directory is allowed.
-This saves 
 
 Fiber Layer
 ===========
+
+To display deterministic tractography results, the program generates and displays .fiber/.trk files 
+in either lines or tubes. 
+One can load fiber files by selecting `Load Fiber` either from menu or toolbar.
+The definition of .fiber files is available at :ref:`Data Format` page.
+The specification for .trk file is defined by 
+`TrackVis <http://www.trackvis.org/docs/?subsect=fileformat>`_. 
+
+Basic fiber data statistics is available on data properties panel once an arbitary tract file 
+is loaded. The statistics information include number of fibers in a tract, average length of fibers and
+total volume covered by the tract etc. 
+These information are generated during fiber tracking process, and there is extra computation during
+online visualization.
+
+Several display options are available to provided high quality rendering results.
+For performance reasons, tracts are rendered as slim lines by default. 
+Therefore, detail shapes of the fibers are not clearly visible. 
+However, location and orientation information of the lines are quite clear.
+By adjusting `Color Code` and `Render Type`, one can easily visualize multiple fiber files.
+
+.. note:: 
+  Note that rendering whole brain fiber in 'Tube' rendering type can be quite slow for 
+  low performance computers. However, a progress bar would popup to show the current loading progress.
+  Also, we recommand storing whole brain fiber files as .trk format instead of .fiber file to 
+  increase file loading efficiency.
 
 Tensor/ODF/FOD Layer
 ====================
@@ -197,8 +242,8 @@ Tensor/ODF/FOD Layer
 Tensor Data Visualization
 -------------------------
 
-
-
+..
+ Due to diffusion tensor data is rendered as classical ellipsoid.
 
 ODF/FOD Visualization
 ---------------------
