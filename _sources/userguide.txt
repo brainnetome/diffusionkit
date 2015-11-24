@@ -3,16 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-----------
-User Guide
-----------
+------------------------
+Data Processing Pipeline
+------------------------
 
 .. meta::
    :description: User Guide of MR.Diffusion
 
 .. toctree::
    :maxdepth: 3
-   :local:
 
 
 Eddy and motion correction
@@ -269,8 +268,8 @@ Figure 6. Illustrations for the capability of the software to show many types of
    -tensor  .nii.gz       set input DTI data (conflict with -odf args)
    -odf     .nii.gz       set input ODF/FOD data (conflict with -tensor args)
 
-Several useful tools
-====================
+Several other useful tools
+==========================
 
 Image registration
 ------------------
@@ -301,7 +300,7 @@ This module is implemented by elastix [10]_, which integrates a collection of fu
 The parameter-file must contain all the information necessary for elastix to runproperly. That includes which metric to use, which optimizer, which transform, etc. It must also contain information specific for the metric, optimizer, transform, etc. For a usable parameter-file, see the website.
 
 Need further help?
-******************
+~~~~~~~~~~~~~~~~~~
 
 Check the website http://elastix.isi.uu.nl, or mail elastix@bigr.nl.
 

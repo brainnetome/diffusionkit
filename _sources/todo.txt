@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-----------
-TO-DO List
-----------
+-------------------
+Future Improvements
+-------------------
 
 .. meta::
    :description: Overivew of Diffusion Kit

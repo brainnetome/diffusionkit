@@ -7,8 +7,6 @@
 Document
 ========
 
-Table of Contents
-
 .. toctree::
    :maxdepth: 3
 	 
@@ -19,5 +17,8 @@ Table of Contents
    fileformat.rst
    todo.rst
    reference.rst
+
+..
+   frontend.rst
 
 .. include:: common.txt

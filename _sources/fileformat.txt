@@ -9,14 +9,19 @@
 .. toctree::
    :maxdepth: 3
 
+.. _Data Format:
+
 -----------
-Data format
+Data Format
 -----------
 
 Input
 -----
 
-Since we apply the dcm2nii to unify the format of input data, it can support most types of DICOM files (in folders). Please refer to the author’s webpage for more information [4]_. Please also get back to us if you encounter any problems.
+Since we apply the dcm2nii to unify the format of input data, 
+it can support most types of DICOM files (in folders). 
+Please refer to the author’s webpage for more information [4]_. 
+Please also get back to us if you encounter any problems.
 
 Output
 ------

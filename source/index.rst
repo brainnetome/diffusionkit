@@ -68,6 +68,8 @@ material contained within.
    license.rst
    feedback.rst
 
+.. note:: Document last updated on |today|.
+
 Reference
 *********
 

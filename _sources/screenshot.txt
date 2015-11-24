@@ -16,24 +16,6 @@ Linux
 
 |fibers| |fibers2|
 
-.. |4A| image:: images/4A.png
-   :width: 300
-
-.. |mainwindow| image:: images/mainwindow.png
-   :width: 320
-
-.. |sticks| image:: images/sticks.png
-   :width: 300
-
-.. |slices| image:: images/slices.png
-   :width: 310
-
-.. |fibers| image:: images/fibers.png
-   :width: 300
-
-.. |fibers2| image:: images/fibers2.png
-   :width: 330
-
 .. include:: common.txt
 
 Windows

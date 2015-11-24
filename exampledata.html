@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="Tutorial on Diffusion Kit" name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Example Data &mdash; Diffusion Kit 1.1.0 beta documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/>
+        <link rel="up" title="Tutorial" href="tutorial.html"/>
+        <link rel="next" title="Data Format" href="fileformat.html"/>
+        <link rel="prev" title="Tutorial" href="tutorial.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Diffusion Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0b2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overivew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Example Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-source-for-bash-b-shell-and-python">Basic source for Bash (B-shell) and Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-compute-fa-md-tensor-et-al-for-a-group-subjects">How to compute FA/MD/tensor et al for a group subjects?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group">How to generate the anatomical connectivity matrix for a given ROI group?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-topics-how-to-generate-figures-in-the-paper">Advanced topics: How to generate figures in the paper?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">Future Improvements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Support</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Diffusion Kit</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="document.html">Document</a> &raquo;</li>
+      
+          <li><a href="tutorial.html">Tutorial</a> &raquo;</li>
+      
+    <li>Example Data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="example-data">
+<h1>Example Data<a class="headerlink" href="#example-data" title="Permalink to this headline">¶</a></h1>
+<p>We provide a group of test data to test the software, and the data was also used in <a class="footnote-reference" href="#id3" id="id1">[1]</a>.</p>
+<div class="section" id="basic-source-for-bash-b-shell-and-python">
+<h2>Basic source for Bash (B-shell) and Python<a class="headerlink" href="#basic-source-for-bash-b-shell-and-python" title="Permalink to this headline">¶</a></h2>
+<p>If you want to use script for batch processing, we strongly recommend using Python, since it has nice grammar style and is portable for cross platform.</p>
+<p>The Python is easy to learn for basic use as a script language, although its powerful functions largely depend on 3rd party packages. To this end, we have several suggestions to begin with it. First, take a couple of hours to go through the primary Python grammars. There is a large bundle of free but kind tutorials from internet (Google “Python tutorial” or related keywords). You can choose the websites according to your preference. If you are a newbie of Python, don’t think about which version is appropriate for you and just use the latest version (Python&gt;3.0) (In the current stage, you only need to note the difference of “print” function in different versions, which I think is not a smart change from version 3.0); and don’t waste money to buy a book since the materials from the internet are largely beyond your capacity. Several tutorial links are listed here:</p>
+<p>For English users</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial">https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial</a>, a short tutorial</li>
+<li><a class="reference external" href="http://askpython.com/">http://askpython.com/</a>, a short tutorial</li>
+<li><a class="reference external" href="http://www.learnpython.org/">http://www.learnpython.org/</a>, an interactive sandbox</li>
+</ol>
+<p>For Chinese users</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://www.runoob.com/python3/python3-tutorial.html">http://www.runoob.com/python3/python3-tutorial.html</a>, a nice tutorial</li>
+<li><a class="reference external" href="http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html">http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html</a>, python and advanced</li>
+<li><a class="reference external" href="http://woodpecker.org.cn/abyteofpython_cn/chinese/">http://woodpecker.org.cn/abyteofpython_cn/chinese/</a>, a complete reference</li>
+</ol>
+<p>If you prefer to use shell script, like Bash, you can also find some entrances for tutorials. The shell script itself is easy to follow and it is a powerful tool to concatenate the underlying execution functions. It should be noted that the Bash script is only for * NUX system, so it is not suitable form cross-platforms. Several tutorial links are listed here:</p>
+<p>For English users</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://linuxconfig.org/bash-scripting-tutorial">http://linuxconfig.org/bash-scripting-tutorial</a>, a short introduction</li>
+<li><a class="reference external" href="http://www.tldp.org/LDP/abs/html/">http://www.tldp.org/LDP/abs/html/</a>, a complete tutorial</li>
+<li><a class="reference external" href="http://www.learnshell.org/">http://www.learnshell.org/</a>, an interactive sandbox</li>
+</ol>
+<p>For Chinese users</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://blog.jobbole.com/85183/">http://blog.jobbole.com/85183/</a>, a short tutorial</li>
+<li><a class="reference external" href="https://serholiu.com/bash-by-example">https://serholiu.com/bash-by-example</a>, several simple examples</li>
+<li><a class="reference external" href="http://c.biancheng.net/cpp/view/6998.html">http://c.biancheng.net/cpp/view/6998.html</a>, a complete tutorial</li>
+</ol>
+</div>
+<div class="section" id="how-to-compute-fa-md-tensor-et-al-for-a-group-subjects">
+<h2>How to compute FA/MD/tensor et al for a group subjects?<a class="headerlink" href="#how-to-compute-fa-md-tensor-et-al-for-a-group-subjects" title="Permalink to this headline">¶</a></h2>
+<p>Done! Please refer to the diffusionkit/extern/script folder.</p>
+</div>
+<div class="section" id="how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group">
+<h2>How to generate the anatomical connectivity matrix for a given ROI group?<a class="headerlink" href="#how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group" title="Permalink to this headline">¶</a></h2>
+<p>Done! Please refer to the diffusionkit/extern/script folder.</p>
+</div>
+<div class="section" id="advanced-topics-how-to-generate-figures-in-the-paper">
+<h2>Advanced topics: How to generate figures in the paper?<a class="headerlink" href="#advanced-topics-how-to-generate-figures-in-the-paper" title="Permalink to this headline">¶</a></h2>
+<p>Done! Please refer to the diffusionkit/extern/script folder <a class="footnote-reference" href="#id3" id="id2">[1]</a>.</p>
+<p>(Xie et al, Journal of Neuroscience Methods, submitted)</p>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Xie S., Zuo N., Shang L., Song M., Fan L., Jiang T., 2015. How does B-value affect HARDI reconstruction using clinical diffusion MRI data? PLoS One 10, e0120773.</td></tr>
+</tbody>
+</table>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+$('.wy-breadcrumbs-aside').hide();
+$('.wy-table-responsive').css('margin-bottom','0px');
+});
+</script>
+<script type="text/javascript"
+src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script></div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fileformat.html" class="btn btn-neutral float-right" title="Data Format" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2015, Brainnetome Center, CASIA.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1.0 beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

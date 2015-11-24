@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; Diffusion Kit 1.1 beta documentation</title>
+  <title>Tutorial &mdash; Diffusion Kit 1.1.0 beta documentation</title>
   
 
   
@@ -31,10 +31,10 @@
   
 
   
-    <link rel="top" title="Diffusion Kit 1.1 beta documentation" href="index.html"/>
+    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/>
         <link rel="up" title="Document" href="document.html"/>
-        <link rel="next" title="Data format" href="fileformat.html"/>
-        <link rel="prev" title="User Guide" href="userguide.html"/> 
+        <link rel="next" title="Example Data" href="exampledata.html"/>
+        <link rel="prev" title="Guidelines on Data Visualization" href="visualization.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.1.151109
+                1.1.0b2
               </div>
             
           
@@ -86,20 +86,14 @@
                 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overivew</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Tutorial</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-data">Example Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#basic-source-for-bash-b-shell-and-python">Basic source for Bash (B-shell) and Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-compute-fa-md-tensor-et-al-for-a-group-subjects">How to compute FA/MD/tensor et al for a group subjects?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group">How to generate the anatomical connectivity matrix for a given ROI group?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#advanced-topics-how-to-generate-figures-in-the-paper">Advanced topics: How to generate figures in the paper?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exampledata.html">Example Data</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="todo.html">TO-DO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">Future Improvements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
 </li>
@@ -153,61 +147,18 @@
             
   <div class="section" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="example-data">
-<h2>Example Data<a class="headerlink" href="#example-data" title="Permalink to this headline">¶</a></h2>
-<p>We provide a group of test data to test the software, and the data was also used in <a class="footnote-reference" href="#id3" id="id1">[1]</a>.</p>
-<div class="section" id="basic-source-for-bash-b-shell-and-python">
-<h3>Basic source for Bash (B-shell) and Python<a class="headerlink" href="#basic-source-for-bash-b-shell-and-python" title="Permalink to this headline">¶</a></h3>
-<p>If you want to use script for batch processing, we strongly recommend using Python, since it has nice grammar style and is portable for cross platform.</p>
-<p>The Python is easy to learn for basic use as a script language, although its powerful functions largely depend on 3rd party packages. To this end, we have several suggestions to begin with it. First, take a couple of hours to go through the primary Python grammars. There is a large bundle of free but kind tutorials from internet (Google “Python tutorial” or related keywords). You can choose the websites according to your preference. If you are a newbie of Python, don’t think about which version is appropriate for you and just use the latest version (Python&gt;3.0) (In the current stage, you only need to note the difference of “print” function in different versions, which I think is not a smart change from version 3.0); and don’t waste money to buy a book since the materials from the internet are largely beyond your capacity. Several tutorial links are listed here:</p>
-<p>For English users</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial">https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial</a>, a short tutorial</li>
-<li><a class="reference external" href="http://askpython.com/">http://askpython.com/</a>, a short tutorial</li>
-<li><a class="reference external" href="http://www.learnpython.org/">http://www.learnpython.org/</a>, an interactive sandbox</li>
-</ol>
-<p>For Chinese users</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://www.runoob.com/python3/python3-tutorial.html">http://www.runoob.com/python3/python3-tutorial.html</a>, a nice tutorial</li>
-<li><a class="reference external" href="http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html">http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html</a>, python and advanced</li>
-<li><a class="reference external" href="http://woodpecker.org.cn/abyteofpython_cn/chinese/">http://woodpecker.org.cn/abyteofpython_cn/chinese/</a>, a complete reference</li>
-</ol>
-<p>If you prefer to use shell script, like Bash, you can also find some entrances for tutorials. The shell script itself is easy to follow and it is a powerful tool to concatenate the underlying execution functions. It should be noted that the Bash script is only for * NUX system, so it is not suitable form cross-platforms. Several tutorial links are listed here:</p>
-<p>For English users</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://linuxconfig.org/bash-scripting-tutorial">http://linuxconfig.org/bash-scripting-tutorial</a>, a short introduction</li>
-<li><a class="reference external" href="http://www.tldp.org/LDP/abs/html/">http://www.tldp.org/LDP/abs/html/</a>, a complete tutorial</li>
-<li><a class="reference external" href="http://www.learnshell.org/">http://www.learnshell.org/</a>, an interactive sandbox</li>
-</ol>
-<p>For Chinese users</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://blog.jobbole.com/85183/">http://blog.jobbole.com/85183/</a>, a short tutorial</li>
-<li><a class="reference external" href="https://serholiu.com/bash-by-example">https://serholiu.com/bash-by-example</a>, several simple examples</li>
-<li><a class="reference external" href="http://c.biancheng.net/cpp/view/6998.html">http://c.biancheng.net/cpp/view/6998.html</a>, a complete tutorial</li>
-</ol>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exampledata.html">Example Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exampledata.html#basic-source-for-bash-b-shell-and-python">Basic source for Bash (B-shell) and Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exampledata.html#how-to-compute-fa-md-tensor-et-al-for-a-group-subjects">How to compute FA/MD/tensor et al for a group subjects?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exampledata.html#how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group">How to generate the anatomical connectivity matrix for a given ROI group?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exampledata.html#advanced-topics-how-to-generate-figures-in-the-paper">Advanced topics: How to generate figures in the paper?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exampledata.html#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="how-to-compute-fa-md-tensor-et-al-for-a-group-subjects">
-<h3>How to compute FA/MD/tensor et al for a group subjects?<a class="headerlink" href="#how-to-compute-fa-md-tensor-et-al-for-a-group-subjects" title="Permalink to this headline">¶</a></h3>
-<p>Done! Please refer to the diffusionkit/extern/script folder.</p>
-</div>
-<div class="section" id="how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group">
-<h3>How to generate the anatomical connectivity matrix for a given ROI group?<a class="headerlink" href="#how-to-generate-the-anatomical-connectivity-matrix-for-a-given-roi-group" title="Permalink to this headline">¶</a></h3>
-<p>Done! Please refer to the diffusionkit/extern/script folder.</p>
-</div>
-<div class="section" id="advanced-topics-how-to-generate-figures-in-the-paper">
-<h3>Advanced topics: How to generate figures in the paper?<a class="headerlink" href="#advanced-topics-how-to-generate-figures-in-the-paper" title="Permalink to this headline">¶</a></h3>
-<p>Done! Please refer to the diffusionkit/extern/script folder <a class="footnote-reference" href="#id3" id="id2">[1]</a>.</p>
-<p>(Xie et al, Journal of Neuroscience Methods, submitted)</p>
-</div>
-</div>
-<div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Xie S., Zuo N., Shang L., Song M., Fan L., Jiang T., 2015. How does B-value affect HARDI reconstruction using clinical diffusion MRI data? PLoS One 10, e0120773.</td></tr>
-</tbody>
-</table>
 <script type="text/javascript" src="_static/jquery.js"></script>
 <script type="text/javascript">
 $(window).load(function(){
@@ -221,7 +172,6 @@ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script></div>
-</div>
 
 
            </div>
@@ -230,10 +180,10 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fileformat.html" class="btn btn-neutral float-right" title="Data format" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exampledata.html" class="btn btn-neutral float-right" title="Example Data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="userguide.html" class="btn btn-neutral" title="User Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="visualization.html" class="btn btn-neutral" title="Guidelines on Data Visualization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -263,7 +213,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1 beta',
+            VERSION:'1.1.0 beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

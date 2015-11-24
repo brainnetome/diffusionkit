@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>User Guide &mdash; Diffusion Kit 1.1 beta documentation</title>
+  <title>Data Processing Pipeline &mdash; Diffusion Kit 1.1.0 beta documentation</title>
   
 
   
@@ -31,9 +31,9 @@
   
 
   
-    <link rel="top" title="Diffusion Kit 1.1 beta documentation" href="index.html"/>
+    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/>
         <link rel="up" title="Document" href="document.html"/>
-        <link rel="next" title="Tutorial" href="tutorial.html"/>
+        <link rel="next" title="Guidelines on Data Visualization" href="visualization.html"/>
         <link rel="prev" title="Overivew" href="overview.html"/> 
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.1.151109
+                1.1.0b2
               </div>
             
           
@@ -86,7 +86,7 @@
                 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overivew</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User Guide</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Data Processing Pipeline</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eddy-and-motion-correction">Eddy and motion correction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#brain-stripping">Brain stripping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reconstruction-of-the-diffusion-model">Reconstruction of the diffusion model</a><ul>
@@ -97,7 +97,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#fiber-tracking-and-attributes-extraction">Fiber tracking and attributes extraction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visualization-for-various-images">Visualization for various images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#several-useful-tools">Several useful tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#several-other-useful-tools">Several other useful tools</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#image-registration">Image registration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#image-calculation-and-roi-generation">Image calculation and ROI generation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#fiber-manipulation">Fiber manipulation</a></li>
@@ -106,9 +106,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="todo.html">TO-DO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">Future Improvements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
 </li>
@@ -148,7 +149,7 @@
       
           <li><a href="document.html">Document</a> &raquo;</li>
       
-    <li>User Guide</li>
+    <li>Data Processing Pipeline</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -160,8 +161,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="user-guide">
-<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="data-processing-pipeline">
+<h1>Data Processing Pipeline<a class="headerlink" href="#data-processing-pipeline" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
 <div class="section" id="eddy-and-motion-correction">
 <h2>Eddy and motion correction<a class="headerlink" href="#eddy-and-motion-correction" title="Permalink to this headline">¶</a></h2>
 <p>During the MRI scanning, many factors can cause magnetic field inhomogeneity, including changing magnetic fields from the imaging gradients and the radiofrequency (RF) coils and yielded biological effects. These effects usually degrade the imaging quality, resulting in artifacts including shearing and blurring (<a class="reference external" href="http://mri-q.com/eddy-current-problems.html">http://mri-q.com/eddy-current-problems.html</a>). Another type of artifacts is caused by head motion. Most of the artifacts described above could be amended by post-processing. In the eddy correction module, we apply a rigid registration method to address most of the shearing and motion artifacts. For the blurring artifacts, it still needs further investigation. Additional solutions would be added to reduce the magnetic field inhomogeneity by field mapping.</p>
@@ -357,8 +362,8 @@ options:
 </pre></div>
 </div>
 </div>
-<div class="section" id="several-useful-tools">
-<h2>Several useful tools<a class="headerlink" href="#several-useful-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="several-other-useful-tools">
+<h2>Several other useful tools<a class="headerlink" href="#several-other-useful-tools" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="image-registration">
 <h3>Image registration<a class="headerlink" href="#image-registration" title="Permalink to this headline">¶</a></h3>
 <p>This module is implemented by elastix <a class="footnote-reference" href="#id16" id="id9">[10]</a>, which integrates a collection of functions from ITK <a class="footnote-reference" href="#id12" id="id10">[1]</a>. In our software, the registration module is customized to auto-configure the parameter settings between different image modalities, e.g., two DWI images (for eddy current correction in current version), standard space and T1 space (for mapping ROIs to the individual space), DWI space and standard space (for statistical comparisons across subjects). This module contains two separate submodules, &lt;code&gt;elastix&lt;/code&gt; for computing the transform matrix and &lt;code&gt;transformix&lt;/code&gt; for applying the existing transform matrix to an image.</p>
@@ -632,7 +637,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="visualization.html" class="btn btn-neutral float-right" title="Guidelines on Data Visualization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="overview.html" class="btn btn-neutral" title="Overivew" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -665,7 +670,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1 beta',
+            VERSION:'1.1.0 beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

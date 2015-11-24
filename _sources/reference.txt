@@ -8,7 +8,6 @@
 
 .. toctree::
    :maxdepth: 3
-   :local:
 
 ---------
 Reference

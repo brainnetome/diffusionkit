@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overivew &mdash; Diffusion Kit 1.1 beta documentation</title>
+  <title>Overivew &mdash; Diffusion Kit 1.1.0 beta documentation</title>
   
 
   
@@ -31,9 +31,9 @@
   
 
   
-    <link rel="top" title="Diffusion Kit 1.1 beta documentation" href="index.html"/>
+    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/>
         <link rel="up" title="Document" href="document.html"/>
-        <link rel="next" title="User Guide" href="userguide.html"/>
+        <link rel="next" title="Data Processing Pipeline" href="userguide.html"/>
         <link rel="prev" title="Document" href="document.html"/> 
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.1.151109
+                1.1.0b2
               </div>
             
           
@@ -89,10 +89,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#key-functions-of-the-software">Key functions of the software</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="todo.html">TO-DO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">Future Improvements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
 </li>
@@ -146,6 +147,10 @@
             
   <div class="section" id="overivew">
 <h1>Overivew<a class="headerlink" href="#overivew" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
 <p>Brainnetome Diffusion Kit is a light one-stop cross-platform solution to dMRI data analysis. The package delivers a complete pipeline from data format conversion to preprocessing, from local reconstruction to fiber tracking, and from fiber statistics to visualization. Diffusion Kit was developed as a cross-platform framework, using ITK <a class="footnote-reference" href="#id6" id="id1">[1]</a> for computation, VTK <a class="footnote-reference" href="#id7" id="id2">[2]</a> for visualization, and Qt for GUI design. Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, for rendering complex scene like whole brain tractographs in particular. The project was managed using the compiler-independent CMake <a class="footnote-reference" href="#id8" id="id3">[3]</a>, which is compatible with gcc/g++ and MS Visual Studio, etc. Well-established algorithms, such as the DICOM conversion tool dcm2nii by Chris Rorden <a class="footnote-reference" href="#id9" id="id4">[4]</a> and the constrained spherical deconvolution (CSD) for HARDI reconstruction in MRtrix <a class="footnote-reference" href="#id10" id="id5">[5]</a>, were adopted with improved interface and user experience.</p>
 <div class="section" id="key-functions-of-the-software">
 <h2>Key functions of the software<a class="headerlink" href="#key-functions-of-the-software" title="Permalink to this headline">¶</a></h2>
@@ -245,7 +250,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="userguide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="userguide.html" class="btn btn-neutral float-right" title="Data Processing Pipeline" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="document.html" class="btn btn-neutral" title="Document" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -278,7 +283,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1 beta',
+            VERSION:'1.1.0 beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
