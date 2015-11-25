@@ -72,9 +72,11 @@ which is used internally in our program. According to VTK's documentation:
 We simplify the trackball interaction to used middle button for both panning and zooming, 
 in order to spare right mouse click to popup option menu for more actions.
 
-The **Background Color** for 3D view is defined as black by default.
-This can be changed from option menu popped up when *right* mouse click event is captured. 
+The background color for 3D view is defined as black by default.
+This can be changed from context menu popped up when *right* mouse click event is captured. 
 By selecting the color from the popup color dialog, the background color is changed instantly.
+Also, saving screenshots as PNG image is enabled from the context menu.
+The default image is named after current timestamp to avoid naming duplication.
 
 2D Navigation
 -------------
@@ -215,8 +217,13 @@ To display deterministic tractography results, the program generates and display
 in either lines or tubes. 
 One can load fiber files by selecting `Load Fiber` either from menu or toolbar.
 The definition of .fiber files is available at :ref:`Data Format` page.
-The specification for .trk file is defined by 
+The specification of .trk file format is available at
 `TrackVis <http://www.trackvis.org/docs/?subsect=fileformat>`_. 
+
+.. figure:: images/view_fiber_prop.png
+  :align: center
+
+  Fiber data properties panel
 
 Basic fiber data statistics is available on data properties panel once an arbitary tract file 
 is loaded. The statistics information include number of fibers in a tract, average length of fibers and
@@ -224,11 +231,21 @@ total volume covered by the tract etc.
 These information are generated during fiber tracking process, and there is extra computation during
 online visualization.
 
+.. figure:: images/fiber_final.png
+  :width: 400
+  :align: center
+
+  A comparison of fibers rendered in different render types.
+
 Several display options are available to provided high quality rendering results.
 For performance reasons, tracts are rendered as slim lines by default. 
 Therefore, detail shapes of the fibers are not clearly visible. 
 However, location and orientation information of the lines are quite clear.
-By adjusting `Color Code` and `Render Type`, one can easily visualize multiple fiber files.
+By adjusting **Color Code** and **Render Type**, one can easily visualize multiple fiber files.
+On the above figure, two images on the left are fibers rendered as lines, 
+while the two images on the right are rendered as tubes. 
+Images on the top row are fibers rendered with directional coloring, 
+while fibers on the bottom row are signed to a single color.
 
 .. note:: 
   Note that rendering whole brain fiber in 'Tube' rendering type can be quite slow for 
@@ -239,23 +256,41 @@ By adjusting `Color Code` and `Render Type`, one can easily visualize multiple f
 Tensor/ODF/FOD Layer
 ====================
 
-Tensor Data Visualization
--------------------------
+Both diffusion tensor and ODF can be visualized within this layer.
+After adjusting rendering parameters, the **Render** button should be pressed in order to 
+regenerate the scene. This prevents the time-consuming processing, 
+every time when users are trying to change the configuration.
+
+.. figure:: images/view_odf_prop.png
+  :align: center
+
+  Tensor/ODF/FOD data properties panel
+
+Diffusion tensor (DTI) file input should be a typical 4D NIFTI image, with exactly six volumes. 
+The six values on each voxel represents entries in a 3x3 symmetric positive definite matrix.
+Numerical definition can be found at :ref:`DTI_Reconstruction` section.
+
+Diffusion orientation distribution function (ODF) file input should be a 4d image, too.
+However, it's fourth dimension should be one of 15,28,45,66,91 etc. 
+If the format is incorrect, the program would refuse to load the image to avoid potential errors.
+Numerical definition can be found at :ref:`SPFI_Reconstruction` and :ref:`CSD_Reconstruction` section.
 
 ..
- Due to diffusion tensor data is rendered as classical ellipsoid.
-
-ODF/FOD Visualization
----------------------
+  Tensor Data Visualization
+  -------------------------
+  Diffusion tensor is rendered as classical ellipsoid.
+  ODF/FOD Visualization
+  ---------------------
 
 Due to performance reasons, ODF/FOD is rendered in low resolution by default.
 For researchers who need high-resolution images for publication quality results, an option in
 the properties panel is provided.
 
-
-.. 
- |odf_lowres| |odf_highres|
- .. note:: show comparison of low/high resolution rendering
+.. figure:: images/odf_res_final.png
+  :width: 400
+  :align: center
+  
+  A comparison of low/high resolution ODF rendering
  
 .. include:: common.txt
 

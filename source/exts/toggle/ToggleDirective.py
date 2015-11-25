@@ -69,6 +69,7 @@ function toggle(label) {
 """
 
     js_ready = """
+<script type="text/javascript" src="_static/jquery.js"></script>
 <script>
 %s
 $(document).ready(function() {

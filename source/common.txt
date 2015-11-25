@@ -39,11 +39,12 @@
 .. |fibers2| image:: images/fibers2.png
    :width: 330
 
-.. |odf_lowres| image:: images/odf_lowres.png
+.. |odf_lowres| image:: images/odf_res_low.png
    :width: 300
 
-.. |odf_highres| image:: images/odf_highres.png
+.. |odf_highres| image:: images/odf_res_high.png
    :width: 300
+
 
 
 
