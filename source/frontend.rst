@@ -41,6 +41,28 @@ Details on the implement can be found at
 Reconstruct
 ===========
 
+Starting from this section, we provide three different approaches for diffusion MR data processing:
+
+.. toggle_table::
+  :arg1: DTI
+  :arg2: SPFI
+  :arg3: CSD
+
+Click one of the options above to see guidelines on using the specific method for data processing.
+				 
+.. toggle:: DTI
+
+ this is for dti
+
+.. toggle:: SPFI
+
+ this is for spfi
+
+.. toggle:: CSD
+
+ this is for csd
+
+
 Fiber Tracking
 ==============
 
