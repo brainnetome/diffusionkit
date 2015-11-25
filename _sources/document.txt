@@ -12,6 +12,7 @@ Document
 	 
    overview.rst
    userguide.rst
+   frontend.rst
    visualization.rst
    tutorial.rst
    fileformat.rst
@@ -19,6 +20,5 @@ Document
    reference.rst
 
 ..
-   frontend.rst
 
 .. include:: common.txt

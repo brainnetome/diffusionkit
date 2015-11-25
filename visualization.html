@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Guidelines on Data Visualization &mdash; Diffusion Kit 1.1.0 beta documentation</title>
+  <title>Guidelines on Data Visualization &mdash; DiffusionKit 1.1.0 beta documentation</title>
   
 
   
@@ -31,10 +31,10 @@
   
 
   
-    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/>
+    <link rel="top" title="DiffusionKit 1.1.0 beta documentation" href="index.html"/>
         <link rel="up" title="Document" href="document.html"/>
         <link rel="next" title="Tutorial" href="tutorial.html"/>
-        <link rel="prev" title="Data Processing Pipeline" href="userguide.html"/> 
+        <link rel="prev" title="GUI Fornt-end of Data Processing Pipeline" href="frontend.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Diffusion Kit
+            <a href="index.html" class="icon icon-home"> DiffusionKit
           
 
           
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.1.0b2
+                1.1.0b
               </div>
             
           
@@ -87,6 +87,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overivew</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frontend.html">GUI Fornt-end of Data Processing Pipeline</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Guidelines on Data Visualization</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#command-line-interface">Command Line Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#image-data-navigation">Image Data Navigation</a><ul>
@@ -102,11 +103,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#region-of-interest-roi-layer">Region of Interest (ROI) Layer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fiber-layer">Fiber Layer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tensor-odf-fod-layer">Tensor/ODF/FOD Layer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tensor-data-visualization">Tensor Data Visualization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#odf-fod-visualization">ODF/FOD Visualization</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#tensor-odf-fod-layer">Tensor/ODF/FOD Layer</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
@@ -132,7 +129,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Diffusion Kit</a>
+        <a href="index.html">DiffusionKit</a>
       </nav>
 
 
@@ -221,16 +218,18 @@ and ctrl + left button for <em>spinning</em>. (With fewer mouse buttons,
 ctrl + shift + left button is for zooming, and shift + left button is for panning.)</div></blockquote>
 <p>We simplify the trackball interaction to used middle button for both panning and zooming,
 in order to spare right mouse click to popup option menu for more actions.</p>
-<p>The <strong>Background Color</strong> for 3D view is defined as black by default.
-This can be changed from option menu popped up when <em>right</em> mouse click event is captured.
-By selecting the color from the popup color dialog, the background color is changed instantly.</p>
+<p>The background color for 3D view is defined as black by default.
+This can be changed from context menu popped up when <em>right</em> mouse click event is captured.
+By selecting the color from the popup color dialog, the background color is changed instantly.
+Also, saving screenshots as PNG image is enabled from the context menu.
+The default image is named after current timestamp to avoid naming duplication.</p>
 </div>
 <div class="section" id="id1">
 <h3>2D Navigation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Three 2D slice image views are placed below 3D view by default.
 The three slice views from left to right are <em>sagittal plane, coronal plane</em> and
 <em>axial plane</em> respectively.</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/view_slice2d.png"><img alt="_images/view_slice2d.png" src="_images/view_slice2d.png" style="width: 420px;" /></a>
 <p class="caption"><span class="caption-text"><em>sagittal plane, coronal plane</em> and <em>axial plane</em> (left to right)</span></p>
 </div>
@@ -253,7 +252,7 @@ please refer to FSL&#8217;s <a class="reference external" href="http://fsl.fmrib
 <p>Beginning from this section, several kinds of &#8216;layers&#8217; are described.
 Each &#8216;layer&#8217; may be contrain one or more data that holds the same property.
 By default, the layers manager is located at top-right side of the window.</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/overlaymgr.png"><img alt="_images/overlaymgr.png" src="_images/overlaymgr.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">The layers manager</span></p>
 </div>
@@ -268,10 +267,15 @@ doesn&#8217;t aware which background image is laid that the bottom that might be
 overlaid by subsequently loaded images.</p>
 <p>Once background image is loaded, several basic data information is shown in the
 data property panel.</p>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/view_bgprop.png"><img alt="_images/view_bgprop.png" src="_images/view_bgprop.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">property panel showing mni152 as background image</span></p>
 </div>
+<p>The widget below the data property panel is the color table for <a class="reference internal" href="#volume-rendering"><span>Volume Rendering</span></a>.
+The horizontal axis indicates intensity values of a target image, while
+the vertical axis of the widget indicate the opacity value that maps the intensity values
+onto visible planes in volume rendering. One can adjust opacity map (by dragging blue opacity nodes)
+as well as color map to get proper renderering results.</p>
 <div class="section" id="image-contrast-enhancement">
 <h3>Image Contrast Enhancement<a class="headerlink" href="#image-contrast-enhancement" title="Permalink to this headline">¶</a></h3>
 <p>During loading a Background image, the minimum and maximum intensity values are
@@ -280,23 +284,26 @@ By narrow down the range of image intensity values, one can the enhance image co
 <p>Note that this functionality is currently applied for 2d sliced views only.</p>
 </div>
 <div class="section" id="volume-image-overlay">
-<h3>Volume Image Overlay<a class="headerlink" href="#volume-image-overlay" title="Permalink to this headline">¶</a></h3>
-<p>By loading multiple image throught <strong>Load Background</strong> menu, one can
-This enables the user to make slice to slice comparison to find out image registration errors.</p>
+<span id="id2"></span><h3>Volume Image Overlay<a class="headerlink" href="#volume-image-overlay" title="Permalink to this headline">¶</a></h3>
+<p>By loading multiple image throught <strong>Load Background</strong> menu, one can place one image over another,
+Therefore, it&#8217;s easy to make slice-to-slice comparison to find out image registration errors
+by adjusting opacity values of the upper level image.</p>
+<p>This feature can be quite useful for verifying <a class="reference internal" href="frontend.html#skull-stripping"><span>Skull Stripping</span></a> results.
+After performing skull stripping, ...</p>
 <div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last">PUT OVERLAY IMAGE HERE!</p>
 </div>
 </div>
 <div class="section" id="volume-rendering">
-<h3>Volume Rendering<a class="headerlink" href="#volume-rendering" title="Permalink to this headline">¶</a></h3>
+<span id="id3"></span><h3>Volume Rendering<a class="headerlink" href="#volume-rendering" title="Permalink to this headline">¶</a></h3>
 <p>Volume rendering of the background image can be enabled in <em>Data Property</em> panel.
 Once volume rendering is enabled, a color table is shown to enable users to adjust
 color map and opacity values that maps intensity values onto visible planes.
 This functionality is particularly useful for visualizing skull-stripped T1 image,
 where the folds that increase the surface area of the cortex can be
 directly visible without threshold-based surface extraction.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id7">
 <a class="reference internal image-reference" href="_images/volrender.png"><img alt="_images/volrender.png" src="_images/volrender.png" style="width: 320px;" /></a>
 <p class="caption"><span class="caption-text">volume rendering of mni152 data</span></p>
 </div>
@@ -306,28 +313,82 @@ directly visible without threshold-based surface extraction.</p>
 <h2>Region of Interest (ROI) Layer<a class="headerlink" href="#region-of-interest-roi-layer" title="Permalink to this headline">¶</a></h2>
 <p>To describe the location of a specific region, we employ the ROI layer.
 It outlines surface of the region on 3d view, along with a filled area on 2d slice views.</p>
+<p>To open a ROI file, click on &#8216;Load ROI&#8217; from either menu or toolbar.
+Note that loading multiple ROI data files that located within the same directory is allowed.
+Therefore, one don&#8217;t have load splitted brain atlas files one-by-one.</p>
+<p>To change the color of a selected ROI files, set Color to different value from
+the data properties panel. This is useful when more than one ROI file is loaded,
+and it&#8217;s hard to distinguish them by appearance.</p>
+<p>To adjust transparency of the surface or the filled area in 2d views,
+set opacity value of the selected fiber file to a value range form 0 to 1.</p>
 <div class="admonition-todo admonition" id="index-2">
 <p class="first admonition-title">Todo</p>
 <p class="last">compute the voxel-level volume size of a region, as well as its size in millimeters
 (by multiplying spacing).</p>
 </div>
-<p>Once the image data is loaded</p>
-<p>Besides, loading multiple ROI data that located within the same directory is allowed.
-This saves</p>
 </div>
 <div class="section" id="fiber-layer">
 <h2>Fiber Layer<a class="headerlink" href="#fiber-layer" title="Permalink to this headline">¶</a></h2>
+<p>To display deterministic tractography results, the program generates and displays .fiber/.trk files
+in either lines or tubes.
+One can load fiber files by selecting <cite>Load Fiber</cite> either from menu or toolbar.
+The definition of .fiber files is available at <a class="reference internal" href="fileformat.html#data-format"><span>Data Format</span></a> page.
+The specification of .trk file format is available at
+<a class="reference external" href="http://www.trackvis.org/docs/?subsect=fileformat">TrackVis</a>.</p>
+<div class="figure align-center" id="id8">
+<img alt="_images/view_fiber_prop.png" src="_images/view_fiber_prop.png" />
+<p class="caption"><span class="caption-text">Fiber data properties panel</span></p>
+</div>
+<p>Basic fiber data statistics is available on data properties panel once an arbitary tract file
+is loaded. The statistics information include number of fibers in a tract, average length of fibers and
+total volume covered by the tract etc.
+These information are generated during fiber tracking process, and there is extra computation during
+online visualization.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/fiber_final.png"><img alt="_images/fiber_final.png" src="_images/fiber_final.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">A comparison of fibers rendered in different render types.</span></p>
+</div>
+<p>Several display options are available to provided high quality rendering results.
+For performance reasons, tracts are rendered as slim lines by default.
+Therefore, detail shapes of the fibers are not clearly visible.
+However, location and orientation information of the lines are quite clear.
+By adjusting <strong>Color Code</strong> and <strong>Render Type</strong>, one can easily visualize multiple fiber files.
+On the above figure, two images on the left are fibers rendered as lines,
+while the two images on the right are rendered as tubes.
+Images on the top row are fibers rendered with directional coloring,
+while fibers on the bottom row are signed to a single color.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that rendering whole brain fiber in &#8216;Tube&#8217; rendering type can be quite slow for
+low performance computers. However, a progress bar would popup to show the current loading progress.
+Also, we recommand storing whole brain fiber files as .trk format instead of .fiber file to
+increase file loading efficiency.</p>
+</div>
 </div>
 <div class="section" id="tensor-odf-fod-layer">
 <h2>Tensor/ODF/FOD Layer<a class="headerlink" href="#tensor-odf-fod-layer" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="tensor-data-visualization">
-<h3>Tensor Data Visualization<a class="headerlink" href="#tensor-data-visualization" title="Permalink to this headline">¶</a></h3>
+<p>Both diffusion tensor and ODF can be visualized within this layer.
+After adjusting rendering parameters, the <strong>Render</strong> button should be pressed in order to
+regenerate the scene. This prevents the time-consuming processing,
+every time when users are trying to change the configuration.</p>
+<div class="figure align-center" id="id10">
+<img alt="_images/view_odf_prop.png" src="_images/view_odf_prop.png" />
+<p class="caption"><span class="caption-text">Tensor/ODF/FOD data properties panel</span></p>
 </div>
-<div class="section" id="odf-fod-visualization">
-<h3>ODF/FOD Visualization<a class="headerlink" href="#odf-fod-visualization" title="Permalink to this headline">¶</a></h3>
+<p>Diffusion tensor (DTI) file input should be a typical 4D NIFTI image, with exactly six volumes.
+The six values on each voxel represents entries in a 3x3 symmetric positive definite matrix.
+Numerical definition can be found at <a class="reference internal" href="userguide.html#dti-reconstruction"><span>DTI Reconstruction</span></a> section.</p>
+<p>Diffusion orientation distribution function (ODF) file input should be a 4d image, too.
+However, it&#8217;s fourth dimension should be one of 15,28,45,66,91 etc.
+If the format is incorrect, the program would refuse to load the image to avoid potential errors.
+Numerical definition can be found at <a class="reference internal" href="userguide.html#spfi-reconstruction"><span>SPFI Reconstruction</span></a> and <a class="reference internal" href="userguide.html#csd-reconstruction"><span>CSD Reconstruction</span></a> section.</p>
 <p>Due to performance reasons, ODF/FOD is rendered in low resolution by default.
 For researchers who need high-resolution images for publication quality results, an option in
 the properties panel is provided.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/odf_res_final.png"><img alt="_images/odf_res_final.png" src="_images/odf_res_final.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">A comparison of low/high resolution ODF rendering</span></p>
+</div>
 <script type="text/javascript" src="_static/jquery.js"></script>
 <script type="text/javascript">
 $(window).load(function(){
@@ -342,7 +403,6 @@ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script></div>
 </div>
-</div>
 
 
            </div>
@@ -354,7 +414,7 @@ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\('
         <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="userguide.html" class="btn btn-neutral" title="Data Processing Pipeline" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="frontend.html" class="btn btn-neutral" title="GUI Fornt-end of Data Processing Pipeline" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

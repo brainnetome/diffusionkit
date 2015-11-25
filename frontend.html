@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GUI Fornt-end of Data Processing Pipeline &mdash; Diffusion Kit 1.1.0 beta documentation</title>
+  <title>GUI Fornt-end of Data Processing Pipeline &mdash; DiffusionKit 1.1.0 beta documentation</title>
   
 
   
@@ -31,7 +31,10 @@
   
 
   
-    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/> 
+    <link rel="top" title="DiffusionKit 1.1.0 beta documentation" href="index.html"/>
+        <link rel="up" title="Document" href="document.html"/>
+        <link rel="next" title="Guidelines on Data Visualization" href="visualization.html"/>
+        <link rel="prev" title="Data Processing Pipeline" href="userguide.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -49,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Diffusion Kit
+            <a href="index.html" class="icon icon-home"> DiffusionKit
           
 
           
@@ -59,7 +62,7 @@
             
             
               <div class="version">
-                1.1.0b2
+                1.1.0b
               </div>
             
           
@@ -80,8 +83,28 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="document.html">Document</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="document.html">Document</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overivew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">GUI Fornt-end of Data Processing Pipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preprocessing">Preprocessing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dicom-to-nifti-conversion">DICOM to NIFTI Conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eddy-current-correction">Eddy Current Correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skull-stripping">Skull Stripping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-for-diffusion-model-reconstruction">GUI for Diffusion Model Reconstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fiber-tracking">Fiber Tracking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">Future Improvements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -99,7 +122,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Diffusion Kit</a>
+        <a href="index.html">DiffusionKit</a>
       </nav>
 
 
@@ -115,6 +138,8 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="document.html">Document</a> &raquo;</li>
       
     <li>GUI Fornt-end of Data Processing Pipeline</li>
       <li class="wy-breadcrumbs-aside">
@@ -134,6 +159,172 @@
 </div>
 <div class="section" id="gui-fornt-end-of-data-processing-pipeline">
 <h1>GUI Fornt-end of Data Processing Pipeline<a class="headerlink" href="#gui-fornt-end-of-data-processing-pipeline" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
+<p>A &#8216;Confirmation&#8217; option is provided in each of the following preprocessing step.
+When confirmation is required, the program displays the processing result
+after the target file is generated to ensure the correctness the final result.</p>
+<div class="section" id="dicom-to-nifti-conversion">
+<h3>DICOM to NIFTI Conversion<a class="headerlink" href="#dicom-to-nifti-conversion" title="Permalink to this headline">¶</a></h3>
+<p>This is the GUI front end for <code class="code docutils literal"><span class="pre">dcm2nii</span></code> program. Details can be found at
+<a class="reference internal" href="userguide.html#dicom-to-nifti"><span>DICOM to NIFTI Conversion</span></a> section.</p>
+<div class="figure align-center">
+<img alt="_images/gui_dcm2nii.png" src="_images/gui_dcm2nii.png" />
+</div>
+</div>
+<div class="section" id="eddy-current-correction">
+<h3>Eddy Current Correction<a class="headerlink" href="#eddy-current-correction" title="Permalink to this headline">¶</a></h3>
+<p>This is the GUI front end for <code class="code docutils literal"><span class="pre">bneddy</span></code> program. Details can be found at
+<a class="reference internal" href="userguide.html#eddy-current-correction"><span>Eddy and motion correction</span></a> section.</p>
+<div class="figure align-center">
+<img alt="_images/gui_bneddy.png" src="_images/gui_bneddy.png" />
+</div>
+<p>Since this is a time-consuming step in preprocessing stage, one can skip
+this step ignoring potential image registration error in original DWI data
+by unchecking the option. Then the converted NIFTI image would be input of
+brain extraction tool directly if the skull stripping option is enabled.</p>
+</div>
+<div class="section" id="skull-stripping">
+<span id="id1"></span><h3>Skull Stripping<a class="headerlink" href="#skull-stripping" title="Permalink to this headline">¶</a></h3>
+<p>FSL&#8217;s <a class="reference external" href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET">BET (Brain Extraction Tool)</a> is
+integrated as part of the program, so that one can verify automatic skull stripping result
+by visualizing overlaying mask image upon original image.
+See <a class="reference internal" href="visualization.html#volume-image-overlay"><span>Volume Image Overlay</span></a> on how to generate overlaid background images.</p>
+<div class="figure align-center">
+<img alt="_images/gui_bnstrip.png" src="_images/gui_bnstrip.png" />
+</div>
+<p>A threshold value that indicate &#8216;fractional intensity&#8217; is exposed on the GUI,
+so that one can adjust the threshold to get smaller/larger brain outline estimates.
+Details on the implement can be found at
+<a class="reference external" href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET/UserGuide">BET&#8217;s UserGuide</a>.</p>
+</div>
+</div>
+<div class="section" id="gui-for-diffusion-model-reconstruction">
+<h2>GUI for Diffusion Model Reconstruction<a class="headerlink" href="#gui-for-diffusion-model-reconstruction" title="Permalink to this headline">¶</a></h2>
+<p>Starting from this section, we provide three different approaches for diffusion MR data processing:</p>
+<p>This is the GUI front end for <a class="reference internal" href="userguide.html#reconstruction"><span>Reconstruction of the diffusion model</span></a>, which generates required model for
+<a class="reference internal" href="userguide.html#fiber-tracking"><span>Fiber tracking and attributes extraction</span></a> from DWI image and related b-values.</p>
+<div class="container">
+<button class="toggleable_button label_DTI" onclick="
+function toggle(label) {
+  $('.toggleable_button').css({border: '2px outset', 'border-radius': '4px'});
+  $('.toggleable_button.label_' + label).css({border: '2px inset', 'border-radius': '4px'});
+  $('.toggleable_div').css('display', 'none');
+  $('.toggleable_div.label_' + label).css('display', 'block');
+};
+toggle('DTI')">DTI</button>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script>
+
+function toggle(label) {
+  $('.toggleable_button').css({border: '2px outset', 'border-radius': '4px'});
+  $('.toggleable_button.label_' + label).css({border: '2px inset', 'border-radius': '4px'});
+  $('.toggleable_div').css('display', 'none');
+  $('.toggleable_div.label_' + label).css('display', 'block');
+};
+
+$(document).ready(function() {
+  var classList =$('.toggleable_button').attr('class').split(/\s+/);
+  $.each( classList, function(index, item){
+  if (item.substring(0, 5) === 'label') {
+    toggle(item.substring(6));
+  };
+  });
+});
+</script>
+<button class="toggleable_button label_SPFI" onclick="
+function toggle(label) {
+  $('.toggleable_button').css({border: '2px outset', 'border-radius': '4px'});
+  $('.toggleable_button.label_' + label).css({border: '2px inset', 'border-radius': '4px'});
+  $('.toggleable_div').css('display', 'none');
+  $('.toggleable_div.label_' + label).css('display', 'block');
+};
+toggle('SPFI')">SPFI</button>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script>
+
+function toggle(label) {
+  $('.toggleable_button').css({border: '2px outset', 'border-radius': '4px'});
+  $('.toggleable_button.label_' + label).css({border: '2px inset', 'border-radius': '4px'});
+  $('.toggleable_div').css('display', 'none');
+  $('.toggleable_div.label_' + label).css('display', 'block');
+};
+
+$(document).ready(function() {
+  var classList =$('.toggleable_button').attr('class').split(/\s+/);
+  $.each( classList, function(index, item){
+  if (item.substring(0, 5) === 'label') {
+    toggle(item.substring(6));
+  };
+  });
+});
+</script>
+<button class="toggleable_button label_CSD" onclick="
+function toggle(label) {
+  $('.toggleable_button').css({border: '2px outset', 'border-radius': '4px'});
+  $('.toggleable_button.label_' + label).css({border: '2px inset', 'border-radius': '4px'});
+  $('.toggleable_div').css('display', 'none');
+  $('.toggleable_div.label_' + label).css('display', 'block');
+};
+toggle('CSD')">CSD</button>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script>
+
+function toggle(label) {
+  $('.toggleable_button').css({border: '2px outset', 'border-radius': '4px'});
+  $('.toggleable_button.label_' + label).css({border: '2px inset', 'border-radius': '4px'});
+  $('.toggleable_div').css('display', 'none');
+  $('.toggleable_div.label_' + label).css('display', 'block');
+};
+
+$(document).ready(function() {
+  var classList =$('.toggleable_button').attr('class').split(/\s+/);
+  $.each( classList, function(index, item){
+  if (item.substring(0, 5) === 'label') {
+    toggle(item.substring(6));
+  };
+  });
+});
+</script>
+</div>
+<p>Click one of the options above to see guidelines on using the specific method for data processing.</p>
+<div class="container">
+<div class="toggleable_div label_DTI"><div class="figure align-center" id="id2">
+<img alt="_images/gui_recon_dti.png" src="_images/gui_recon_dti.png" />
+<p class="caption"><span class="caption-text">GUI front-end for <a class="reference internal" href="userguide.html#dti-reconstruction"><span>DTI Reconstruction</span></a> using <code class="code docutils literal"><span class="pre">bndti_estimate</span></code></span></p>
+</div>
+</div></div>
+<div class="container">
+<div class="toggleable_div label_SPFI"><div class="figure align-center" id="id3">
+<img alt="_images/gui_recon_spfi.png" src="_images/gui_recon_spfi.png" />
+<p class="caption"><span class="caption-text">GUI front-end for <a class="reference internal" href="userguide.html#spfi-reconstruction"><span>SPFI Reconstruction</span></a> using <code class="code docutils literal"><span class="pre">bnhardi_ODF_estimate</span></code></span></p>
+</div>
+</div></div>
+<div class="container">
+<div class="toggleable_div label_CSD"><div class="figure align-center" id="id4">
+<img alt="_images/gui_recon_csd.png" src="_images/gui_recon_csd.png" />
+<p class="caption"><span class="caption-text">GUI front-end for <a class="reference internal" href="userguide.html#csd-reconstruction"><span>CSD Reconstruction</span></a> using <code class="code docutils literal"><span class="pre">bnhardi_FOD_estimate</span></code></span></p>
+</div>
+</div></div>
+<p>Once DWI data is selected through file selection dialog, all other input and output
+options would be automatically generated.
+This simplifies the usage of command-line program, which requires a list of options to be entered.</p>
+</div>
+<div class="section" id="fiber-tracking">
+<h2>Fiber Tracking<a class="headerlink" href="#fiber-tracking" title="Permalink to this headline">¶</a></h2>
+<p>To generate fiber tracking result using previously generated diffusion model,
+we provide the GUI front-end for using <code class="code docutils literal"><span class="pre">bndti_tracking</span></code> and <code class="code docutils literal"><span class="pre">bnhardi_tracking</span></code>,
+which generate tract files from DTI and HARDI respectively.
+The details of the program are described on <a class="reference internal" href="userguide.html#fiber-tracking"><span>Fiber tracking and attributes extraction</span></a> section.</p>
+<div class="figure align-center">
+<img alt="_images/gui_fibertracking.png" src="_images/gui_fibertracking.png" />
+</div>
+<p>Fiber tracking require seed(ROI) files to initialize a tracking process.
+One can either generate the seed files from the <strong>Registration Tool</strong> we provided from
+<strong>Tools</strong> menu, or split a brain atlas image (e.g. AAL) using <code class="code docutils literal"><span class="pre">bncalc</span></code> or <code class="code docutils literal"><span class="pre">bnroisplit</span></code>
+into multiple ROI files.
+To generate whole brain fiber, just use the brain mask image generated during <a class="reference internal" href="#skull-stripping"><span>Skull Stripping</span></a>
+as seed input. This may cost a few minutes when HARDI is used as input diffusion model.</p>
 <script type="text/javascript" src="_static/jquery.js"></script>
 <script type="text/javascript">
 $(window).load(function(){
@@ -147,11 +338,21 @@ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script></div>
+</div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="visualization.html" class="btn btn-neutral float-right" title="Guidelines on Data Visualization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="userguide.html" class="btn btn-neutral" title="Data Processing Pipeline" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

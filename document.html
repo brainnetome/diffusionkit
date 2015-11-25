@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Document &mdash; Diffusion Kit 1.1.0 beta documentation</title>
+  <title>Document &mdash; DiffusionKit 1.1.0 beta documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="Diffusion Kit 1.1.0 beta documentation" href="index.html"/>
+    <link rel="top" title="DiffusionKit 1.1.0 beta documentation" href="index.html"/>
         <link rel="next" title="Overivew" href="overview.html"/>
         <link rel="prev" title="Homepage" href="index.html"/> 
 
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Diffusion Kit
+            <a href="index.html" class="icon icon-home"> DiffusionKit
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.1.0b2
+                1.1.0b
               </div>
             
           
@@ -85,6 +85,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Document</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overivew</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frontend.html">GUI Fornt-end of Data Processing Pipeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fileformat.html">Data Format</a></li>
@@ -109,7 +110,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Diffusion Kit</a>
+        <a href="index.html">DiffusionKit</a>
       </nav>
 
 
@@ -147,12 +148,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="userguide.html">Data Processing Pipeline</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#eddy-and-motion-correction">Eddy and motion correction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#brain-stripping">Brain stripping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html#preprocessing">Preprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#dicom-to-nifti-conversion">DICOM to NIFTI Conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#eddy-and-motion-correction">Eddy and motion correction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#skull-stripping-brain-extraction">Skull Stripping (Brain Extraction)</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="userguide.html#reconstruction-of-the-diffusion-model">Reconstruction of the diffusion model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#dti-reconstruction">DTI reconstruction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#spfi-reconstruction">SPFI reconstruction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#csd-reconstruction">CSD reconstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#dti-reconstruction">DTI Reconstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#spfi-reconstruction">SPFI Reconstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#csd-reconstruction">CSD Reconstruction</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="userguide.html#fiber-tracking-and-attributes-extraction">Fiber tracking and attributes extraction</a></li>
@@ -164,6 +169,17 @@
 <li class="toctree-l3"><a class="reference internal" href="userguide.html#reference">Reference</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="frontend.html">GUI Fornt-end of Data Processing Pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="frontend.html#preprocessing">Preprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="frontend.html#dicom-to-nifti-conversion">DICOM to NIFTI Conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend.html#eddy-current-correction">Eddy Current Correction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend.html#skull-stripping">Skull Stripping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="frontend.html#gui-for-diffusion-model-reconstruction">GUI for Diffusion Model Reconstruction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frontend.html#fiber-tracking">Fiber Tracking</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Guidelines on Data Visualization</a><ul>
@@ -181,11 +197,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#region-of-interest-roi-layer">Region of Interest (ROI) Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#fiber-layer">Fiber Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualization.html#tensor-odf-fod-layer">Tensor/ODF/FOD Layer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="visualization.html#tensor-data-visualization">Tensor Data Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="visualization.html#odf-fod-visualization">ODF/FOD Visualization</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#tensor-odf-fod-layer">Tensor/ODF/FOD Layer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
