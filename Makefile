@@ -39,7 +39,7 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	-rm -rf $(BUILDDIR)/_static $(BUILDDIR)/doctrees $(BUILDDIR)/objects.inv $(BUILDDIR)/searchindex.js $(BUILDDIR)/*.html 
+	-rm -rf $(BUILDDIR)/_static $(BUILDDIR)/_images $(BUILDDIR)/_sources $(BUILDDIR)/doctrees $(BUILDDIR)/objects.inv $(BUILDDIR)/searchindex.js $(BUILDDIR)/*.html 
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/
