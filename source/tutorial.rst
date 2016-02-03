@@ -8,7 +8,7 @@ Tutorial
 --------
 
 .. meta::
-   :description: Tutorial on Diffusion Kit
+   :description: Tutorial on DiffusionKit
 
 .. toctree::
    :maxdepth: 3

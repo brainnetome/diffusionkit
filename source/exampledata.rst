@@ -12,14 +12,27 @@
 Example Data
 ============
 
-We provide a group of test data to test the software, and the data was also used in [1]_.
+We provide a group of test data to test the software, and the data 
+was also used in `[11] <reference.html#id11>`_ .
 
 Basic source for Bash (B-shell) and Python
 ------------------------------------------
 
-If you want to use script for batch processing, we strongly recommend using Python, since it has nice grammar style and is portable for cross platform. 
+If you want to use script for batch processing, we strongly recommend using Python, 
+since it has nice grammar style and is portable for cross platform. 
 
-The Python is easy to learn for basic use as a script language, although its powerful functions largely depend on 3rd party packages. To this end, we have several suggestions to begin with it. First, take a couple of hours to go through the primary Python grammars. There is a large bundle of free but kind tutorials from internet (Google “Python tutorial” or related keywords). You can choose the websites according to your preference. If you are a newbie of Python, don’t think about which version is appropriate for you and just use the latest version (Python>3.0) (In the current stage, you only need to note the difference of “print” function in different versions, which I think is not a smart change from version 3.0); and don’t waste money to buy a book since the materials from the internet are largely beyond your capacity. Several tutorial links are listed here:
+The Python is easy to learn for basic use as a script language, 
+although its powerful functions largely depend on 3rd party packages. To this 
+end, we have several suggestions to begin with it. First, take a couple of hours 
+to go through the primary Python grammars. There is a large bundle of free 
+but kind tutorials from internet (Google “Python tutorial” or related keywords). 
+You can choose the websites according to your preference. If you are a newbie of 
+Python, don’t think about which version is appropriate for you and just use 
+the latest version (Python>3.0) (In the current stage, you only need to note 
+the difference of “print” function in different versions, which I think is not 
+a smart change from version 3.0); and don’t waste money to buy a book since 
+the materials from the internet are largely beyond your capacity. Several 
+tutorial links are listed here:
 
 For English users
 
@@ -33,7 +46,11 @@ For Chinese users
 2. http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html, python and advanced
 3. http://woodpecker.org.cn/abyteofpython_cn/chinese/, a complete reference
 
-If you prefer to use shell script, like Bash, you can also find some entrances for tutorials. The shell script itself is easy to follow and it is a powerful tool to concatenate the underlying execution functions. It should be noted that the Bash script is only for * NUX system, so it is not suitable form cross-platforms. Several tutorial links are listed here:
+If you prefer to use shell script, like Bash, you can also find some 
+entrances for tutorials. The shell script itself is easy to follow and it is 
+a powerful tool to concatenate the underlying execution functions. It should be 
+noted that the Bash script is only for * NUX system, so it is not 
+suitable form cross-platforms. Several tutorial links are listed here:
 
 For English users
 
@@ -61,14 +78,9 @@ Done! Please refer to the diffusionkit/extern/script folder.
 Advanced topics: How to generate figures in the paper?
 ---------------------------------------------------------------------------------------------
 
-Done! Please refer to the diffusionkit/extern/script folder [1]_.
+Done! Please refer to the diffusionkit/extern/script folder `[11] <reference.html#id11>`_.
 
 (Xie et al, Journal of Neuroscience Methods, submitted)
-
-Reference
----------
-
-.. [1] Xie S., Zuo N., Shang L., Song M., Fan L., Jiang T., 2015. How does B-value affect HARDI reconstruction using clinical diffusion MRI data? PLoS One 10, e0120773.
 
 .. include:: common.txt
 

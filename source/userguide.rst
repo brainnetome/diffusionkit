@@ -74,7 +74,7 @@ give the link of your data if it has big size beyond the email capability.
 Eddy and motion correction
 --------------------------
 
-During the MRI scanning, many factors can cause magnetic field inhomogeneity, including changing magnetic fields from the imaging gradients and the radiofrequency (RF) coils and yielded biological effects. These effects usually degrade the imaging quality, resulting in artifacts including shearing and blurring (http://mri-q.com/eddy-current-problems.html). Another type of artifacts is caused by head motion. Most of the artifacts described above could be amended by post-processing. In the eddy correction module, we apply a rigid registration method to address most of the shearing and motion artifacts. For the blurring artifacts, it still needs further investigation. Additional solutions would be added to reduce the magnetic field inhomogeneity by field mapping.
+During the MRI scanning, many factors can cause magnetic field inhomogeneity, including changing magnetic fields from the imaging gradients and the radiofrequency (RF) coils and yielded biological effects. These effects usually degrade the imaging quality, resulting in artifacts including shearing and blurring (http://mri-q.com/eddy-current-problems.html). Another type of artifacts is caused by head motion. Most of the artifacts described above could be amended by post-processing. In the eddy correction module, we apply a affine registration method to address most of the shearing and motion artifacts. For the blurring artifacts, it still needs further investigation. Additional solutions would be added to reduce the magnetic field inhomogeneity by field mapping.
 
 .. code-block:: bash
 
@@ -82,7 +82,8 @@ During the MRI scanning, many factors can cause magnetic field inhomogeneity, in
  bneddy: Head Motion Correction. 
     -i                Input file.
     -o                Output file.
-    -ref     0        Indicating which frame is the reference.
+    -ref     0        Reference image.
+    -omp     2        Max number of threads.
 
 Skull Stripping (Brain Extraction)
 ----------------------------------
@@ -117,7 +118,7 @@ This module is to strip the brain skull and extract the brain tissue, including 
 Reconstruction of the diffusion model
 =====================================
 
-The reconstruction for diffusion model within pixels is one of the key topics in diffusion MRI research and it is also one of key modules of the software. At the current stage, we have integrated three modeling methods: one is the traditional Gaussian model (commonly known as DTI, diffusion tensor imaging), and the other two are for high angular resolution diffusion imaging (HARDI). For more detailed information please refer to our review paper [11,13]_.
+The reconstruction for diffusion model within pixels is one of the key topics in diffusion MRI research and it is also one of key modules of the software. At the current stage, we have integrated three modeling methods: one is the traditional Gaussian model (commonly known as DTI, diffusion tensor imaging), and the other two are for high angular resolution diffusion imaging (HARDI). For more detailed information please refer to our review paper `[11] <reference.html#id11>`_ `[13] <reference.html#id13>`_ .
 
 .. _DTI_Reconstruction:
 
@@ -140,7 +141,7 @@ In the b-value in Eq. (1), $\\gamma$ is the proton gyromagnetic ratio, $\\bf{G}=
  E(b)=\frac{S({b})}{S(0)}=\exp(-{b}D)
  \end{equation} $$
 
-where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor [12]_ to represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
+where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor `[12] <reference.html#id12>`_ to represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
 
 .. raw:: html
 
@@ -156,7 +157,7 @@ where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects th
 
    Figure 4. Tensor field and the scalar maps estimated from a monkey data with b = 1500s/mm2.
 
-The diffusion tensor D can be estimated from measured diffusion signal samples  through a simple least square method or weighted least square method [12]_, or more complex methods that consider positive deﬁnite constraint or Rician noise. If single b-value is used, the optimal b-value for tensor estimation was reported to in the range of (0.7, 1.5) × 10−3 s/mm2, and normally about twenty DWI images are used in DTI in clinical study. ome useful indices can be obtained from tensor D. The most important three indices are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
+The diffusion tensor D can be estimated from measured diffusion signal samples  through a simple least square method or weighted least square method `[12] <reference.html#id12>`_, or more complex methods that consider positive deﬁnite constraint or Rician noise. If single b-value is used, the optimal b-value for tensor estimation was reported to in the range of (0.7, 1.5) × 10−3 s/mm2, and normally about twenty DWI images are used in DTI in clinical study. ome useful indices can be obtained from tensor D. The most important three indices are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
 
 .. raw:: html
 
@@ -177,7 +178,7 @@ The diffusion tensor D can be estimated from measured diffusion signal samples  
  {\rm{RA}}=\sqrt{\frac{(\lambda_1-\bar{\lambda})^2+(\lambda_2-\bar{\lambda})^2+(\lambda_3-\bar{\lambda})^2}{3\bar{\lambda}}}
  \end{equation} $$ 
 
-where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA have been used in many clinical applications. For example, MD is known to be useful in stroke study. For more detailed information please refer to our review paper [13]_.
+where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA have been used in many clinical applications. For example, MD is known to be useful in stroke study. For more detailed information please refer to our review paper `[13] <reference.html#id13>`_.
 
 .. code-block:: bash
 
@@ -199,7 +200,7 @@ where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA ha
 SPFI Reconstruction
 -------------------
 
-It was proposed that the SPFI method has more powerful capability to identify the tangling fibers [8]_. In SPFI [8]_, the diffusion signal  is represented by spherical polar Fourier (SPF) basis functions in Eq. 7. 
+It was proposed that the SPFI method has more powerful capability to identify the tangling fibers `[8] <reference.html#id8>`_. In SPFI `[8] <reference.html#id8>`_, the diffusion signal  is represented by spherical polar Fourier (SPF) basis functions in Eq. 7. 
 
 .. raw:: html
 
@@ -222,7 +223,7 @@ represented by the spherical harmonics basis, as in Eq. 8.
 
 It is a model-free, regularized, fast and robust reconstruction method 
 which can be performed with single-shell or multiple-shell HARDI data to 
-estimate the ODF proposed by Wedeen et al. [14]_. 
+estimate the ODF proposed by Wedeen et al. `[14] <reference.html#id14>`_. 
 The implementation of analytical SPFI includes two independent steps. 
 The first estimates the coefficients of $E(q)$ with least squares, 
 and the second transforms the coefficients of $E(q)$ to the coefficients of ODF.
@@ -255,7 +256,7 @@ and the second transforms the coefficients of $E(q)$ to the coefficients of ODF.
 CSD Reconstruction
 ------------------
 
-The CSD method was proposed by Tournier et al. [9]_, which expresses the diffusion signal as in Eq. 9,
+The CSD method was proposed by Tournier et al. `[9] <reference.html#id9>`_, which expresses the diffusion signal as in Eq. 9,
 
 .. raw:: html
 
@@ -307,7 +308,7 @@ which inspired an efficient C/C++ implementation.
 Fiber tracking and attributes extraction
 ========================================
 
-Fiber tracking is a critical way to construct the anatomical connectivity matrix. For the tracking based on tensors from DTI, an intuitive way is to link the neighboring voxels following their main directions (e.g. V1 in the eigenvector of the DTI) given a set of some stop criteria, such as maximum bending angle of the curve and minimum FA value, which is to ensure the target voxel is indeed white matter microstructure. This is the so called deterministic streamline tractography [15]_, as illustrated in Figure 5.
+Fiber tracking is a critical way to construct the anatomical connectivity matrix. For the tracking based on tensors from DTI, an intuitive way is to link the neighboring voxels following their main directions (e.g. V1 in the eigenvector of the DTI) given a set of some stop criteria, such as maximum bending angle of the curve and minimum FA value, which is to ensure the target voxel is indeed white matter microstructure. This is the so called deterministic streamline tractography `[15] <reference.html#id15>`_, as illustrated in Figure 5.
 
 .. figure:: images/tractography.png
    :width: 800 px
@@ -383,68 +384,164 @@ Several other useful tools
 Image registration
 ------------------
 
-This module is implemented by elastix [10]_, which integrates a collection of functions from ITK [1]_. In our software, the registration module is customized to auto-configure the parameter settings between different image modalities, e.g., two DWI images (for eddy current correction in current version), standard space and T1 space (for mapping ROIs to the individual space), DWI space and standard space (for statistical comparisons across subjects). This module contains two separate submodules, <code>elastix</code> for computing the transform matrix and <code>transformix</code> for applying the existing transform matrix to an image.
+This module is implemented by NiftyReg, which is an open-source software 
+for efficient medical image registration. It has been mainly developed by 
+members of the Translational Imaging Group with the Centre for Medical 
+Image Computing at University College London, UK `[10] <reference.html#id10>`_. 
+In our software, the registration module is customized to auto-configure 
+the parameter settings for different image modalities, e.g., two DWI 
+images (for eddy current correction in current version), standard space and T1 
+space (for mapping ROIs to the individual space), DWI space and 
+standard space (for statistical comparisons across subjects). This 
+module contains several commands :code:`reg_aladin` is the command for 
+rigid and afiine registration which is based on a block-matching approach and 
+a Trimmed Least Square (TLS) scheme `[18] <reference.html#id18>`_ 
+`[19] <reference.html#id19>`_. :code:`reg_f3d` is the command to perform 
+non-linear registration which is based on the Free-From Deformation presented 
+by Rueckert et al. `[20] <reference.html#id20>`_. :code:`reg_resample` is 
+been embedded in the package. It uses the output of :code:`reg_aladin` and 
+:code:`reg_f3d` to apply transformation, generate deformation fields or 
+Jacobian map images for example. 
 
 .. code-block:: bash
 
- ccm@:bin$ ./elastix -h
- elastix version: 4.700
- elastix registers a moving image to a fixed image.
- The registration-process is specified in the parameter file.
-  --help, -h displays this message and exit
-  --version  output version information and exit
- Call elastix from the command line with mandatory arguments:
-  -f        fixed image
-  -m        moving image
-  -out      output directory
-  -p        parameter file, elastix handles 1 or more "-p"
- Optional extra commands:
-  -fMask    mask for fixed image
-  -mMask    mask for moving image
-  -t0       parameter file for initial transform
-  -priority set the process priority to high, abovenormal, normal (default),
-            belownormal, or idle (Windows only option)
-  -threads  set the maximum number of threads of elastix
+ ccm@:bin$ ./reg_aladin -h
+ Block Matching algorithm for global registration.
+ Based on Ourselin et al., "Reconstructing a 3D structure from serial histological sections", Image and Vision Computing, 2001
+ 
+ Usage:	reg_aladin -ref <filename> -flo <filename> [OPTIONS].
+	-ref <filename>	Reference image filename (also called Target or Fixed) (mandatory)
+	-flo <filename>	Floating image filename (also called Source or moving) (mandatory)
+ 
+ OPTIONS
+	-noSym 			The symmetric version of the algorithm is used by default. Use this flag to disable it.
+	-rigOnly		To perform a rigid registration only. (Rigid+affine by default)
+	-affDirect		Directly optimize 12 DoF affine. (Default is rigid initially then affine)
+	-aff <filename>		Filename which contains the output affine transformation. [outputAffine.txt]
+	-inaff <filename>	Filename which contains an input affine transformation. (Affine*Reference=Floating) [none]
+	-rmask <filename>	Filename of a mask image in the reference space.
+	-fmask <filename>	Filename of a mask image in the floating space. (Only used when symmetric turned on)
+	-res <filename>		Filename of the resampled image. [outputResult.nii]
+	-maxit <int>		Maximal number of iterations of the trimmed least square approach to perform per level. [5]
+	-ln <int>		Number of levels to use to generate the pyramids for the coarse-to-fine approach. [3]
+	-lp <int>		Number of levels to use to run the registration once the pyramids have been created. [ln]
+	-smooR <float>		Standard deviation in mm (voxel if negative) of the Gaussian kernel used to smooth the Reference image. [0]
+	-smooF <float>		Standard deviation in mm (voxel if negative) of the Gaussian kernel used to smooth the Floating image. [0]
+	-refLowThr <float>	Lower threshold value applied to the reference image. [0]
+	-refUpThr <float>	Upper threshold value applied to the reference image. [0]
+	-floLowThr <float>	Lower threshold value applied to the floating image. [0]
+	-floUpThr <float>	Upper threshold value applied to the floating image. [0]
+	-nac			Use the nifti header origin to initialise the transformation. (Image centres are used by default)
+	-cog			Use the input masks centre of mass to initialise the transformation. (Image centres are used by default)
+	-interp			Interpolation order to use internally to warp the floating image.
+	-iso			Make floating and reference images isotropic if required.
+	-pv <int>		Percentage of blocks to use in the optimisation scheme. [50]
+	-pi <int>		Percentage of blocks to consider as inlier in the optimisation scheme. [50]
+	-speeeeed		Go faster
+	-omp <int>		Number of thread to use with OpenMP. [4]
+	-voff			Turns verbose off [on]
 
-The parameter-file must contain all the information necessary for elastix to runproperly. That includes which metric to use, which optimizer, which transform, etc. It must also contain information specific for the metric, optimizer, transform, etc. For a usable parameter-file, see the website.
+.. code-block:: bash
+
+ ccm@:bin$ ./reg_f3d -h
+ Fast Free-Form Deformation algorithm for non-rigid registration.
+ Based on Modat et al., "Fast Free-Form Deformation using graphics processing units", CMPB, 2010
+ 
+ Usage:	reg_f3d -ref <filename> -flo <filename> [OPTIONS].
+	-ref <filename>	Filename of the reference image (mandatory)
+	-flo <filename>	Filename of the floating image (mandatory)
+
+ OPTIONS
+ Initial transformation options (One option will be considered):
+	-aff <filename>		Filename which contains an affine transformation (Affine*Reference=Floating)
+	-incpp <filename>	Filename ofloatf control point grid input
+
+ Output options:
+	-cpp <filename>		Filename of control point grid [outputCPP.nii]
+	-res <filename> 	Filename of the resampled image [outputResult.nii]
+
+ Input image options:
+	-rmask <filename>		Filename of a mask image in the reference space
+	-smooR <float>			Smooth the reference image using the specified sigma (mm) [0]
+	-smooF <float>			Smooth the floating image using the specified sigma (mm) [0]
+	--rLwTh <float>			Lower threshold to apply to the reference image intensities [none]. Identical value for every timepoint.*
+	--rUpTh <float>			Upper threshold to apply to the reference image intensities [none]. Identical value for every timepoint.*
+	--fLwTh <float>			Lower threshold to apply to the floating image intensities [none]. Identical value for every timepoint.*
+	--fUpTh <float>			Upper threshold to apply to the floating image intensities [none]. Identical value for every timepoint.*
+	-rLwTh <timepoint> <float>	Lower threshold to apply to the reference image intensities [none]*
+	-rUpTh <timepoint> <float>	Upper threshold to apply to the reference image intensities [none]*
+	-fLwTh <timepoint> <float>	Lower threshold to apply to the floating image intensities [none]*
+	-fUpTh <timepoint> <float>	Upper threshold to apply to the floating image intensities [none]*
+
+ Spline options:
+	-sx <float>		Final grid spacing along the x axis in mm (in voxel if negative value) [5 voxels]
+	-sy <float>		Final grid spacing along the y axis in mm (in voxel if negative value) [sx value]
+	-sz <float>		Final grid spacing along the z axis in mm (in voxel if negative value) [sx value]
+
+ Regularisation options:
+	-be <float>		Weight of the bending energy penalty term [0.005]
+	-le <float> <float>	Weights of linear elasticity penalty term [0.0 0.0]
+	-l2 <float>		Weights of L2 norm displacement penalty term [0.0]
+	-jl <float>		Weight of log of the Jacobian determinant penalty term [0.0]
+	-noAppJL		To not approximate the JL value only at the control point position
+
+ Measure of similarity options:
+ NMI with 64 bins is used expect if specified otherwise
+	--nmi			NMI. Used NMI even when one or several other measures are specified.
+	--rbn <int>		NMI. Number of bin to use for the reference image histogram. Identical value for every timepoint.
+	--fbn <int>		NMI. Number of bin to use for the floating image histogram. Identical value for every timepoint.
+	-rbn <tp> <int>		NMI. Number of bin to use for the reference image histogram for the specified time point.
+	-rbn <tp> <int>		NMI. Number of bin to use for the floating image histogram for the specified time point.
+	--lncc <float>		LNCC. Standard deviation of the Gaussian kernel. Identical value for every timepoint
+	-lncc <tp> <float>	LNCC. Standard deviation of the Gaussian kernel for the specified timepoint
+	--ssd			SSD. Used for all time points
+	-ssd <tp>		SSD. Used for the specified timepoint
+	--kld			KLD. Used for all time points
+	-kld <tp>		KLD. Used for the specified timepoint
+	-amc			To use the additive NMI for multichannel data (bivariate NMI by default)
+
+ Optimisation options:
+	-maxit <int>		Maximal number of iteration per level [300]
+	-ln <int>		Number of level to perform [3]
+	-lp <int>		Only perform the first levels [ln]
+	-nopy			Do not use a pyramidal approach
+	-noConj			To not use the conjuage gradient optimisation but a simple gradient ascent
+	-pert <int>		To add perturbation step(s) after each optimisation scheme
+
+ F3D2 options:
+	-vel 			Use a velocity field integration to generate the deformation
+	-fmask <filename>	Filename of a mask image in the floating space
+
+ OpenMP-related options:
+	-omp <int>		Number of thread to use with OpenMP. [4]
+
+ Other options:
+	-smoothGrad <float>	To smooth the metric derivative (in mm) [0]
+	-pad <float>		Padding value [nan]
+	-voff			To turn verbose off
+
+.. code-block:: bash
+
+ ccm@:bin$ ./reg_resample -h
+ Usage:	reg_resample -ref <filename> -flo <filename> [OPTIONS].
+	-ref <filename>      Filename of the reference image (mandatory)
+	-flo <filename>      Filename of the floating image (mandatory)
+
+ OPTIONS
+	-trans <filename>    Filename of the file containing the transformation parametrisation (from reg_aladin, reg_f3d or reg_transform)
+	-res <filename>      Filename of the resampled image [none]
+	-blank <filename>    Filename of the resampled blank grid [none]
+	-inter <int>         Interpolation order (0, 1, 3, 4)[3] (0=NN, 1=LIN; 3=CUB, 4=SINC)
+	-pad <int>           Interpolation padding value [0]
+	-tensor              The last six timepoints of the floating image are considered to be tensor order as XX, XY, YY, XZ, YZ, ZZ [off]
+	-psf                 Perform the resampling in two steps to resample an image to a lower resolution [off]
+	-voff                Turns verbose off [on]
+
 
 Need further help?
 ~~~~~~~~~~~~~~~~~~
 
-Check the website http://elastix.isi.uu.nl, or mail elastix@bigr.nl.
-
-.. code-block:: bash
-
- ccm@:bin$ ./transformix -h
- transformix version: 4.700
- transformix applies a transform on an input image and/or generates a deformation field.
- The transform is specified in the transform-parameter file.
-  --help, -h displays this message and exit
-  --version  output version information and exit
-
-Call transformix from the command line with mandatory arguments:
-
--out      output directory
--tp       transform-parameter file, only 1
-
-Optional extra commands:
-
--in        input image to deform
--def       file containing input-image points; the point are transformed
-           according to the specified transform-parameter file
-           use "-def all" to transform all points from the input-image, which
-           effectively generates a deformation field.
--jac       use "-jac all" to generate an image with the determinant of the
-           spatial Jacobian
--jacmat    use "-jacmat all" to generate an image with the spatial Jacobian
-           matrix at each voxel
--priority  set the process priority to high, abovenormal, normal (default),
-           belownormal, or idle (Windows only option)
--threads   set the maximum number of threads of transformix
-
-At least one of the options "-in", "-def", "-jac", or "-jacmat" should be given.
-
-The transform-parameter file must contain all the information necessary for transformix to run properly. That includes which transform to use, with which parameters, etc. For a usable transform-parameter file, run elastix, and inspect the output file "TransformParameters.0.txt".
+Check the website http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg.
 
 Image calculation and ROI generation
 ------------------------------------
@@ -513,7 +610,7 @@ bnfiber_stats, to extract statistical properties of the fiber bundle, such as me
  (Sep 17 2015, 14:47:12)
     -fiber                                    Input fiber file, then output mean FA/MD, number of fibers et al.
 
-bnfiber_map, to compute the fiber density map which is used in track density imaging [16]_.
+bnfiber_map, to compute the fiber density map which is used in track density imaging `[16] <reference.html#id16>`_.
 
 .. code-block:: bash
 
@@ -555,21 +652,24 @@ bninfo, to display a short head information of the input image. Supported input 
  (Jul 15 2015, 11:50:01)
     -i                                        Nifti/ANALYZE/DICOM file.
 
-Reference
----------
-
-.. [1] http://www.itk.org
-.. [7] Smith SM. Fast robust automated brain extraction. Human Brain Mapping, 17(3):143-155, 2002.
-.. [8] Cheng J, Jiang T, Deriche R. Nonnegative definite EAP and ODF estimation via a unified multi-shell HARDI reconstruction. Med Image Comput Comput Assist Interv., 15(Pt 2):313-21, 2012.
-.. [9] Tournier JD, Calamante F, Connelly A. Robust determination of the fibre orientation distribution in diffusion MRI: non-negativity constrained super-resolved spherical deconvolution. Neuroimage, 35 (4): 1459-1472, 2007.
-.. [10] http://elastix.isi.uu.nl/ 
-.. [11] Xie S., Zuo N., Shang L., Song M., Fan L., Jiang T., 2015. How does B-value affect HARDI reconstruction using clinical diffusion MRI data? PLoS One 10, e0120773.
-.. [12] Basser P.J., Mattiello J., LeBihan D., MR diffusion tensor spectroscopy and imaging. Biophysical journal, 1994. 66, 259-267.
-.. [13] Zuo N., Cheng J., Jiang T., 2012. Diffusion magnetic resonance imaging for Brainnetome: A critical review, Neuroscience bulletin, DOI: 10.1007/s12264-012-1245-3.
-.. [14] Wedeen V.J., Hagmann P., Tseng W.Y., Reese T.G., Weisskoff R.M., 2005. Mapping complex tissue architecture with diffusion spectrum magnetic resonance imaging. Magn Reson Med, 54(6):1377-1386.
-.. [15] Alexander, A.L., Lee, J.E., Lazar, M., Field, A.S., 2007. Diffusion tensor imaging of the brain. Neurotherapeutics 4, 316-329.
-.. [16] Calamante F., Tournier J.D., Heidemann R.M., Anwander A., Jackson G.D., Connelly A., 2011. Track density imaging (TDI): validation of super resolution property. Neuroimage, 56, 1259-66.
-.. [17] http://trackvis.org
+.. 
+ Reference
+ ---------
+ .. [1] http://www.itk.org
+ .. [7] Smith SM. Fast robust automated brain extraction. Human Brain Mapping, 17(3):143-155, 2002.
+ .. [8] Cheng J, Jiang T, Deriche R. Nonnegative definite EAP and ODF estimation via a unified multi-shell HARDI reconstruction. Med Image Comput Comput Assist Interv., 15(Pt 2):313-21, 2012.
+ .. [9] Tournier JD, Calamante F, Connelly A. Robust determination of the fibre orientation distribution in diffusion MRI: non-negativity constrained super-resolved spherical deconvolution. Neuroimage, 35 (4): 1459-1472, 2007.
+ .. [10] http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg 
+ .. [11] Ourselin S, Stefanescu R, Pennec X. Robust registration of multi-modal images: towards real-time clinical applications. Medical Image Computing and Computer Assisted Intervention. Springer Berlin Heidelberg, 2002: 140-147. 
+ .. [12] Ourselin S, Roche A, Subsol G, et al. Reconstructing a 3D structure from serial histological section. Image and vision computing, 2001, 19(1): 25-31. 
+ .. [13] Modat M, Ridgway G R, Taylor Z A, et al. Fast free-form deformation using graphics processing units. Computer methods and programs in biomedicine, 2010, 98(3): 278-284. 
+ .. [12] Xie S., Zuo N., Shang L., Song M., Fan L., Jiang T., 2015. How does B-value affect HARDI reconstruction using clinical diffusion MRI data? PLoS One 10, e0120773.
+ .. [13] Basser P.J., Mattiello J., LeBihan D., MR diffusion tensor spectroscopy and imaging. Biophysical journal, 1994. 66, 259-267.
+ .. [13] Zuo N., Cheng J., Jiang T., 2012. Diffusion magnetic resonance imaging for Brainnetome: A critical review, Neuroscience bulletin, DOI: 10.1007/s12264-012-1245-3.
+ .. [14] Wedeen V.J., Hagmann P., Tseng W.Y., Reese T.G., Weisskoff R.M., 2005. Mapping complex tissue architecture with diffusion spectrum magnetic resonance imaging. Magn Reson Med, 54(6):1377-1386.
+ .. [15] Alexander, A.L., Lee, J.E., Lazar, M., Field, A.S., 2007. Diffusion tensor imaging of the brain. Neurotherapeutics 4, 316-329.
+ .. [16] Calamante F., Tournier J.D., Heidemann R.M., Anwander A., Jackson G.D., Connelly A., 2011. Track density imaging (TDI): validation of super resolution property. Neuroimage, 56, 1259-66.
+ .. [17] http://trackvis.org
 
 .. include:: common.txt
 

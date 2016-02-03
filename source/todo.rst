@@ -8,7 +8,7 @@ Future Improvements
 -------------------
 
 .. meta::
-   :description: Overivew of Diffusion Kit
+   :description: Overivew of DiffusionKit
 
 .. toctree::
    :maxdepth: 3
