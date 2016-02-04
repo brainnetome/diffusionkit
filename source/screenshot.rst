@@ -7,9 +7,6 @@
 Screenshots
 ===========
 
-Linux
-=====
-
 |sticks| |slices|
 
 |4A| |mainwindow| 
@@ -17,9 +14,6 @@ Linux
 |fibers| |fibers2|
 
 .. include:: common.txt
-
-Windows
-=======
 
 
 

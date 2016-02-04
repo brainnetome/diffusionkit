@@ -65,6 +65,7 @@ material contained within.
    :maxdepth: 1
    
    document.rst
+   tutorial.rst
    screenshot.rst
    download.rst
    license.rst

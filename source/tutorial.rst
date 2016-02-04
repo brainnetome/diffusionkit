@@ -14,6 +14,7 @@ Tutorial
    :maxdepth: 3
 
    exampledata.rst
+   generateroi.rst
 
 .. include:: common.txt
 

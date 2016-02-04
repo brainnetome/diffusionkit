@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-========
-Document
-========
+======
+Manual
+======
 
 .. toctree::
    :maxdepth: 3
@@ -14,7 +14,6 @@ Document
    userguide.rst
    frontend.rst
    visualization.rst
-   tutorial.rst
    fileformat.rst
    todo.rst
    reference.rst

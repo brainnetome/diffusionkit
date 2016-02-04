@@ -9,14 +9,14 @@
 .. toctree::
    :maxdepth: 3
 
-Example Data
-============
+Where can I download example data?
+==================================
 
 We provide a group of test data to test the software, and the data 
 was also used in `[11] <reference.html#id11>`_ .
 
 Basic source for Bash (B-shell) and Python
-------------------------------------------
+==========================================
 
 If you want to use script for batch processing, we strongly recommend using Python, 
 since it has nice grammar style and is portable for cross platform. 
@@ -66,17 +66,17 @@ For Chinese users
 
 
 How to compute FA/MD/tensor et al for a group subjects?
--------------------------------------------------------
+=======================================================
 
 Done! Please refer to the diffusionkit/extern/script folder.
 
 How to generate the anatomical connectivity matrix for a given ROI group?
--------------------------------------------------------------------------
+=========================================================================
 
 Done! Please refer to the diffusionkit/extern/script folder.
 
-Advanced topics: How to generate figures in the paper?
----------------------------------------------------------------------------------------------
+How to generate figures in the paper?
+======================================================
 
 Done! Please refer to the diffusionkit/extern/script folder `[11] <reference.html#id11>`_.
 

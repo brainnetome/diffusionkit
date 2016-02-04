@@ -51,23 +51,25 @@ give the link of your data if it has big size beyond the email capability.
 
 .. code-block:: bash
 
- ccm@:bin$ ./dcm2nii -h
- Compression will be faster with /usr/local/bin/pigz
- Chris Rorden's dcm2niiX version 24Nov2014
- usage: dcm2nii [options] <in_folder>
+  ccm@:bin$ ./dcm2nii -h
+  Compression will be faster with /usr/local/bin/pigz
+  Chris Rorden's dcm2niiX version 24Nov2014
+  usage: dcm2nii [options] <in_folder>
   Options :
-   -h : show help
-   -f : filename (%c=comments %f=folder name %p=protocol %i ID of 
+
+   -h   show help
+   -f   filename (%c=comments %f=folder name %p=protocol %i ID of 
         patient %n=name of patient %s=series, %t=time; default 'DTI')
-   -o : output directory (omit to save to input folder)
-   -z : gz compress images (y/n, default n)
- Defaults file : /home/ccm/.dcm2nii.ini
- Examples :
+   -o   output directory (omit to save to input folder)
+   -z   gz compress images (y/n, default n)
+
+  Defaults file : /home/ccm/.dcm2nii.ini
+  Examples :
   dcm2nii /Users/chris/dir
   dcm2nii -o /users/cr/outdir/ -z y ~/dicomdir
   dcm2nii -f mystudy%s ~/dicomdir
   dcm2nii -o "~/dir with spaces/dir" ~/dicomdir
- Example output filename: '/DTI.nii.gz'
+  Example output filename: '/DTI.nii.gz'
 
 .. _Eddy_Current_Correction:
 
