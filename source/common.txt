@@ -1,0 +1,52 @@
+.. raw:: html
+
+ <script type="text/javascript" src="_static/jquery.js"></script>
+ <script type="text/javascript">
+ $(window).load(function(){
+ $('.wy-breadcrumbs-aside').hide();
+ $('.wy-table-responsive').css('margin-bottom','0px');
+ });
+ </script>
+ <script type="text/javascript" 
+ src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+ <script type="text/x-mathjax-config">
+ MathJax.Hub.Config({showMathMenu: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+ </script>
+
+
+.. |br| raw:: html
+
+ <br/>
+
+.. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN
+
+.. |4A| image:: images/4A.png
+   :width: 300
+
+.. |mainwindow| image:: images/mainwindow.png
+   :width: 320
+
+.. |sticks| image:: images/sticks.png
+   :width: 300
+
+.. |slices| image:: images/slices.png
+   :width: 310
+
+.. |fibers| image:: images/fibers.png
+   :width: 300
+
+.. |fibers2| image:: images/fibers2.png
+   :width: 330
+
+.. |odf_lowres| image:: images/odf_res_low.png
+   :width: 300
+
+.. |odf_highres| image:: images/odf_res_high.png
+   :width: 300
+
+
+
+
+
+
