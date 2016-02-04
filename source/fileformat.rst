@@ -26,26 +26,92 @@ Please also get back to us if you encounter any problems.
 Output
 ------
 
-All the intermediate files are in compressed NIFTI format (.nii.gz). The final track file is in .fiber/.fbr or .trk format, where the former is a short version of the later one. The .trk format is from the TrackVis `[17] <reference.html#id17>`_. 
+All the intermediate files are in compressed NIFTI format (.nii.gz). 
+The final track file is in :code:`.trk` format. 
+The :code:`.trk` format is from the 
+`TrackVis <http://www.trackvis.org/docs/?subsect=fileformat>`_ 
+`[17] <reference.html#id17>`_. 
 
-The .fiber format is as following ::
+Briefly, header section contains following information:
 
- Brainnetome fiber tracking
- Version 1
- Number_Fiber 235
- Mean_Length(mm) 150
- Volume_Total(mm^3)  37020
- Mean_FA  0.6
- Mean_MD  0.07
- 80 101.378 0.5 0.1
- 110.758 148.574 124.982 0.166754 0.3
- 111.253 148.68 123.688 0.198468 0.25
++-----------------+-----------+----------+----------------------------------------------+
+| Name            | Data type | Bytes    | Comment                                      |
++=================+===========+==========+==============================================+
+| id_string[6]    | char      | 6        | ID string for track file, "TRACK"            |
++-----------------+-----------+----------+----------------------------------------------+
+| dim[3]          | short     | 6        | Dimension of the image volume.               |
++-----------------+-----------+----------+----------------------------------------------+
+| voxel_size[3]   | float     | 12       | Voxel size of the image volume.              |
++-----------------+-----------+----------+----------------------------------------------+
+|origin[3]        | float     | 12       | Origin of the image volume.                  |
++-----------------+-----------+----------+----------------------------------------------+
+| n_scalars       | short     | 2        | Number of scalars saved at each track point  |
++-----------------+-----------+----------+----------------------------------------------+
+| s_name[10][20]  | char      | 200      | Name of each scalar.                         |
++-----------------+-----------+----------+----------------------------------------------+
+| n_properties    | short     | 2        | Number of properties saved at each track.    |
++-----------------+-----------+----------+----------------------------------------------+
+| p_name[10][20]  | char      | 200      | Name of each property.                       |
++-----------------+-----------+----------+----------------------------------------------+
+| vox_to_ras[4][4]| float     | 64       | 4x4 matrix for voxel to RAS                  |
++-----------------+-----------+----------+----------------------------------------------+
+| reserved[444]   | char      | 444      | Reserved space for future version.           |
++-----------------+-----------+----------+----------------------------------------------+
+| voxel_order[4]  | char      | 4        | Order of the original image data.            |
++-----------------+-----------+----------+----------------------------------------------+
+| pad2[4]         | char      | 4        | Paddings.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| orient_p[6]     | float     | 24       | Image orientation of the original image.     |
++-----------------+-----------+----------+----------------------------------------------+
+| pad1[2]         | char      | 2        | Paddings.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| invert_x        | uchar     | 1        | Inversion/rotation flags                     |
++-----------------+-----------+----------+----------------------------------------------+
+| invert_y        | uchar     | 1        | As above.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| invert_x        | uchar     | 1        | As above.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| swap_xy         | uchar     | 1        | As above.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| swap_yz         | uchar     | 1        | As above.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| swap_zx         | uchar     | 1        | As above.                                    |
++-----------------+-----------+----------+----------------------------------------------+
+| n_count         | int       | 4        | Number of tracks stored in this track file.  |
++-----------------+-----------+----------+----------------------------------------------+
+| version         | int       | 4        | Version number. Current version is 2.        |
++-----------------+-----------+----------+----------------------------------------------+
+| hdr_size        | int       | 4        | Size of the header, should be 1000.          |
++-----------------+-----------+----------+----------------------------------------------+
 
-The first and second line indicates who produces the file and the version of the file format, and line 3 to line 7 characterize several main attributes of this fiber bundle. From line 8, fiber-wise node descriptions are presented; for example, for one fiber on line 8, [80 101.378 0.5 0.1] corresponds to the total number of nodes, length, mean FA and mean MD of this fiber. Starting from line 9, properties of each node of the fiber are described, e.g., [110.758 148.574 124.982 0.166754 0.3] denote x-, y- and z-coordinate, FA and MD of this node.
+with data section in following format:
 
-.. 
- .. [4] http://www.mccauslandcenter.sc.edu/mricro
- .. [17] http://trackvis.org
++----------+-----------+-----------+----------------------------------------------+
+| Track    | Data type | Bytes     | Comment                                      |
++----------+-----------+-----------+----------------------------------------------+
+| Track #1 | int       | 4         | Number of points in this track, as m.        |
+|          +-----------+-----------+----------------------------------------------+
+|          | float     | (3+n_s)*4 | Track Point #1.                              |
+|          +-----------+-----------+----------------------------------------------+
+|          | float     | (3+n_s)*4 | Track Point #2. Same as above.               |
+|          +-----------+-----------+----------------------------------------------+
+|          | float     | (3+n_s)*4 | Track Point #m. Same as above.               |
+|          +-----------+-----------+----------------------------------------------+
+|          | float     | n_p*4     | n_p float numbers                            |
++----------+-----------+-----------+----------------------------------------------+
+| Track #2 | Same as above.                                                       |
++----------+-----------+-----------+----------------------------------------------+
+| ...                                                                             |
++----------+-----------+-----------+----------------------------------------------+
+| Track #n | Same as above.                                                       |
++----------+-----------+-----------+----------------------------------------------+
+
+By default, we prefined two scalars (FA,MD) and three properties (length,FA,MD) 
+in the generated .trk file, along with six additional values stored in :code:`reserved` section.
+These are `version_num`, `num_fibers`, `mean_length`, `total_volume`, `tractFA`, `tractMD` values in 
+:code:`float` type (single precision).
+
+Again, please visit `DataFormat section on TrackVis.org <http://www.trackvis.org/docs/?subsect=fileformat>`_ for more detail.
 
 .. include:: common.txt
 
