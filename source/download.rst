@@ -13,14 +13,18 @@ Download Links
 .. |winlogo| image:: images/winlogo.jpg
 .. |rellogo| image:: images/rellogo.jpg
 
-|winlogo| `Windows Installer (x86-64) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.1/DiffusionKitSetup-WIN64-v1.1.exe>`_
+Current Release (v1.1-r160204)
+-----------------------------
 
-|winlogo| `Windows Installer (x86) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.1/DiffusionKitSetup-WIN32-v1.1.exe>`_
+|winlogo| `Windows Installer (x86-64) 
+<http://diffusion.brainnetome.org/release/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
 
 |rellogo| `Linux Binary Package (x86-64) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.1/DiffusionKitSetup-x86_64-v1.1.tar.gz>`_
+<http://diffusion.brainnetome.org/release/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_
+
+.. note::
+
+ See `Nightly <http://diffusion.brainnetome.org/nightly>`_ for our previously compiled packages.
 
 System requirement
 ==================
