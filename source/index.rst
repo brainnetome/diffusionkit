@@ -16,17 +16,14 @@ Homepage
 Welcome to Brainnetome DiffusionKit's Homepage
 -----------------------------------------------
 
-..
-	 What is Brainnetome DiffusionKit?
-	 **********************************
+.. note:: 
+ * a full pipeline for (pre-)processing and visualization for diffusion MRI data.
+ * cross-platform support and a small installation size without 3rd party dependency.
+ * utilize a graphical interface along with command-line programs that enables easy operation and batch processing.
 
 Brainnetome DiffusionKit is a light one-stop cross-platform solution to dMRI data analysis. 
 The package delivers a complete pipeline from data format conversion to preprocessing, 
 from local reconstruction to fiber tracking, and from fiber statistics to visualization.
-
-..
-	 What does Brainnetome DiffusionKit consist of?
-	 ***********************************************
 
 It was developed as a cross-platform framework, 
 using ITK `[1] <reference.html#id1>`_ for computation, 
@@ -47,22 +44,9 @@ material contained within.
 
 *Please see the navigation sidebar to the left to begin.*
 
-..
-	 This site covers DiffusionKit’s usage & API documentation. 
-	 For basic info on what DiffusionKit is, including its public changelog & how the project is maintained, 
-	 please see the main project website.
-
-	 Tutorial
-	 --------
-
-	 Usage documentation
-	 -------------------
-
-	 The following list contains all major sections of DiffusionKit’s prose (non-API) documentation, 
-	 which expands upon the concepts outlined in the Overview and Tutorial and also covers advanced topics.
-
 .. toctree::
    :maxdepth: 1
+   :hidden:
    
    document.rst
    tutorial.rst
@@ -74,25 +58,18 @@ material contained within.
 
 .. note:: Document last updated on |today|.
 
-.. 
- Reference
- *********
- .. [1] http://www.itk.org
- .. [2] http://www.vtk.org
- .. [3] http://www.cmake.org
- .. [4] http://www.mccauslandcenter.sc.edu/mricro
- .. [5] http://www.nitrc.org/projects/mrtrix
-
 .. include:: common.txt
 
 .. raw:: html
 
  <script type="text/javascript">
  $(window).load(function(){
- $('.toctree-wrapper').hide();
- $('.reference').css('font-size','10pt');
- $('.fn-backref').css('font-size','10pt');
+ // $('.toctree-wrapper').hide();
+ // $('.reference').css('font-size','10pt');
+ // $('.fn-backref').css('font-size','10pt');
  $('h1').hide();
- $('td').css('padding','2px');
+ // $('td').css('padding','2px');
+ var elem = document.getElementsByClassName('admonition-title')[0];
+ elem.innerHTML=' HIGHLIGHTS';
  });
  </script>
