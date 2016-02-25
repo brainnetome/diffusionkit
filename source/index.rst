@@ -26,8 +26,7 @@ The package delivers a complete pipeline from data format conversion to preproce
 from local reconstruction to fiber tracking, and from fiber statistics to visualization.
 
 It was developed as a cross-platform framework, 
-using ITK `[1] <reference.html#id1>`_ for computation, 
-VTK `[2] <reference.html#id2>`_ for visualization, and Qt for GUI design. 
+using VTK `[2] <reference.html#id2>`_ for visualization, and Qt for GUI design. 
 Both GPU and CPU computing were implemented for visualization to achieve high frame-rate, 
 for rendering complex scene like whole brain tractographs in particular. 
 The project was managed using the compiler-independent CMake `[3] <reference.html#id3>`_, 
