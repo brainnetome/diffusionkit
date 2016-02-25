@@ -7,9 +7,15 @@
 Screenshots
 ===========
 
+Tensor and ODF/FOD Visualization
+--------------------------------
+
 |sticks| |slices|
 
 |4A| |mainwindow| 
+
+Tractography Visualization
+--------------------------
 
 |fibers| |fibers2|
 

@@ -75,8 +75,19 @@ in order to spare right mouse click to popup option menu for more actions.
 The background color for 3D view is defined as black by default.
 This can be changed from context menu popped up when *right* mouse click event is captured. 
 By selecting the color from the popup color dialog, the background color is changed instantly.
+
 Also, saving screenshots as PNG image is enabled from the context menu.
 The default image is named after current timestamp to avoid naming duplication.
+
+.. figure:: images/view_screenshot.png
+   :width: 300
+   :align: center
+
+To customize generated image for different requirements, two additional options are
+provided, as shown in the above screenshot. 
+The higher magnification value indicate higher resolution of generated image.
+By enabling transparent background in output image, one can alternate the 
+background color in a later stage.
 
 2D Navigation
 -------------

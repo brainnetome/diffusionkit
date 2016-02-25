@@ -14,7 +14,7 @@ Homepage
 ========
 
 Welcome to Brainnetome DiffusionKit's Homepage
------------------------------------------------
+----------------------------------------------
 
 .. note:: 
  * a full pipeline for (pre-)processing and visualization for diffusion MRI data.
@@ -36,15 +36,15 @@ Chris Rorden `[4] <reference.html#id4>`_ and the constrained spherical deconvolu
 HARDI reconstruction in MRtrix `[5] <reference.html#id5>`_, 
 were adopted with improved interface and user experience.
 
-For new users, and/or for an overview of DiffusionKit’s basic functionality, 
-please see the `Tutorial <tutorial.html>`_. 
-The rest of the documentation will assume you’re at least passingly familiar with the 
-material contained within.
+* Visit `Manual <document.html>`_ page for a complete list of usage instructions.
+* Visit `Tutorial <tutorial.html>`_ page to take a look at how DiffusionKit can solve your practical problems.
+* Visit `Screenshot <screenshot>`_ page to see how the GUI front-end looks like.
+* For additional problems, please feel free to email us at diffusion.kit@nlpr.ia.ac.cn .
 
 *Please see the navigation sidebar to the left to begin.*
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
    
    document.rst

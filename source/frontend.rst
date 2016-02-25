@@ -61,8 +61,8 @@ so that one can adjust the threshold to get smaller/larger brain outline estimat
 Details on the implement can be found at 
 `BET's UserGuide <http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET/UserGuide>`_.
 
-GUI for Diffusion Model Reconstruction
-======================================
+Diffusion Model Reconstruction
+==============================
 
 Starting from this section, we provide three different approaches for diffusion MR data processing:
 
@@ -119,5 +119,39 @@ One can either generate the seed files from the **Registration Tool** we provide
 into multiple ROI files.
 To generate whole brain fiber, just use the brain mask image generated during :ref:`Skull_Stripping`
 as seed input. This may cost a few minutes when HARDI is used as input diffusion model.
+
+Miscellaneous Tools
+===================
+
+Image Registration
+------------------
+
+This is basically the GUI front-end of NiftyReg, while we perform :code:`reg_aladin` 
+on intra-subject images, and addtionally run :code:`reg_f3d` for inter-subject cases.
+
+The details of the tool is described in 
+`Image Registration <userguide.html#image-registration>`_ section in UserGuide page.
+
+.. figure:: images/gui_registration.png
+  :width: 400px
+  :align: center
+
+Create ROI
+----------
+
+The details of the tool is described in `Image calculation and ROI generation <userguide.html#image-calculation-and-roi-generation>`_ section in UserGuide page.
+
+.. figure:: images/gui_createroi.png
+  :width: 600px
+  :align: center
+
+Fiber Pruning
+-------------
+
+The details of the tool is described in `Fiber manipulation <userguide.html#fiber-manipulation>`_ section in UserGuide page.
+
+.. figure:: images/gui_fiberpruning.png
+  :width: 450px
+  :align: center
 
 .. include:: common.txt

@@ -13,8 +13,8 @@ Download Links
 .. |winlogo| image:: images/winlogo.jpg
 .. |rellogo| image:: images/rellogo.jpg
 
-Current Release (v1.1-r160204)
------------------------------
+Latest Release (v1.1-r160204)
+------------------------------
 
 |winlogo| `Windows Installer (x86-64) 
 <http://diffusion.brainnetome.org/release/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
