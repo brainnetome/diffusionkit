@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-===
-FAQ
-===
+====
+FAQs
+====
 
-1. Why images and fibers are not properly aligned?
---------------------------------------------------
+1. Why images and fibers are not properly aligned in my case?
+-------------------------------------------------------------
 
 This typically happens when nifti image headers are modified
 before generating fiber.
@@ -46,6 +46,49 @@ For more information, we recommand reading FSL's
 and 
 `Docs on qform and sform <http://nifti.nimh.nih.gov/nifti-1/documentation/nifti1fields/nifti1fields_pages/qsform.html>`_ to get a good understanding of orientation layout within NIfTI data format.
 
+2. How to extract the gradient table if the dcm2nii/MRIcron fails?
+------------------------------------------------------------------
+
+The dcm2nii/MRIcron is useful to extract the gradient table for the DWI data. 
+However, occasionally it fails to get the gradient table although it 
+indeed get the NIFTI data from the DICOM images. 
+Herein we provide a temporal solution by calling the Matlab/dicominfo 
+which depends on a specified keyword dictionary.  
+
+.. code-block:: matlab
+
+  function findGrad(dcmfile)
+  % This script is special to locate the individual grad directions
+  % for each DICOM file, if the dicom2nii tool failed to extract them.
+  % by NMZUO, Sept. 12, 2014
+  
+  % Change the following if still fails
+  %prestr = 'DiffusionGradientOrientation';
+  prestr = 'DiffusionGradient';
+  
+  myhdr = dicominfo(dcmfile);
+  myfind = fieldnamesr(myhdr, prestr);
+  iLen = length(myfind);
+  iCount = 0;
+  
+  for i=1:iLen
+     mystr = myfind{i};
+     if strfind(mystr, prestr)
+         iCount = iCount + 1;
+         disp(['Field containing ' prestr ': ' num2str(iCount) ]);
+         disp(mystr);
+				 
+         % to extract the grad directions
+         eval(strcat('myhdr.', mystr))
+     end
+  end
+  end
+
+Please download the two files fieldnamesr.m and findGrad.m. 
+The first one is to generate the full string of the keyword dictionary 
+and second is to find the locations. If your problem remains unsolved, 
+please `send us <diffusion.kit@nlpr.ia.ac.cn>`_ your data 
+(only one 2D/3D DICOM image is enough) and then we will update our DICOM dictionary. 
 
 .. include:: common.txt
 
