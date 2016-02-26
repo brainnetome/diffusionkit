@@ -17,14 +17,14 @@ Latest Release (v1.1-r160204)
 ------------------------------
 
 |winlogo| `Windows Installer (x86-64) 
-<http://diffusion.brainnetome.org/release/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
 
 |rellogo| `Linux Binary Package (x86-64) 
-<http://diffusion.brainnetome.org/release/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_
 
 .. note::
 
- See `Nightly <http://diffusion.brainnetome.org/nightly>`_ for our previously compiled packages.
+ See `Releases <https://github.com/liangfu/diffusionkit/releases>`_ for our previously compiled packages.
 
 System requirement
 ==================
