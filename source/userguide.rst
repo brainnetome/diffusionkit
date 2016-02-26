@@ -186,7 +186,7 @@ where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA ha
 
  ccm@:bin$ ./bndti_estimate -h
  bndti_estimate: Diffusion Tensors Estimation.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:40)
  general arguments
     -d                Input DWI Data, in NIFTI/Analyze format (4D)
@@ -234,7 +234,7 @@ and the second transforms the coefficients of $E(q)$ to the coefficients of ODF.
 
   ccm@:bin$ bnhardi_ODF_estimate -h
   bnhardi_ODF_estimate: Orientation Distribution Function Estimation (SPFI method).
-  DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
   (Jul 15 2015, 11:50:20)
     -d                        dwi data
     -b                        text file contains b-value
@@ -285,7 +285,7 @@ which inspired an efficient C/C++ implementation.
 
  ccm@:bin$ ./bnhardi_FOD_estimate -h
  bnhardi_FOD_estimate: Constraind Spherical Deconvolution (CSD) based HARDI reconstruciton.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Jul 15 2015, 11:50:20)
  general arguments
     -d                            Input DWI Data, in NIFTI/Analyze format (4D)
@@ -323,7 +323,7 @@ Fiber tracking is a critical way to construct the anatomical connectivity matrix
 
  ccm@:bin$ ./bndti_tracking -h
  bndti_tracking: DTI Deterministic Fibertracking.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:46)
     -d                   Input DTI data.
     -m                   Mask Image.
@@ -342,7 +342,7 @@ The tracking module in the software for HARDI estimation is similar to the strea
 
  ccm@:bin$ ./bnhardi_tracking -h
  bnhardi_tracking: HARDI Deterministic Fibertracking.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:46)
    -d                HARDI spherical harmonic image.
    -a                Anisotropy image.
@@ -548,12 +548,15 @@ Check the website http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg.
 Image calculation and ROI generation
 ------------------------------------
 
-The module bncalc provides simple image calculations, such as add/minus/multiply/divide operations. Meanwhile, it can also generate user-defined ROIs given the origin and radius in a user-specified image space.
+The module :code:`bncalc` provides simple image calculations, 
+such as add/minus/multiply/divide operations. 
+Meanwhile, it can also generate user-defined ROIs given 
+the origin and radius in a user-specified image space.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bncalc -h
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ $ bncalc -h
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  This funciton provide basic process for the input data (NIFTI/Analyze format)
  Usage of bncalc:
     -i       image         The original file you want to manage.
@@ -580,8 +583,8 @@ bnfiber_manipulate, to split/merge fiber bundles based on given ROIs.
 
 .. code-block:: bash
 
- bnfiber_manipulate: Merge or prune fiber bundles based on given ROIs.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ bnfiber_prune: Merge or prune fiber bundles based on given ROIs.
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:12)
     -fiber                                    fiber file
     -and                                      AND file: ro1.nii.gz,roi2.nii.gz
@@ -595,7 +598,7 @@ bnfiber_end, to cut the fiber bundles given start/stop ROIs, which is useful to 
 
  ccm@:bin$ ./bnfiber_end -h
  bnfiber_end: Extract fibers which end in the two given rois.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:12)
     -fiber                                    fiber file
     -roi1                                     roi1 file
@@ -608,7 +611,7 @@ bnfiber_stats, to extract statistical properties of the fiber bundle, such as me
 
  ccm@:bin$ ./bnfiber_stats -h
  bnfiber_stats: Show fiber stats.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:12)
     -fiber                                    Input fiber file, then output mean FA/MD, number of fibers et al.
 
@@ -618,7 +621,7 @@ bnfiber_map, to compute the fiber density map which is used in track density ima
 
  ccm@:bin$ ./bnfiber_map -h
  bnfiber_map: Calculate the fiber density according to the reference volume.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:13)
     -fiber                                    Fiber file
     -ref                                      Reference file (NIfTI)
@@ -650,7 +653,7 @@ bninfo, to display a short head information of the input image. Supported input 
 
  ccm@:DWI$ bninfo -h
  bninfo: Show file header information.
- DiffusionKit (v1.1), http://diffusion.brainnetome.org/. 
+ DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Jul 15 2015, 11:50:01)
     -i                                        Nifti/ANALYZE/DICOM file.
 
