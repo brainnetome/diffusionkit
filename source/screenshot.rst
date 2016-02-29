@@ -19,6 +19,8 @@ Tractography Visualization
 
 |fibers| |fibers2|
 
+|fibers3| |fiberlayer|
+
 .. include:: common.txt
 
 

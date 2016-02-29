@@ -39,6 +39,12 @@
 .. |fibers2| image:: images/fibers2.png
    :width: 330
 
+.. |fibers3| image:: images/fibers3.png
+   :width: 330
+
+.. |fiberlayer| image:: images/fiberlayer.png
+   :width: 330
+
 .. |odf_lowres| image:: images/odf_res_low.png
    :width: 300
 
