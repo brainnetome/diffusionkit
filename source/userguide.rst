@@ -17,13 +17,6 @@ Data Processing Pipeline
 Preprocessing
 =============
 
-.. 
-  figure:: images/preprocessing.png
-  :width: 300 px
-  :alt: Data preprocessing steps
-  :align: center
-  Figure 3. Data preprocessing steps, including data format conversion, eddy current correction and brain extraction.
-
 A set of command line tools for data preprocessing steps is described in this section, 
 which include data format conversion, eddy current correction and brain extraction.
 
@@ -32,7 +25,11 @@ which include data format conversion, eddy current correction and brain extracti
 DICOM to NIFTI Conversion
 -------------------------
 
-For saving space of data store, the nii.gz format was used throughout the whole pipeline. Firstly, we use the dcm2nii (by Chris Rorden, https://www.nitrc.org/projects/dcm2nii) to convert the data into a single 3/4D .nii.gz volume-series file, plus bval and bvec files. The format of bval file is ::
+For saving space of data store, the nii.gz format was used throughout the 
+whole pipeline. Firstly, we use the 
+dcm2nii (by Chris Rorden, https://www.nitrc.org/projects/dcm2nii) to convert the 
+data into a single 3/4D .nii.gz volume-series file, plus bval and bvec files. 
+The format of bval file is ::
 
  0 1500 1500 ... 1500
 
@@ -51,7 +48,7 @@ give the link of your data if it has big size beyond the email capability.
 
 .. code-block:: bash
 
-  ccm@:bin$ ./dcm2nii -h
+  $ ./dcm2nii -h
   Compression will be faster with /usr/local/bin/pigz
   Chris Rorden's dcm2niiX version 24Nov2014
   usage: dcm2nii [options] <in_folder>
@@ -76,11 +73,21 @@ give the link of your data if it has big size beyond the email capability.
 Eddy and motion correction
 --------------------------
 
-During the MRI scanning, many factors can cause magnetic field inhomogeneity, including changing magnetic fields from the imaging gradients and the radiofrequency (RF) coils and yielded biological effects. These effects usually degrade the imaging quality, resulting in artifacts including shearing and blurring (http://mri-q.com/eddy-current-problems.html). Another type of artifacts is caused by head motion. Most of the artifacts described above could be amended by post-processing. In the eddy correction module, we apply a affine registration method to address most of the shearing and motion artifacts. For the blurring artifacts, it still needs further investigation. Additional solutions would be added to reduce the magnetic field inhomogeneity by field mapping.
+During the MRI scanning, many factors can cause magnetic field inhomogeneity,
+ including changing magnetic fields from the imaging gradients and the radiofrequency 
+(RF) coils and yielded biological effects. These effects usually degrade 
+the imaging quality, resulting in artifacts including shearing and blurring 
+(http://mri-q.com/eddy-current-problems.html). 
+Another type of artifacts is caused by head motion. Most of the artifacts 
+described above could be amended by post-processing. In the eddy correction 
+module, we apply a affine registration method to address most of the shearing 
+and motion artifacts. For the blurring artifacts, it still needs further 
+investigation. Additional solutions would be added to reduce the magnetic 
+field inhomogeneity by field mapping.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bneddy -h
+ $ ./bneddy -h
  bneddy: Head Motion Correction. 
     -i                Input file.
     -o                Output file.
@@ -90,11 +97,17 @@ During the MRI scanning, many factors can cause magnetic field inhomogeneity, in
 Skull Stripping (Brain Extraction)
 ----------------------------------
 
-This module is to strip the brain skull and extract the brain tissue, including gray matter, white matter, cerebrospinal fluid (CSF) and cerebellum. It largely benefits the following processing and analysis, offering better registration/alignment results and reducing computational time by excluding non-brain tissue. Therefore, although this step is not compulsory, we strongly recommend enforcing it. This module is adapted from the FSL/BET functions (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET) for its excellent efficacy and efficiency. 
+This module is to strip the brain skull and extract the brain tissue, including 
+gray matter, white matter, cerebrospinal fluid (CSF) and cerebellum. It 
+largely benefits the following processing and analysis, offering better 
+registration/alignment results and reducing computational time by excluding 
+non-brain tissue. Therefore, although this step is not compulsory, we strongly 
+recommend enforcing it. This module is adapted from the FSL/BET functions 
+(http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET) for its excellent efficacy and efficiency. 
 
 .. code-block:: bash
 
- ccm@:bin$ ./bet2 -h
+ $ ./bet2 -h
  Part of FSL (build 504)
  BET (Brain Extraction Tool) v2.1 - FMRIB Analysis Group, Oxford
  Usage: 
@@ -120,14 +133,26 @@ This module is to strip the brain skull and extract the brain tissue, including 
 Reconstruction of the diffusion model
 =====================================
 
-The reconstruction for diffusion model within pixels is one of the key topics in diffusion MRI research and it is also one of key modules of the software. At the current stage, we have integrated three modeling methods: one is the traditional Gaussian model (commonly known as DTI, diffusion tensor imaging), and the other two are for high angular resolution diffusion imaging (HARDI). For more detailed information please refer to our review paper `[11] <reference.html#id11>`_ `[13] <reference.html#id13>`_ .
+The reconstruction for diffusion model within pixels is one of the key topics 
+in diffusion MRI research and it is also one of key modules of the software.
+At the current stage, we have integrated three modeling methods: one is 
+the traditional Gaussian model (commonly known as DTI, diffusion tensor 
+imaging), and the other two are for high angular resolution diffusion imaging 
+(HARDI). For more detailed information please refer to our review paper 
+`[11] <reference.html#id11>`_ and `[13] <reference.html#id13>`_ .
 
 .. _DTI_Reconstruction:
 
 DTI Reconstruction
 ------------------
 
-The classical diffusion gradient sequence used in dMRI is the pulsed gradient spin-echo (PGSE) sequence proposed by Stejskal and Tanner. This sequence has 90o and 180o gradient pulses with duration time δ and separation time Δ. To eliminate the dependence of spin density, we need at least two measurements of diffusion weighted imaging (DWI) signals, i.e. S(b) with the diffusion weighting factor b in Eq. (1) introduced by Le Bihan etc, and S(0) with b = 0 which is the baseline signal without any gradient. 
+The classical diffusion gradient sequence used in dMRI is the pulsed gradient 
+spin-echo (PGSE) sequence proposed by Stejskal and Tanner. This sequence 
+has 90o and 180o gradient pulses with duration time δ and separation time Δ. 
+To eliminate the dependence of spin density, we need at least two measurements 
+of diffusion weighted imaging (DWI) signals, i.e. S(b) with the diffusion 
+weighting factor b in Eq. (1) introduced by Le Bihan etc, and S(0) with 
+b = 0 which is the baseline signal without any gradient. 
 
 .. raw:: html
 
@@ -135,7 +160,12 @@ The classical diffusion gradient sequence used in dMRI is the pulsed gradient sp
  b=\gamma^2 \delta^2 (\Delta-\frac{\delta}{3}){||\bf{G}||}^2
  \end{equation} $$
 
-In the b-value in Eq. (1), $\\gamma$ is the proton gyromagnetic ratio, $\\bf{G}=||\\bf{G}||\\bf{u}$ is the diffusion sensitizing gradient pulse with norm $||{\\bf G}||$ and direction ${\\bf u}$. $\\tau=\\Delta-\\frac{1}{3}\\delta$ is normally used to describe the effective diffusion time. Using the PGSE sequence with S(b), the diffusion weighted signal attenuation E(b) is given by Stejskal-Tanner equation,
+In the b-value in Eq. (1), $\\gamma$ is the proton gyromagnetic ratio, 
+$\\bf{G}=||\\bf{G}||\\bf{u}$ is the diffusion sensitizing gradient pulse 
+with norm $||{\\bf G}||$ and direction ${\\bf u}$. $\\tau=\\Delta-\\frac{1}{3}\\delta$ 
+is normally used to describe the effective diffusion time. Using the PGSE 
+sequence with S(b), the diffusion weighted signal attenuation E(b) is given 
+by Stejskal-Tanner equation,
 
 .. raw:: html
 
@@ -143,7 +173,18 @@ In the b-value in Eq. (1), $\\gamma$ is the proton gyromagnetic ratio, $\\bf{G}=
  E(b)=\frac{S({b})}{S(0)}=\exp(-{b}D)
  \end{equation} $$
 
-where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects the property of surrounding tissues. Note that in general ADC D is also dependent on G in a complex way. However, free diffusion in DTI assumes D is only dependent on the direction of G, i.e. . The early works in dMRI reported that ADC D is dependent on gradient direction u and used two or three DWI images in different directions to detect the properties of tissues. Then Basser et al. introduced diffusion tensor `[12] <reference.html#id12>`_ to represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁnite matrix independent of u. This method is called as diffusion tensor imaging (DTI) and is the most common method nowadays in dMRI technique. In DTI, the signal E(b) is represented as 
+where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects 
+the property of surrounding tissues. Note that in general ADC D is also 
+dependent on G in a complex way. However, free diffusion in DTI assumes 
+D is only dependent on the direction of G, i.e. . The early works in dMRI 
+reported that ADC D is dependent on gradient direction u and used two or 
+three DWI images in different directions to detect the properties of tissues.
+ Then Basser et al. introduced diffusion tensor `[12] <reference.html#id12>`_ to 
+represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ 
+is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁ
+nite matrix independent of u. This method is called as diffusion tensor 
+imaging (DTI) and is the most common method nowadays in dMRI technique. In 
+DTI, the signal E(b) is represented as 
 
 .. raw:: html
 
@@ -159,7 +200,14 @@ where D is known as the apparent diffusion coefﬁcient (ADC) which reﬂects th
 
    Figure 4. Tensor field and the scalar maps estimated from a monkey data with b = 1500s/mm2.
 
-The diffusion tensor D can be estimated from measured diffusion signal samples  through a simple least square method or weighted least square method `[12] <reference.html#id12>`_, or more complex methods that consider positive deﬁnite constraint or Rician noise. If single b-value is used, the optimal b-value for tensor estimation was reported to in the range of (0.7, 1.5) × 10−3 s/mm2, and normally about twenty DWI images are used in DTI in clinical study. ome useful indices can be obtained from tensor D. The most important three indices are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
+The diffusion tensor D can be estimated from measured diffusion signal samples 
+through a simple least square method or weighted least square 
+method `[12] <reference.html#id12>`_, or more complex methods that consider 
+positive deﬁnite constraint or Rician noise. If single b-value is used, the 
+optimal b-value for tensor estimation was reported to in the range of $(0.7, 1.5) x 10^{-3} s/mm^2$ , 
+and normally about twenty DWI images are used in DTI in clinical study. ome 
+useful indices can be obtained from tensor D. The most important three indices 
+are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
 
 .. raw:: html
 
@@ -184,7 +232,7 @@ where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA ha
 
 .. code-block:: bash
 
- ccm@:bin$ ./bndti_estimate -h
+ $ ./bndti_estimate -h
  bndti_estimate: Diffusion Tensors Estimation.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:40)
@@ -202,7 +250,9 @@ where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA ha
 SPFI Reconstruction
 -------------------
 
-It was proposed that the SPFI method has more powerful capability to identify the tangling fibers `[8] <reference.html#id8>`_. In SPFI `[8] <reference.html#id8>`_, the diffusion signal  is represented by spherical polar Fourier (SPF) basis functions in Eq. 7. 
+It was proposed that the SPFI method has more powerful capability to identify 
+the tangling fibers `[8] <reference.html#id8>`_. In SPFI `[8] <reference.html#id8>`_, 
+the diffusion signal  is represented by spherical polar Fourier (SPF) basis functions in Eq. 7. 
 
 .. raw:: html
 
@@ -232,7 +282,7 @@ and the second transforms the coefficients of $E(q)$ to the coefficients of ODF.
 
 .. code-block:: bash
 
-  ccm@:bin$ bnhardi_ODF_estimate -h
+  $ bnhardi_ODF_estimate -h
   bnhardi_ODF_estimate: Orientation Distribution Function Estimation (SPFI method).
   DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
   (Jul 15 2015, 11:50:20)
@@ -283,7 +333,7 @@ which inspired an efficient C/C++ implementation.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnhardi_FOD_estimate -h
+ $ ./bnhardi_FOD_estimate -h
  bnhardi_FOD_estimate: Constraind Spherical Deconvolution (CSD) based HARDI reconstruciton.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Jul 15 2015, 11:50:20)
@@ -310,7 +360,13 @@ which inspired an efficient C/C++ implementation.
 Fiber tracking and attributes extraction
 ========================================
 
-Fiber tracking is a critical way to construct the anatomical connectivity matrix. For the tracking based on tensors from DTI, an intuitive way is to link the neighboring voxels following their main directions (e.g. V1 in the eigenvector of the DTI) given a set of some stop criteria, such as maximum bending angle of the curve and minimum FA value, which is to ensure the target voxel is indeed white matter microstructure. This is the so called deterministic streamline tractography `[15] <reference.html#id15>`_, as illustrated in Figure 5.
+Fiber tracking is a critical way to construct the anatomical connectivity 
+matrix. For the tracking based on tensors from DTI, an intuitive way is 
+to link the neighboring voxels following their main directions (e.g. V1 
+in the eigenvector of the DTI) given a set of some stop criteria, such as 
+maximum bending angle of the curve and minimum FA value, which is to ensure 
+the target voxel is indeed white matter microstructure. This is the so called 
+deterministic streamline tractography `[15] <reference.html#id15>`_, as illustrated in Figure 5.
 
 .. figure:: images/tractography.png
    :width: 800 px
@@ -321,7 +377,7 @@ Fiber tracking is a critical way to construct the anatomical connectivity matrix
 
 .. code-block:: bash
 
- ccm@:bin$ ./bndti_tracking -h
+ $ ./bndti_tracking -h
  bndti_tracking: DTI Deterministic Fibertracking.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:46)
@@ -336,11 +392,18 @@ Fiber tracking is a critical way to construct the anatomical connectivity matrix
     -max       5000      Upper-threshold the fiber (mm). (remove fibers longer than the number)
     -o                   Output Fibers Filename (.fiber file).
 
-The tracking module in the software for HARDI estimation is similar to the streamline method as described above. It should be kept in mind that, for HARDI estimation, usually there are more than one main direction (which is what we desired since it possibly identifies tangling fibers), so we should consider these kissing/branching cases. Meanwhile, since there is no explicit dominant directions for each voxel, searching algorithm should be applied to locate the main directions. The searching should run for each voxel, so it is not as fast as the traditional DTI tracking.
+The tracking module in the software for HARDI estimation is similar to the 
+streamline method as described above. It should be kept in mind that, for 
+HARDI estimation, usually there are more than one main direction (which 
+is what we desired since it possibly identifies tangling fibers), so we 
+should consider these kissing/branching cases. Meanwhile, since there is 
+no explicit dominant directions for each voxel, searching algorithm should 
+be applied to locate the main directions. The searching should run for each 
+voxel, so it is not as fast as the traditional DTI tracking.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnhardi_tracking -h
+ $ ./bnhardi_tracking -h
  bnhardi_tracking: HARDI Deterministic Fibertracking.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:46)
@@ -358,20 +421,24 @@ The tracking module in the software for HARDI estimation is similar to the strea
 Visualization for various images
 ================================
 
-The software provides a variety of entries for visualizing different data types, including 3D/4D image, Tensor/ODF/FOD image and white mater fibers. The views of different data could be superimposed for a precise anatomical localization. It should be noted that, if one uses the GUI, these view functions could be called in each processing steps for inspecting the results. 
+The software provides a variety of entries for visualizing different data 
+types, including 3D/4D image, Tensor/ODF/FOD image and white mater fibers.
+The views of different data could be superimposed for a precise anatomical 
+localization. It should be noted that, if one uses the GUI, these view functions 
+could be called in each processing steps for inspecting the results. 
 
 Figure 6. Illustrations for the capability of the software to show many types of images.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnviewer -h
+ $ ./bnviewer -h
  This program is the GUI frontend that displays and performs data reconstruction and fiber tracking on diffusion MR images, which have been developed by the teams of Brainnetome Center, CASIA.
  basic usage: 
    bnviewer [[-volume] DTI_FA.nii.gz] 
             [-roi ROI/roi_cc_top.nii.gz] 
             [-fiber ROI/roi_cc_top.fiber] 
             [-tensor DTI.nii.gz]/[-odf HARDI.nii.gz]
-            [-atlas DTI.nii.gz]
+
  options:  
    -help                  show this help
    -volume  .nii.gz       set input background data
@@ -396,7 +463,7 @@ images (for eddy current correction in current version), standard space and T1
 space (for mapping ROIs to the individual space), DWI space and 
 standard space (for statistical comparisons across subjects). This 
 module contains several commands :code:`reg_aladin` is the command for 
-rigid and afiine registration which is based on a block-matching approach and 
+rigid and affine registration which is based on a block-matching approach and 
 a Trimmed Least Square (TLS) scheme `[18] <reference.html#id18>`_ 
 `[19] <reference.html#id19>`_. :code:`reg_f3d` is the command to perform 
 non-linear registration which is based on the Free-From Deformation presented 
@@ -407,7 +474,7 @@ Jacobian map images for example.
 
 .. code-block:: bash
 
- ccm@:bin$ ./reg_aladin -h
+ $ ./reg_aladin -h
  Block Matching algorithm for global registration.
  Based on Ourselin et al., "Reconstructing a 3D structure from serial histological sections", Image and Vision Computing, 2001
  
@@ -445,7 +512,7 @@ Jacobian map images for example.
 
 .. code-block:: bash
 
- ccm@:bin$ ./reg_f3d -h
+ $ ./reg_f3d -h
  Fast Free-Form Deformation algorithm for non-rigid registration.
  Based on Modat et al., "Fast Free-Form Deformation using graphics processing units", CMPB, 2010
  
@@ -524,7 +591,7 @@ Jacobian map images for example.
 
 .. code-block:: bash
 
- ccm@:bin$ ./reg_resample -h
+ $ ./reg_resample -h
  Usage:	reg_resample -ref <filename> -flo <filename> [OPTIONS].
 	-ref <filename>      Filename of the reference image (mandatory)
 	-flo <filename>      Filename of the floating image (mandatory)
@@ -578,8 +645,10 @@ the origin and radius in a user-specified image space.
 Fiber manipulation
 ------------------
 
-After obtaining a large bundle of white matter fibers, you may want to prune the fibers that go through specified locations (ROIs). Here, we provide several tools to manipulate the fiber bundles.
-bnfiber_manipulate, to split/merge fiber bundles based on given ROIs.
+After obtaining a large bundle of white matter fibers, you may want to prune 
+the fibers that go through specified locations (ROIs). Here, we provide 
+several tools to manipulate the fiber bundles. :code:`bnfiber_prune`, to 
+split fiber bundles based on given ROIs.
 
 .. code-block:: bash
 
@@ -592,11 +661,12 @@ bnfiber_manipulate, to split/merge fiber bundles based on given ROIs.
     -not                                      NOT file: ro1.nii.gz,roi2.nii.gz
     -o                                        Output file (.fiber file).
 
-bnfiber_end, to cut the fiber bundles given start/stop ROIs, which is useful to get the exact connections between two ROIs in constructing connectivity matrix.
+:code:`bnfiber_end`, to cut the fiber bundles given start/stop ROIs, which is useful 
+to get the exact connections between two ROIs in constructing connectivity matrix.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnfiber_end -h
+ $ ./bnfiber_end -h
  bnfiber_end: Extract fibers which end in the two given rois.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:12)
@@ -605,21 +675,22 @@ bnfiber_end, to cut the fiber bundles given start/stop ROIs, which is useful to 
     -roi2                                     roi2 file
     -o                                        Output file (.fiber file)
 
-bnfiber_stats, to extract statistical properties of the fiber bundle, such as mean FA/MD and fiber numbers.
+:code:`bnfiber_stats`, to extract statistical properties of the fiber bundle, such 
+as mean FA/MD and fiber numbers.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnfiber_stats -h
+ $ ./bnfiber_stats -h
  bnfiber_stats: Show fiber stats.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:12)
     -fiber                                    Input fiber file, then output mean FA/MD, number of fibers et al.
 
-bnfiber_map, to compute the fiber density map which is used in track density imaging `[16] <reference.html#id16>`_.
+:code:`bnfiber_map`, to compute the fiber density map which is used in track density imaging `[16] <reference.html#id16>`_.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnfiber_map -h
+ $ ./bnfiber_map -h
  bnfiber_map: Calculate the fiber density according to the reference volume.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Sep 17 2015, 14:47:13)
@@ -628,11 +699,11 @@ bnfiber_map, to compute the fiber density map which is used in track density ima
     -o                                        Output file (NIfTI).
     -nor             1                        Normalize fiber density: 1(yes) or 0(no).
 
-bnmerge/bnsplit, to merge the 3D volumes to 4D or split 4D to 3D volumes.
+:code:`bnmerge` / :code:`bnsplit`, to merge the 3D volumes to 4D or split 4D to 3D volumes.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnmerge -h
+ $ ./bnmerge -h
  bnmerge: Merge 3D NIfTI files  to 4D NIfTI file.
     This program is to merge 3D NIfTI files to 4D NIfTI file. 
     Usage: bnmerge filein1 filein2 ... fileout
@@ -640,41 +711,22 @@ bnmerge/bnsplit, to merge the 3D volumes to 4D or split 4D to 3D volumes.
 
 .. code-block:: bash
 
- ccm@:bin$ ./bnsplit -h
+ $ ./bnsplit -h
  bnsplit: Split 4D volume to 3D volumes.
     This program splits 4D volume to 3D volumes. 
     basic usage: split -i FILE_IN -o FILE_OUT prefix
     options:     -h           : show this help
                  -v LEVEL     : the verbose level to LEVEL
 
-bninfo, to display a short head information of the input image. Supported input image format includes NIFTI/DICOM.
+:code:`bninfo`, to display a short head information of the input image. Supported input image format includes NIFTI/DICOM.
 
 .. code-block:: bash
 
- ccm@:DWI$ bninfo -h
+ $ bninfo -h
  bninfo: Show file header information.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Jul 15 2015, 11:50:01)
     -i                                        Nifti/ANALYZE/DICOM file.
-
-.. 
- Reference
- ---------
- .. [1] http://www.itk.org
- .. [7] Smith SM. Fast robust automated brain extraction. Human Brain Mapping, 17(3):143-155, 2002.
- .. [8] Cheng J, Jiang T, Deriche R. Nonnegative definite EAP and ODF estimation via a unified multi-shell HARDI reconstruction. Med Image Comput Comput Assist Interv., 15(Pt 2):313-21, 2012.
- .. [9] Tournier JD, Calamante F, Connelly A. Robust determination of the fibre orientation distribution in diffusion MRI: non-negativity constrained super-resolved spherical deconvolution. Neuroimage, 35 (4): 1459-1472, 2007.
- .. [10] http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg 
- .. [11] Ourselin S, Stefanescu R, Pennec X. Robust registration of multi-modal images: towards real-time clinical applications. Medical Image Computing and Computer Assisted Intervention. Springer Berlin Heidelberg, 2002: 140-147. 
- .. [12] Ourselin S, Roche A, Subsol G, et al. Reconstructing a 3D structure from serial histological section. Image and vision computing, 2001, 19(1): 25-31. 
- .. [13] Modat M, Ridgway G R, Taylor Z A, et al. Fast free-form deformation using graphics processing units. Computer methods and programs in biomedicine, 2010, 98(3): 278-284. 
- .. [12] Xie S., Zuo N., Shang L., Song M., Fan L., Jiang T., 2015. How does B-value affect HARDI reconstruction using clinical diffusion MRI data? PLoS One 10, e0120773.
- .. [13] Basser P.J., Mattiello J., LeBihan D., MR diffusion tensor spectroscopy and imaging. Biophysical journal, 1994. 66, 259-267.
- .. [13] Zuo N., Cheng J., Jiang T., 2012. Diffusion magnetic resonance imaging for Brainnetome: A critical review, Neuroscience bulletin, DOI: 10.1007/s12264-012-1245-3.
- .. [14] Wedeen V.J., Hagmann P., Tseng W.Y., Reese T.G., Weisskoff R.M., 2005. Mapping complex tissue architecture with diffusion spectrum magnetic resonance imaging. Magn Reson Med, 54(6):1377-1386.
- .. [15] Alexander, A.L., Lee, J.E., Lazar, M., Field, A.S., 2007. Diffusion tensor imaging of the brain. Neurotherapeutics 4, 316-329.
- .. [16] Calamante F., Tournier J.D., Heidemann R.M., Anwander A., Jackson G.D., Connelly A., 2011. Track density imaging (TDI): validation of super resolution property. Neuroimage, 56, 1259-66.
- .. [17] http://trackvis.org
 
 .. include:: common.txt
 
