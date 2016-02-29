@@ -55,10 +55,10 @@ and
 3. How to extract the gradient table if the dcm2nii/MRIcron fails?
 ------------------------------------------------------------------
 
-The dcm2nii/MRIcron is useful to extract the gradient table for the DWI data. 
-However, occasionally it fails to get the gradient table although it 
+The dcm2nii/MRIcron are useful to extract the gradient table for the DWI data. 
+Occasionally, they fails to get the gradient table, though it 
 indeed get the NIFTI data from the DICOM images. 
-Herein we provide a temporal solution by calling the Matlab/dicominfo 
+Herein we provide a temporary solution by calling the MATLAB/dicominfo 
 which depends on a specified keyword dictionary.  
 
 .. code-block:: matlab
@@ -90,9 +90,10 @@ which depends on a specified keyword dictionary.
   end
   end
 
-Please download the two files fieldnamesr.m and findGrad.m. 
-The first one is to generate the full string of the keyword dictionary 
-and second is to find the locations. If your problem remains unsolved, 
+Please download the two files `fieldnamesr.m <_static/fieldnamesr.m>`_ 
+and `findGrad.m <_static/findGrad.m>`_ . The first one is to generate 
+the full string of the keyword dictionary and second is to find the 
+locations. If your problem remains unsolved, 
 please `send us <diffusion.kit@nlpr.ia.ac.cn>`_ your data 
 (only one 2D/3D DICOM image is enough) and then we will update our DICOM dictionary. 
 
