@@ -48,7 +48,7 @@ were adopted with improved interface and user experience.
    :hidden:
    
    document.rst
-   tutorial.rst
+   tutorials.rst
    screenshot.rst
    download.rst
    license.rst

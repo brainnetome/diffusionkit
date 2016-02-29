@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
---------
-Tutorial
---------
+---------
+Tutorials
+---------
 
 .. meta::
    :description: Tutorial on DiffusionKit
@@ -13,8 +13,8 @@ Tutorial
 .. toctree::
    :maxdepth: 3
 
-   exampledata.rst
-   generateroi.rst
+   tutorial_intro.rst
+   tutorial_generateroi.rst
 
 .. include:: common.txt
 

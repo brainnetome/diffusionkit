@@ -7,7 +7,13 @@
 FAQs
 ====
 
-1. Why images and fibers are not properly aligned in my case?
+1. Where can I download example data?
+-------------------------------------
+
+We provide a group of test data to test the software, and the data 
+was also used in `[11] <reference.html#id11>`_ .
+
+2. Why images and fibers are not properly aligned in my case?
 -------------------------------------------------------------
 
 This typically happens when nifti image headers are modified
@@ -46,7 +52,7 @@ For more information, we recommand reading FSL's
 and 
 `Docs on qform and sform <http://nifti.nimh.nih.gov/nifti-1/documentation/nifti1fields/nifti1fields_pages/qsform.html>`_ to get a good understanding of orientation layout within NIfTI data format.
 
-2. How to extract the gradient table if the dcm2nii/MRIcron fails?
+3. How to extract the gradient table if the dcm2nii/MRIcron fails?
 ------------------------------------------------------------------
 
 The dcm2nii/MRIcron is useful to extract the gradient table for the DWI data. 
