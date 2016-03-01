@@ -12,6 +12,7 @@ Download Links
 
 .. |winlogo| image:: images/winlogo.jpg
 .. |rellogo| image:: images/rellogo.jpg
+.. |linuxlogo| image:: images/linuxlogo.jpg
 
 Latest Release (v1.1-r160204)
 ------------------------------
@@ -19,7 +20,7 @@ Latest Release (v1.1-r160204)
 |winlogo| `Windows Installer (x86-64) 
 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
 
-|rellogo| `Linux Binary Package (x86-64) 
+|linuxlogo| `Linux Binary Package (x86-64) 
 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_
 
 .. note::
