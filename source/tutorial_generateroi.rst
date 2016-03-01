@@ -75,8 +75,8 @@ file `gen_ROI_from_list.sh </_static/gen_ROI_from_list.sh>`_. The content is as 
   echo "Done!"
   rm -f ${tmpfile}??????.nii.gz
   
-Basic source for Bash (B-shell) and Python
-------------------------------------------
+Notes on programming in Bash/Python
+-----------------------------------
 
 If you want to use script for batch processing, we strongly recommend using Python, 
 since it has nice grammar style and is portable for cross platform. 
