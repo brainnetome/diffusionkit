@@ -27,6 +27,13 @@ Latest Release (v1.1-r160204)
 
  See `Releases <https://github.com/liangfu/diffusionkit/releases>`_ for our previously compiled packages.
 
+Example Data
+------------
+
+* `List File <_static/list.txt>`_
+* `Subject 01 <_static/sub01.nii.gz>`_
+* `Subject 02 <_static/sub02.nii.gz>`_
+
 System requirement
 ==================
 
