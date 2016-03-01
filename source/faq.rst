@@ -10,7 +10,7 @@ FAQs
 1. Where can I download example data?
 -------------------------------------
 
-We provide a group of test data to test the software, and the data 
+We provide a group of `test data <download.html#example-data>`_ to test the software, and the data 
 was also used in `[11] <reference.html#id11>`_ .
 
 2. Why images and fibers are not properly aligned in my case?
