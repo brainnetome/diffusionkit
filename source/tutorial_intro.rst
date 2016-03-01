@@ -15,6 +15,12 @@ Getting Started
 Preprocessing
 -------------
 
+Starting from this section, we would go throught the pipeline provided 
+in DiffusionKit, assuming DiffusionKit is properly installed following 
+`Installation Instructions <download.html#install-uninstall>`_, along 
+with the `Example Dataset <download.html#example-data>`_ downloaded on 
+your hard disk.
+
 Data Format Conversion
 ~~~~~~~~~~~~~~~~~~~~~~
 
