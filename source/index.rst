@@ -16,6 +16,8 @@ Homepage
 Welcome to Brainnetome DiffusionKit's Homepage
 ----------------------------------------------
 
+|banner|
+
 .. note:: 
  * a full pipeline for (pre-)processing and visualization for diffusion MRI data.
  * cross-platform support and a small installation size without 3rd party dependency.

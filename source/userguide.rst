@@ -74,7 +74,7 @@ Eddy and motion correction
 --------------------------
 
 During the MRI scanning, many factors can cause magnetic field inhomogeneity,
- including changing magnetic fields from the imaging gradients and the radiofrequency 
+including changing magnetic fields from the imaging gradients and the radiofrequency 
 (RF) coils and yielded biological effects. These effects usually degrade 
 the imaging quality, resulting in artifacts including shearing and blurring 
 (http://mri-q.com/eddy-current-problems.html). 
@@ -179,7 +179,7 @@ dependent on G in a complex way. However, free diffusion in DTI assumes
 D is only dependent on the direction of G, i.e. . The early works in dMRI 
 reported that ADC D is dependent on gradient direction u and used two or 
 three DWI images in different directions to detect the properties of tissues.
- Then Basser et al. introduced diffusion tensor `[12] <reference.html#id12>`_ to 
+Then Basser et al. introduced diffusion tensor `[12] <reference.html#id12>`_ to 
 represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ 
 is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁ
 nite matrix independent of u. This method is called as diffusion tensor 

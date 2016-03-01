@@ -24,6 +24,9 @@
 .. |4A| image:: images/4A.png
    :width: 300
 
+.. |banner| image:: images/web_banner.png
+   :width: 800
+
 .. |mainwindow| image:: images/mainwindow.png
    :width: 320
 
