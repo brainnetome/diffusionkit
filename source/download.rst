@@ -30,9 +30,9 @@ Latest Release (v1.1-r160204)
 Example Data
 ------------
 
-* `List File <_static/list.txt>`_
-* `Subject 01 <_static/sub01.nii.gz>`_
-* `Subject 02 <_static/sub02.nii.gz>`_
+* `List File <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt>`_
+* `Subject 01 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz>`_
+* `Subject 02 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz>`_
 
 System requirement
 ==================
