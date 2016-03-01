@@ -17,15 +17,15 @@ Download Links
 Latest Release (v1.1-r160204)
 ------------------------------
 
+.. sidebar:: Previous Release
+
+ See `Releases <https://github.com/liangfu/diffusionkit/releases>`_ for our previously compiled packages.
+
 |winlogo| `Windows Installer (x86-64) 
 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
 
 |linuxlogo| `Linux Binary Package (x86-64) 
 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_
-
-.. note::
-
- See `Releases <https://github.com/liangfu/diffusionkit/releases>`_ for our previously compiled packages.
 
 Example Data
 ------------
@@ -40,7 +40,7 @@ System requirement
 Basically this software can run in any system, including 32/64-bit MS Windows/Linux OS, 
 although currently we only tested and released the binary packages for Windows/Linux OS. 
 The software is developed based on C/C++, and some platform independent packages, 
-including ITK, VTK, and OpenCV, etc. 
+including VTK, and OpenCV, etc. 
 However, for high-performance data processing and visualization, 
 we recommend using 64-bit OS with multi-core CPU and standalone video card.
 
