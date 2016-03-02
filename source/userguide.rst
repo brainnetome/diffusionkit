@@ -390,7 +390,7 @@ deterministic streamline tractography `[15] <reference.html#id15>`_, as illustra
     -sl        0.5       Step Length (Voxel).
     -min       10        Threshold the fiber (mm). (remove fibers shorter than the number)
     -max       5000      Upper-threshold the fiber (mm). (remove fibers longer than the number)
-    -o                   Output Fibers Filename (.fiber file).
+    -o                   Output Fibers Filename (.trk file).
 
 The tracking module in the software for HARDI estimation is similar to the 
 streamline method as described above. It should be kept in mind that, for 
@@ -408,10 +408,10 @@ voxel, so it is not as fast as the traditional DTI tracking.
  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
  (Oct  9 2015, 19:26:46)
    -d                HARDI spherical harmonic image.
-   -a                Anisotropy image.
+   -fa               Anisotropy image.
    -m                Mask file.
    -s                Seeds file.
-   -o                Fiber file (.fiber file).
+   -o                Fiber file (.trk file).
    -sl     0.5       Step length (Voxel): float
    -ft     0.1       FA threshold: float
    -at     75        Angle threshold: float
@@ -436,14 +436,14 @@ Figure 6. Illustrations for the capability of the software to show many types of
  basic usage: 
    bnviewer [[-volume] DTI_FA.nii.gz] 
             [-roi ROI/roi_cc_top.nii.gz] 
-            [-fiber ROI/roi_cc_top.fiber] 
+            [-fiber ROI/roi_cc_top.trk] 
             [-tensor DTI.nii.gz]/[-odf HARDI.nii.gz]
 
  options:  
    -help                  show this help
    -volume  .nii.gz       set input background data
    -roi     .nii.gz       set input ROI data
-   -fiber   .fiber/.trk   set input fiber data
+   -fiber   .trk          set input fiber data
    -tensor  .nii.gz       set input DTI data (conflict with -odf args)
    -odf     .nii.gz       set input ODF/FOD data (conflict with -tensor args)
 
@@ -659,7 +659,7 @@ split fiber bundles based on given ROIs.
     -and                                      AND file: ro1.nii.gz,roi2.nii.gz
     -or                                       OR file: roi1.nii.gz,roi2.nii.gz
     -not                                      NOT file: ro1.nii.gz,roi2.nii.gz
-    -o                                        Output file (.fiber file).
+    -o                                        Output file (.trk file).
 
 :code:`bnfiber_end`, to cut the fiber bundles given start/stop ROIs, which is useful 
 to get the exact connections between two ROIs in constructing connectivity matrix.
@@ -673,7 +673,7 @@ to get the exact connections between two ROIs in constructing connectivity matri
     -fiber                                    fiber file
     -roi1                                     roi1 file
     -roi2                                     roi2 file
-    -o                                        Output file (.fiber file)
+    -o                                        Output file (.trk file)
 
 :code:`bnfiber_stats`, to extract statistical properties of the fiber bundle, such 
 as mean FA/MD and fiber numbers.
