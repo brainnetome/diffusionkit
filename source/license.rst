@@ -7,7 +7,7 @@
 License
 =======
 
-Copyright |copy|  2013-2015 `Brainnetome Center <http://www.brainnetome.org/>`_, CASIA
+Copyright |copy|  2012-2015 `Brainnetome Center <http://www.brainnetome.org/>`_, CASIA
 
 This software is provided 'as-is', without any express or implied warranty. 
 In no event will the authors be held liable for any damages arising from the use of this software.

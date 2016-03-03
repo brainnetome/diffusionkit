@@ -32,6 +32,48 @@ improved interface and user experience.
 Key functions of the software
 =============================
 
++------------+----------------------+-------------------------------------------------------+
+| Functions  | Program              | Description (use '-h' argument for more details)      |
++============+======================+=======================================================+
+| Preprocess | dcm2nii              | Convert DICOM to unified 4D NIFTI files               |
+|            +----------------------+-------------------------------------------------------+
+|            | bneddy               | Reduce head motion and magnetic artifacts             |
+|            +----------------------+-------------------------------------------------------+
+|            | bet2                 | Extract brain tissue (Smith, 2002)                    |
+|            +----------------------+-------------------------------------------------------+
+|            | bnsplit,bnmerge      | Split/merge the 4D image along the 4th dimension      |
++------------+----------------------+-------------------------------------------------------+
+| Modeling   | bndti_estimate       | Estimate tensor model, output FA, MD, tensor etc.     |
+|            +----------------------+-------------------------------------------------------+
+|            | bnhardi_ODF_estimate | Estimate ODF by SPFI method                           |
+|            +----------------------+-------------------------------------------------------+
+|            | bnhardi_FOD_estimate | Estimate FOD by CSD method (Tournier et al., 2007)    |
++------------+----------------------+-------------------------------------------------------+
+| Tracking   | bndti_tracking       | Track white matter fiber based on tensor model        |
+|            +----------------------+-------------------------------------------------------+
+|            | bnhardi_tracking     | Track white matter fiber based on ODF/FOD             |
++------------+----------------------+-------------------------------------------------------+
+| Visualize  | bnviewer             | Visualize various kinds of data (.nii.gz, .trk)       |
++------------+----------------------+-------------------------------------------------------+
+| Tools      | bncalc,bnroisplit    | Numeric calculation and ROI generation                |
+|            +----------------------+-------------------------------------------------------+
+|            | bninfo               | Show the head information of DICOM and NIFTI files    |
+|            +----------------------+-------------------------------------------------------+
+|            | reg_aladin,reg_f3d   | Inter/intra-image registration across modalities      |
+|            +----------------------+-------------------------------------------------------+
+|            | reg_resample,        | Resample and apply transformation matrix              |
+|            | reg_transform        |                                                       |
+|            +----------------------+-------------------------------------------------------+
+|            | bnfiber_end,         | Prune fiber bundle, logical and/or/not based on ROIs  |
+|            | bnfiber_prune        |                                                       |
+|            +----------------------+-------------------------------------------------------+
+|            | bnfiber_stats        | Export attributes of fiber bundles                    |
+|            +----------------------+-------------------------------------------------------+
+|            | bnfiber_map          | Generate the fiber density going through each voxel   |
+|            +----------------------+-------------------------------------------------------+
+|            | bnnetwork            | Function to construct anatomical network              |
++------------+----------------------+-------------------------------------------------------+
+
 .. figure:: images/overall.png
    :width: 800 px
    :alt: The overall design framework of DiffusionKit
@@ -48,11 +90,6 @@ Key functions of the software
 
 It should be noteworthy that, for all the computing steps provided in GUI, the called commands with the complete parameter list are displayed in a separate log window. Such a design is special for the users to keep in mind what he/she is doing, and furthermore, it could be directly copied into script (Bash, Python ...) for batch processing.
 
+
 .. include:: common.txt
 
-.. 
- .. [1] http://www.itk.org
- .. [2] http://www.vtk.org
- .. [3] http://www.cmake.org
- .. [4] http://www.mccauslandcenter.sc.edu/mricro
- .. [5] http://www.nitrc.org/projects/mrtrix

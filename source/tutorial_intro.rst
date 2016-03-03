@@ -71,6 +71,10 @@ in DiffusionKit, assuming DiffusionKit is properly installed following
 with the `Example Dataset <download.html#example-data>`_ downloaded on 
 your hard disk.
 
+For your convenience, a `bash script <_static/process.sh>`_, which 
+enables processing multiple data within a loop, is also available for 
+downloading.
+
 Data Format Conversion
 ~~~~~~~~~~~~~~~~~~~~~~
 
