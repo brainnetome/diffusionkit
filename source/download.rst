@@ -22,17 +22,18 @@ Latest Release (v1.1-r160204)
  See `Releases <https://github.com/liangfu/diffusionkit/releases>`_ for our previously compiled packages.
 
 |winlogo| `Windows Installer (x86-64) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-WIN64-v1.1-r160204.exe>`_ [11.9 MB]
 
 |linuxlogo| `Linux Binary Package (x86-64) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_
+<https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_ [36.4 MB]
 
 Example Data
 ------------
 
-* `List File <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt>`_
-* `Subject 01 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz>`_
-* `Subject 02 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz>`_
+* `List File <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt>`_ [12 Bytes]
+* `Subject 01 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz>`_ [74.5 MB]
+* `Subject 02 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz>`_ [72.9 MB]
+* `Brain Atlas <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz>`_ [3.33 MB]
 
 System requirement
 ==================
