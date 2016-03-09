@@ -34,7 +34,7 @@ Example Data and Test Script
 * `Subject 01 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz>`_ [74.5 MB]
 * `Subject 02 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz>`_ [72.9 MB]
 * `Brain Atlas <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz>`_ [3.33 MB]
-* `Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ [1.8 KB]
+* `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh>`_ [1.8 KB]
 
 IN A HURRY? Download all the data files above and run the 
 `Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ ,
@@ -52,7 +52,7 @@ or simply run the following commands to do everything.
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
-  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh
+  wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh
   chmod +x process.sh
   ./process.sh	
 
@@ -60,9 +60,7 @@ And even more simpler,
 
 .. code-block:: bash
 
-  wget http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh
-  chmod +x test-diffusionkit.sh
-  ./test-diffusionkit.sh
+  `curl http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh`
 
 System requirement
 ==================

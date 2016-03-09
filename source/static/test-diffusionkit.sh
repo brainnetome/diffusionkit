@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # install the program  
 wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
 tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
@@ -10,5 +8,6 @@ wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/li
 wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz
 wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
 wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh
+wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh
+chmod +x process.sh
 ./process.sh	
