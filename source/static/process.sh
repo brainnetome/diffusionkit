@@ -33,7 +33,7 @@ aal_r.nii.gz: b0.nii.gz
 eddy.nii.gz: dwi.nii.gz
 	bneddy -i dwi.nii.gz -o eddy -ref 0
 
-rotated_bvecs:
+rotated_bvecs: eddy.nii.gz
 	bnrotate_bvec -i dwi.bvec -log eddy.txt -o rotated_bvecs 
 
 b0.nii.gz: eddy.nii.gz
