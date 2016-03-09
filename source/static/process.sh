@@ -10,10 +10,10 @@ for file in `cat list.txt`; do
   if [ ! -f $file/dwi.nii.gz ]; then tar zxvf $file.tar.gz; cd $file; else cd $file; fi
 
   # generate roi file to subject folder
-  if [ ! -f ../atlas/aal.nii.gz ]; then cp ../atlas/aal.nii.gz . ; fi
-  if [ ! -f ../atlas/aal.txt ]; then cp ../atlas/aal.txt . ; fi
-  if [ ! -f ../atlas/roi.txt ]; then cp ../atlas/roi.txt . ; fi
-  if [ ! -f ../atlas/mni152_FA.nii.gz ]; then cp ../atlas/mni152_FA.nii.gz . ; fi
+  if [ ! -f aal.nii.gz ]; then cp ../atlas/aal.nii.gz . ; fi
+  if [ ! -f aal.txt ]; then cp ../atlas/aal.txt . ; fi
+  if [ ! -f roi.txt ]; then cp ../atlas/roi.txt . ; fi
+  if [ ! -f mni152_FA.nii.gz ]; then cp ../atlas/mni152_FA.nii.gz . ; fi
 
   echo "
 network.txt: dti_wb.trk roi
