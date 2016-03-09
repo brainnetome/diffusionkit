@@ -53,7 +53,7 @@ or simply run the following commands to do everything.
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh
-	chmod +x process.sh
+  chmod +x process.sh
   ./process.sh	
 
 And even more simpler,
@@ -62,7 +62,7 @@ And even more simpler,
 
   wget http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh
   chmod +x test-diffusionkit.sh
-	./test-diffusionkit.sh
+  ./test-diffusionkit.sh
 
 System requirement
 ==================
