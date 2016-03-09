@@ -23,7 +23,7 @@ roi: aal_r.nii.gz
 	bnroisplit -i aal_r.nii.gz -o ./ -l aal.txt
 	touch roi
 
-aal_r.nii.gz: b0.nii.gz
+aal_r.nii.gz: b0.nii.gz dti.nii.gz
 	reg_aladin -ref dti_FA.nii.gz -flo mni152_FA.nii.gz -res mni152_FA_r.nii.gz -aff affine.txt
 	reg_f3d -ref dti_FA.nii.gz -flo mni152_FA_r.nii.gz -res mni152_FA_r.nii.gz -aff affine.txt
 	reg_resample -ref dti_FA.nii.gz -flo aal.nii.gz -res aal_r.nii.gz -aff affine.txt -inter 0
