@@ -7,13 +7,13 @@ fi
 
 for file in `cat list.txt`; do
   # extract data to subject folder
-  if [ -d $file/dwi.nii.gz ]; then cd $file; else tar zxvf $file.tar.gz; cd $file; fi
+  if [ ! -f $file/dwi.nii.gz ]; then tar zxvf $file.tar.gz; cd $file; else cd $file; fi
 
   # generate roi file to subject folder
-  cp ../atlas/aal.nii.gz .
-  cp ../atlas/aal.txt .
-  cp ../atlas/roi.txt .
-  cp ../atlas/mni152_FA.nii.gz .
+  if [ ! -f ../atlas/aal.nii.gz ]; then cp ../atlas/aal.nii.gz . ; fi
+  if [ ! -f ../atlas/aal.txt ]; then cp ../atlas/aal.txt . ; fi
+  if [ ! -f ../atlas/roi.txt ]; then cp ../atlas/roi.txt . ; fi
+  if [ ! -f ../atlas/mni152_FA.nii.gz ]; then cp ../atlas/mni152_FA.nii.gz . ; fi
 
   echo "
 network.txt: dti_wb.trk roi
