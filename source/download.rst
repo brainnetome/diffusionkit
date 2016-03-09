@@ -44,7 +44,7 @@ or simply run the following commands to do everything.
  
   # install the program  
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
-	tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+  tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
   export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.1-r160204/bin
 
   # get the data and run!
