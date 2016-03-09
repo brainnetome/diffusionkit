@@ -60,7 +60,7 @@ And even more simpler,
 
 .. code-block:: bash
 
-  `curl http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh`
+  $(curl http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh)
 
 System requirement
 ==================
@@ -109,7 +109,7 @@ If you do not want to type the full path every time, you could add the path to t
 
 To uninstall the software, just manually remove the entire folder where you untar-ed the .tar.gz file.
 
-That’s it! Enjoy the software now!
+That's it! Enjoy the software now!
 
 .. include:: common.txt
 

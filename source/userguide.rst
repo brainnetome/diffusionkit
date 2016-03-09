@@ -293,9 +293,6 @@ and the second transforms the coefficients of $E(q)$ to the coefficients of ODF.
     -o                        output odf file
     -scale           -1       if not given, a suggested scheme is used
     -tau             0.02533  tar value to calculate the true pdf.
-    -b0_w            1        b0 weight for the least square estimate
-    -b0_analytical   1        true: analytical
-    -is_assemlal     true     true: assemlal basis; false: cheng basis
     -outGFA          false    output GFA: true or false
     -rdis            0.015    r value for pdf.
     -sh              4        order of spherical harmonics
