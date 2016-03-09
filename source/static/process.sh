@@ -17,11 +17,11 @@ for file in `cat list.txt`; do
 
   echo "
 network.txt: dti_wb.trk roi
-	bnnetwork -fiber dti_wb.trk -roi roi.txt -outfiber 0 -o network
+	bnnetwork -fiber dti_wb.trk -roi roi.txt -outfiber 0 -o network -omp 2
 
 roi: aal_r.nii.gz
 	bnroisplit -i aal_r.nii.gz -o ./ -l aal.txt
-	touch roi
+.PHONY: roi
 
 aal_r.nii.gz: b0.nii.gz dti.nii.gz
 	reg_aladin -ref dti_FA.nii.gz -flo mni152_FA.nii.gz -res mni152_FA_r.nii.gz -aff affine.txt
