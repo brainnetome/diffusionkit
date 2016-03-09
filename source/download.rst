@@ -37,7 +37,7 @@ Example Data and Test Script
 * `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh>`_ [1.8 KB]
 
 IN A HURRY? Download all the data files above and run the 
-`Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ ,
+`Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh>`_ ,
 or simply run the following commands to do everything. 
 
 .. code-block:: bash
