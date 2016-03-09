@@ -40,21 +40,45 @@ IN A HURRY? Download all the data files above and run the
 `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh>`_ ,
 or simply run the following commands to do everything. 
 
-.. code-block:: bash
- 
-  # install the program  
-  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
-  tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
-  export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.1-r160204/bin
+.. toggle_table::
+  :arg1: Worldwide
+  :arg2: China
 
-  # get the data and run!
-  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt
-  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz
-  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
-  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
-  wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh
-  chmod +x process.sh
-  ./process.sh	
+.. toggle:: Worldwide
+
+  .. code-block:: bash
+   
+    # install the program  
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+    tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+    export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.1-r160204/bin
+  
+    # get the data and run!
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
+    wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh
+    chmod +x process.sh
+    ./process.sh	
+
+.. toggle:: China
+
+  .. code-block:: bash
+   
+    # install the program  
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+    tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+    export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.1-r160204/bin
+  
+    # get the data and run!
+    wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt
+    wget http://ddl.escience.cn/ff/emBl?func=download -O sub01.tar.gz
+    wget http://ddl.escience.cn/ff/emBm?func=download -O sub02.tar.gz
+    wget http://ddl.escience.cn/ff/emBo?func=download -O atlas.tar.gz
+    wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh
+    chmod +x process.sh
+    ./process.sh	
 
 And even more simpler,
 
