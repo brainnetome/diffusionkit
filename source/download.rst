@@ -27,13 +27,39 @@ Latest Release (v1.1-r160204)
 |linuxlogo| `Linux Binary Package (x86-64) 
 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz>`_ [36.4 MB]
 
-Example Data
-------------
+Example Data and Test Script
+----------------------------
 
 * `List File <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt>`_ [12 Bytes]
 * `Subject 01 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz>`_ [74.5 MB]
 * `Subject 02 <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz>`_ [72.9 MB]
 * `Brain Atlas <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz>`_ [3.33 MB]
+* `Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ [1.8 KB]
+
+To have a quick look what DiffusionKit can do? Download all the data files above and run the 
+`Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ ,
+or simply run the following commands to do everything. 
+
+.. code-block:: bash
+ 
+  # install the program  
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+	tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
+  export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.1-r160204/bin
+
+  # get the data and run!
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh
+  ./process.sh	
+
+And even more simpler,
+
+.. code-block:: bash
+
+  `curl http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh`
 
 System requirement
 ==================
@@ -43,7 +69,7 @@ although currently we only tested and released the binary packages for Windows/L
 The software is developed based on C/C++, and some platform independent packages, 
 including VTK, and OpenCV, etc. 
 However, for high-performance data processing and visualization, 
-we recommend using 64-bit OS with multi-core CPU and standalone video card.
+we recommend using 64-bit OS with multi-core CPU and standalone graphics card.
 
 Install/Uninstall
 =================
