@@ -36,7 +36,7 @@ Example Data and Test Script
 * `Brain Atlas <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz>`_ [3.33 MB]
 * `Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ [1.8 KB]
 
-To have a quick look what DiffusionKit can do? Download all the data files above and run the 
+IN A HURRY? Download all the data files above and run the 
 `Test Script <https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh>`_ ,
 or simply run the following commands to do everything. 
 
@@ -53,13 +53,16 @@ or simply run the following commands to do everything.
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
   wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/process.sh
+	chmod +x process.sh
   ./process.sh	
 
 And even more simpler,
 
 .. code-block:: bash
 
-  `curl http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh`
+  wget http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh
+  chmod +x test-diffusionkit.sh
+	./test-diffusionkit.sh
 
 System requirement
 ==================
