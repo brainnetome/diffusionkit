@@ -28,31 +28,35 @@
 
 .. |banner| image:: images/web_banner-thumb.png
    :width: 800
-   :target: images/web_banner.png
+   :target: _images/web_banner.png
 
-.. |mainwindow| image:: images/mainwindow.png
+.. |mainwindow| image:: images/mainwindow-thumb.png
    :width: 320
+   :target: _images/mainwindow.png
 
-.. |sticks| image:: images/sticks.png
+.. |sticks| image:: images/sticks-thumb.png
    :width: 300
+   :target: _images/sticks.png
 
-.. |slices| image:: images/slices.png
+.. |slices| image:: images/slices-thumb.png
    :width: 310
+   :target: _images/slices.png
 
 .. |fibers| image:: images/fibers-thumb.png
    :width: 300
-   :target: images/fibers.png
+   :target: _images/fibers.png
 
 .. |fibers2| image:: images/fibers2-thumb.png
    :width: 300
-   :target: images/fibers2.png
+   :target: _images/fibers2.png
 
 .. |fibers3| image:: images/fibers3-thumb.png
    :width: 300
-   :target: images/fibers3.png
+   :target: _images/fibers3.png
 
-.. |fiberlayer| image:: images/fiberlayer.png
+.. |fiberlayer| image:: images/fiberlayer-thumb.png
    :width: 300
+   :target: _images/fiberlayer.png
 
 .. |odf_lowres| image:: images/odf_res_low.png
    :width: 300
