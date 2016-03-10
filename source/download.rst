@@ -109,11 +109,13 @@ or simply run the following commands to do everything.
     chmod +x process_advanced.sh
     ./process.sh	
 
-And even more simpler,
+And more simpler, download and run
+`test-diffusionkit.sh <http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh>`_
+to take a quick look how DiffusionKit can **BUILD A BRAIN NETWORK JUST A FEW MINUTES**!
 
 .. code-block:: bash
 
-  $(curl http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh)
+  $ bash test-diffusionkit.sh
 
 System requirement
 ==================

@@ -10,6 +10,8 @@ Screenshots
 Tensor and ODF/FOD Visualization
 --------------------------------
 
+**[click to see high resolution images]**
+
 |sticks| |slices|
 
 |4A| |mainwindow| 
