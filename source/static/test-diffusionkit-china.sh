@@ -1,7 +1,7 @@
 # install the program  
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.2-r160310/bin
+# wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
+# tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
+# export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.2-r160310/bin
 
 # get the data and run!
 if [ ! -f list.txt ]; then
