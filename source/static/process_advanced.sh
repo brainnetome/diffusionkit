@@ -11,8 +11,7 @@ fi
 
 for file in `cat list.txt`; do
   # extract data to subject folder
-  if [ ! -f $file/dwi.nii.gz ]; then tar zxvf $file.tar.gz; cd $file; else cd $file; fi
-  if [ ! -f $file/t1.nii.gz ]; then tar zxvf $file.tar.gz; cd $file; else cd $file; fi
+  if [ ! -f $file/dwi.nii.gz ] || [ ! -f $file/t1.nii.gz ]; then tar zxvf $file.tar.gz; cd $file; else cd $file; fi
 
   # generate roi file to subject folder
   if [ ! -f aal.nii.gz ]; then cp ../atlas/aal.nii.gz . ; fi
@@ -36,7 +35,7 @@ aal_r.nii.gz: b0.nii.gz dti.nii.gz brain.nii.gz
 	reg_aladin -ref dti_FA.nii.gz -flo brain.nii.gz -res brain_diff.nii.gz
 	reg_aladin -ref brain_diff.nii.gz -flo ch2bet.nii.gz -res stand_diff -aff stand_diff_affine.txt
 	reg_f3d -ref brain_diff.nii.gz -flo ch2bet.nii.gz -res stand_diff_warp.nii.gz -aff stand_diff_affine.txt -fmask ch2bet.nii.gz -cpp outputCPP.nii 
-	reg_resample -ref brain_diff.nii.gz -flo aal.nii.gz -res aal_diff.nii.gz -trans outputCPP.nii -inter 0
+	reg_resample -ref brain_diff.nii.gz -flo aal.nii.gz -res aal_r.nii.gz -trans outputCPP.nii -inter 0
 
 eddy.nii.gz: dwi.nii.gz
 	bneddy -i dwi.nii.gz -o eddy -ref 0
