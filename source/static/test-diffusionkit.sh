@@ -1,13 +1,25 @@
 # install the program  
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
-tar zxvf DiffusionKitSetup-x86_64-v1.1-r160204.tar.gz
-export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.1-r160204/bin
+if [ `which bnviewer` -eq '' ]; then
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
+  tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
+  export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.2-r160310/bin
+fi
 
 # get the data and run!
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/list.txt
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub01.tar.gz
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/sub02.tar.gz
-wget https://github.com/liangfu/diffusionkit/releases/download/v1.1-r20160204/atlas.tar.gz
-wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process.sh
-chmod +x process.sh
-./process.sh	
+if [ ! -f list.txt ]; then
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/list.txt
+fi
+if [ ! -f sub01.tar.gz ]; then
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz
+fi
+if [ ! -f sub02.tar.gz ]; then
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz
+fi
+if [ ! -f atlas.tar.gz ]; then
+  wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz
+fi
+if [ ! -f process_advanced.sh ]; then
+  wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh
+fi
+chmod +x process_advanced.sh
+./process_advanced.sh	
