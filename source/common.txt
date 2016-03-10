@@ -38,13 +38,13 @@
 .. |slices| image:: images/slices.png
    :width: 310
 
-.. |fibers| image:: images/fibers.png
+.. |fibers| image:: images/fibers.jpg
    :width: 300
 
 .. |fibers2| image:: images/fibers2.png
    :width: 300
 
-.. |fibers3| image:: images/fibers3.png
+.. |fibers3| image:: images/fibers3.jpg
    :width: 300
 
 .. |fiberlayer| image:: images/fiberlayer.png
