@@ -26,7 +26,7 @@
 .. |4A| image:: images/4A.png
    :width: 300
 
-.. |banner| image:: thumb/web_banner.png
+.. |banner| image:: images/web_banner-thumb.png
    :width: 800
    :target: images/web_banner.png
 
@@ -39,15 +39,15 @@
 .. |slices| image:: images/slices.png
    :width: 310
 
-.. |fibers| image:: thumb/fibers.png
+.. |fibers| image:: images/fibers-thumb.png
    :width: 300
    :target: images/fibers.png
 
-.. |fibers2| image:: thumb/fibers2.png
+.. |fibers2| image:: images/fibers2-thumb.png
    :width: 300
    :target: images/fibers2.png
 
-.. |fibers3| image:: thumb/fibers3.png
+.. |fibers3| image:: images/fibers3-thumb.png
    :width: 300
    :target: images/fibers3.png
 

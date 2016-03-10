@@ -3,7 +3,7 @@
 images=`find images/*.png`
 
 for im in $images; do
-  convert -resize 25% $im thumb/${im:7:${#im}}
+  convert -resize 25% $im ${im:0:${#im}-4}-thumb.png
 done
 
 

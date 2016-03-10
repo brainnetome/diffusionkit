@@ -36,6 +36,34 @@ Example Data and Test Script
 * `Brain Atlas <https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [3.33 MB]
 * `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh>`_ [1.8 KB]
 
+And this is what we have in the data above::
+
+ ├── atlas
+ │   ├── aal.nii.gz
+ │   ├── aal.nii.lut
+ │   ├── aal.nii.txt
+ │   ├── aal_roi_024.txt
+ │   ├── aal_roi_090.txt
+ │   └── ch2bet.nii.gz
+ ├── atlas.tar.gz
+ ├── list.txt
+ ├── process_advanced.sh
+ ├── process_primary.sh
+ ├── sub01
+ │   ├── dwi.bval
+ │   ├── dwi.bvec
+ │   ├── dwi.nii.gz
+ │   └── t1.nii.gz
+ ├── sub01.tar.gz
+ ├── sub02
+ │   ├── dwi.bval
+ │   ├── dwi.bvec
+ │   ├── dwi.nii.gz
+ │   └── t1.nii.gz
+ └── sub02.tar.gz
+
+We recommand user to follow the tutorial page for more
+
 IN A HURRY? Download all the data files above and run the 
 `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh>`_ ,
 or simply run the following commands to do everything. 
