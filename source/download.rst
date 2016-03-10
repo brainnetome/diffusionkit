@@ -10,9 +10,9 @@ Download and Install
 Download Links
 ==============
 
-.. |winlogo| image:: images/winlogo.jpg
-.. |rellogo| image:: images/rellogo.jpg
-.. |linuxlogo| image:: images/linuxlogo.jpg
+.. |winlogo| image:: images/winlogo.png
+.. |rellogo| image:: images/rellogo.png
+.. |linuxlogo| image:: images/linuxlogo.png
 
 Latest Release (v1.2-r160310)
 ------------------------------
