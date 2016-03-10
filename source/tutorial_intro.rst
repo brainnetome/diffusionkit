@@ -62,6 +62,17 @@ For Chinese users
 Getting Started
 ===============
 
+For your convenience, We've created two bash scripts the 
+`Advanced <_static/process_advanced.sh>`_ and the
+`Primary <_static/process_primary.sh>`_, which enable processing multiple data 
+within a loop. 
+The instructions for using the `Advanced <_static/process_advanced.sh>`_ bash script
+are provided in `Download Page <download.html>`_.
+
+This tutorial, however, we would go through the processing pipeline
+with the `Primary <_static/process_primary.sh>`_ bash script, which contains more
+features and options.
+
 Preprocessing
 -------------
 
@@ -70,10 +81,6 @@ in DiffusionKit, assuming DiffusionKit is properly installed following
 `Installation Instructions <download.html#install-uninstall>`_, along 
 with the `Example Dataset <download.html#example-data>`_ downloaded on 
 your hard disk.
-
-For your convenience, a `bash script <_static/process.sh>`_, which 
-enables processing multiple data within a loop, is also available for 
-downloading.
 
 Data Format Conversion
 ~~~~~~~~~~~~~~~~~~~~~~

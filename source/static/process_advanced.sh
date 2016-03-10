@@ -63,3 +63,4 @@ dti_wb.trk: dti.nii.gz nodif_brain_mask.nii.gz seeds.nii.gz
   cd ..
 done
 
+echo "Please check the results in the folder of each subject"
