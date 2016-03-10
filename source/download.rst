@@ -14,7 +14,7 @@ Download Links
 .. |rellogo| image:: images/rellogo.jpg
 .. |linuxlogo| image:: images/linuxlogo.jpg
 
-Latest Release (v1.1-r160204)
+Latest Release (v1.2-r160310)
 ------------------------------
 
 .. sidebar:: Previous Release
@@ -109,7 +109,7 @@ If you encounter any dependency problem please DO `contact us <mailto:diffusion.
 For MS Windows OS
 -----------------
 
-Double click the ``DiffusionKitSetup-v1.1.exe`` file and then choose the destination path 
+Double click the ``DiffusionKitSetup-WIN64-v1.2-r160310.exe`` file and then choose the destination path 
 according to the wizard. You may need to provide administrator permission 
 if you want to put the files into the system path. 
 Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.
@@ -117,23 +117,20 @@ Similarly, to uninstall you only need to hit the menu of “uninstall” in the 
 For Linux OS
 ------------
 
-:code:`Glibc>=2.2` is required. Download the ``DiffusionKitSetup-v1.1.tar.gz``, and then
+:code:`Glibc>=2.2` is required. Download the ``DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz``, and then
 
 .. code-block:: bash
 
- tar zxvf DiffusionKitSetup-v1.1.tar.gz 
- cd diffusionkit/bin
- ./bnviewer # (you can run the command in this way)
+ tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
+ export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.2-r160310/bin
 
-If you do not want to type the full path every time, you could add the path to the $PATH. Edit the ~/.bashrc file, then add the following line,
+You could add the path to the $PATH in the ~/.bashrc file, by adding the following line,
 
 .. code-block:: bash
 
  export $PATH=$PATH:/your/path/to/diffusionkit
 
 To uninstall the software, just manually remove the entire folder where you untar-ed the .tar.gz file.
-
-That's it! Enjoy the software now!
 
 .. include:: common.txt
 
