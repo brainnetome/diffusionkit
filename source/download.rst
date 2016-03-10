@@ -11,6 +11,7 @@ Download Links
 ==============
 
 .. image:: images/try_now_sidebar.png
+  :width: 100px
   :target: http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh
 
 .. |winlogo| image:: images/winlogo.png
