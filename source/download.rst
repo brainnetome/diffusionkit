@@ -62,8 +62,8 @@ And this is what we have in the data above::
  │   └── t1.nii.gz
  └── sub02.tar.gz
 
-We recommand users to follow the `Tutorial Page <tutorials.html>` for 
-step-by-step introduction of the functionalities of DiffutionKit.
+We recommand users to follow the `Tutorial Page <tutorials.html>`_ for 
+a step-by-step introduction of the functions within DiffutionKit.
 
 IN A HURRY? Download all the data files above and run the 
 `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh>`_ ,

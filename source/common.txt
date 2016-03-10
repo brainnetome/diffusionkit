@@ -23,8 +23,9 @@
 
 .. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN
 
-.. |4A| image:: images/4A.png
+.. |4A| image:: images/4A-thumb.png
    :width: 300
+   :target: _images/4A.png
 
 .. |banner| image:: images/web_banner-thumb.png
    :width: 800
