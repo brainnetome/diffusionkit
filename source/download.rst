@@ -116,7 +116,7 @@ or simply run the following commands to do everything.
     ./process_advanced.sh	
 
 And more simpler, download and run
-`test-diffusionkit.sh <http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh>`_
+`test-diffusionkit.sh <http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh>`_ 
 to take a quick look how DiffusionKit can **BUILD A BRAIN NETWORK JUST A FEW MINUTES**!
 
 .. code-block:: bash
