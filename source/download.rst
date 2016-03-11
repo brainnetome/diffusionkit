@@ -31,11 +31,11 @@ Example Data and Test Script
 ----------------------------
 
 * `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
-* `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [74.5 MB]
-* `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [72.9 MB]
-* `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [3.33 MB]
-* Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] [1.8 KB]
-  [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] [1.8 KB]
+* `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
+* `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
+* `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
+* Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
+  [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
 And this is what we have in the data above::
 
@@ -118,9 +118,21 @@ or simply run the following commands to do everything.
 
 And more simpler way is to copy the code in the above panel (choose the server close to you) and save it as a file,such as test-diffusionkit.sh, and run to take a quick look how DiffusionKit can **BUILD A BRAIN NETWORK JUST A FEW MINUTES**!
 
-.. code-block:: bash
+.. toggle_table::
+  :arg1: server in GitHub
+  :arg2: server in China
 
-  $ bash test-diffusionkit.sh
+.. toggle:: server in GitHub
+
+  .. code-block:: bash
+
+    $ bash test-diffusionkit.sh
+
+.. toggle:: server in China
+
+  .. code-block:: bash
+
+    $ bash test-diffusionkit-china.sh
 
 System requirement
 ==================
