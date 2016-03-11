@@ -44,6 +44,8 @@ And this is what we have in the data above::
  │   ├── aal.nii.txt
  │   ├── aal_roi_024.txt
  │   ├── aal_roi_090.txt
+ │   ├── BN_Atlas_246_1mm.nii.gz
+ │   ├── BN_Atlas_246.txt
  │   └── ch2bet.nii.gz
  ├── atlas.tar.gz
  ├── list.txt
@@ -65,22 +67,24 @@ And this is what we have in the data above::
 We recommand users to follow the `Tutorial Page <tutorial_intro.html#getting-started>`_ for 
 a step-by-step introduction of the functions within DiffutionKit.
 
-IN A HURRY? Download all the data files above and run the 
-`Test Script <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ,
+IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
+`process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ,
 or simply run the following commands to do everything. 
 
 .. toggle_table::
-  :arg1: Worldwide
-  :arg2: China
+  :arg1: server in GitHub
+  :arg2: server in China
 
-.. toggle:: Worldwide
+.. toggle:: server in GitHub
 
   .. code-block:: bash
    
-    # install the program  
-    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-    tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-    export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.2-r160310/bin
+    # install DiffusionKit
+    kitv='v1.2-r160310' ## This line should be changed according to the version you desired.
+    kitname='DiffusionKitSetup-x86_64-'${kitv}
+    wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
+    tar zxvf ${kitname}'.tar.gz'
+    export PATH=$PATH:$(pwd)/${kitname}/bin
   
     # get the data and run!
     wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt
@@ -91,14 +95,16 @@ or simply run the following commands to do everything.
     chmod +x process_advanced.sh
     ./process_advanced.sh	
 
-.. toggle:: China
+.. toggle:: server in China
 
   .. code-block:: bash
    
-    # install the program  
-    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-    tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-    export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.2-r160310/bin
+    # install DiffusionKit 
+    kitv='v1.2-r160310' ## This line should be changed according to the version you desired.
+    kitname='DiffusionKitSetup-x86_64-'${kitv}
+    wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
+    tar zxvf ${kitname}'.tar.gz'
+    export PATH=$PATH:$(pwd)/${kitname}/bin
   
     # get the data and run!
     wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt
