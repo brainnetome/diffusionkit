@@ -34,7 +34,8 @@ Example Data and Test Script
 * `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [74.5 MB]
 * `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [72.9 MB]
 * `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [3.33 MB]
-* `Test Script <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ [1.8 KB]
+* Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] [1.8 KB]
+  [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] [1.8 KB]
 
 And this is what we have in the data above::
 
