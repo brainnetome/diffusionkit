@@ -21,11 +21,25 @@ Latest Release (v1.2-r160310)
 
  See `Releases <https://github.com/brainnetome/diffusionkit/releases>`_ for our previously compiled packages.
 
-|winlogo| `Windows Installer (x86-64) 
-<https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-WIN64-v1.2-r160310.exe>`_ [11.9 MB]
+.. toggle_table::
+  :arg1: server in GitHub
+  :arg2: server in China
 
-|linuxlogo| `Linux Binary Package (x86-64) 
-<https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz>`_ [36.4 MB]
+.. toggle:: server in GitHub
+
+  |winlogo| `Windows Installer (x86-64) 
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-WIN64-v1.2-r160310.exe>`_ [11.9 MB]
+
+  |linuxlogo| `Linux Binary Package (x86-64) 
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz>`_ [36.4 MB]
+
+.. toggle:: server in China
+
+  |winlogo| `Windows Installer (x86-64) 
+  <http://ddl.escience.cn/ff/emBq?func=download>`_ [11.9 MB]
+
+  |linuxlogo| `Linux Binary Package (x86-64) 
+  <http://ddl.escience.cn/ff/emBr?func=download>`_ [36.4 MB]
 
 Example Data and Test Script
 ----------------------------
