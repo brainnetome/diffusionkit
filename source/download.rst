@@ -116,26 +116,10 @@ or simply run the following commands to do everything.
     chmod +x process_advanced.sh
     ./process_advanced.sh	
 
-.. toggle_table::
-  :arg1: server in GitHub
-  :arg2: server in China
-
 And more simpler way is to copy the code in the above panel (choose the server close to you) 
 and save it as a file, such as `test-diffusionkit.sh <http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh>`_, 
 or `test-diffusionkit-china.sh <http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit-china.sh>`_.
 and run to take a quick look how DiffusionKit can **BUILD A BRAIN NETWORK JUST A FEW MINUTES**!
-
-.. toggle:: server in GitHub
-
-  .. code-block:: bash
-
-    $ bash test-diffusionkit.sh
-
-.. toggle:: server in China
-
-  .. code-block:: bash
-
-    $ bash test-diffusionkit-china.sh
 
 System requirement
 ==================
