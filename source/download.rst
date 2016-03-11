@@ -70,8 +70,8 @@ IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
 or simply run the following commands to do everything. 
 
 .. toggle_table::
-  :arg1: server_in_GitHub
-  :arg2: server_in_China
+  :arg1: server in GitHub
+  :arg2: server in China
 
 .. toggle:: server in GitHub
 
