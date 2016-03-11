@@ -19,22 +19,23 @@ Latest Release (v1.2-r160310)
 
 .. sidebar:: Previous Release
 
- See `Releases <https://github.com/liangfu/diffusionkit/releases>`_ for our previously compiled packages.
+ See `Releases <https://github.com/brainnetome/diffusionkit/releases>`_ for our previously compiled packages.
 
 |winlogo| `Windows Installer (x86-64) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-WIN64-v1.2-r160310.exe>`_ [11.9 MB]
+<https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-WIN64-v1.2-r160310.exe>`_ [11.9 MB]
 
 |linuxlogo| `Linux Binary Package (x86-64) 
-<https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz>`_ [36.4 MB]
+<https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz>`_ [36.4 MB]
 
 Example Data and Test Script
 ----------------------------
 
-* `List File <https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
-* `Subject 01 <https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [74.5 MB]
-* `Subject 02 <https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [72.9 MB]
-* `Brain Atlas <https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [3.33 MB]
-* `Test Script <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh>`_ [1.8 KB]
+* `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+* `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [74.5 MB]
+* `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [72.9 MB]
+* `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [3.33 MB]
+* Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] [1.8 KB]
+  [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] [1.8 KB]
 
 And this is what we have in the data above::
 
@@ -68,7 +69,7 @@ We recommand users to follow the `Tutorial Page <tutorial_intro.html#getting-sta
 a step-by-step introduction of the functions within DiffutionKit.
 
 IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
-`process_advanced.sh <https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh>`_ ,
+`process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ,
 or simply run the following commands to do everything. 
 
 .. toggle_table::
@@ -82,16 +83,16 @@ or simply run the following commands to do everything.
     # install DiffusionKit
     kitv='v1.2-r160310' ## This line should be changed according to the version you desired.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
-    wget https://github.com/liangfu/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
+    wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
-    export PATH=$PATH:`pwd`/${kitname}/bin
+    export PATH=$PATH:$(pwd)/${kitname}/bin
   
     # get the data and run!
-    wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/list.txt
-    wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz
-    wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz
-    wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz
-    wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz
+    wget https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh
     chmod +x process_advanced.sh
     ./process_advanced.sh	
 
@@ -102,16 +103,16 @@ or simply run the following commands to do everything.
     # install DiffusionKit 
     kitv='v1.2-r160310' ## This line should be changed according to the version you desired.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
-    wget https://github.com/liangfu/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
+    wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
-    export PATH=$PATH:`pwd`/${kitname}/bin
+    export PATH=$PATH:$(pwd)/${kitname}/bin
   
     # get the data and run!
-    wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/list.txt
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt
     wget http://ddl.escience.cn/ff/emBl?func=download -O sub01.tar.gz
     wget http://ddl.escience.cn/ff/emBm?func=download -O sub02.tar.gz
     wget http://ddl.escience.cn/ff/emBo?func=download -O atlas.tar.gz
-    wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh
+    wget https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh
     chmod +x process_advanced.sh
     ./process_advanced.sh	
 
