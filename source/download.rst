@@ -89,7 +89,7 @@ or simply run the following commands to do everything.
     wget https://github.com/liangfu/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz
     wget https://raw.githubusercontent.com/liangfu/diffusionkit/master/source/static/process_advanced.sh
     chmod +x process_advanced.sh
-    ./process.sh	
+    ./process_advanced.sh	
 
 .. toggle:: China
 

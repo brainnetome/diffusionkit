@@ -62,7 +62,7 @@ For Chinese users
 Getting Started
 ===============
 
-For your convenience, We've created two bash scripts the 
+For your convenience, we've created two bash scripts the 
 `Advanced <_static/process_advanced.sh>`_ and the
 `Primary <_static/process_primary.sh>`_, which enable processing multiple data 
 within a loop. 
