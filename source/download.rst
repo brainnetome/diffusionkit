@@ -44,6 +44,8 @@ And this is what we have in the data above::
  │   ├── aal.nii.txt
  │   ├── aal_roi_024.txt
  │   ├── aal_roi_090.txt
+ │   ├── BN_Atlas_246_1mm.nii.gz
+ │   ├── BN_Atlas_246.txt
  │   └── ch2bet.nii.gz
  ├── atlas.tar.gz
  ├── list.txt
