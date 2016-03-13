@@ -50,19 +50,19 @@ Example Data and Test Script
 
 .. toggle:: server in GitHub 
 
-  * `List File: list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
-  * `Subject 01: sub01.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
-  * `Subject 02: sub02.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
-  * `Brain Atlas: atlas.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
+  * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+  * Subject 01: `sub01.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
+  * Subject 02: `sub02.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
+  * Brain Atlas: `atlas.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
   * Test Script [ `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
     [ `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
 .. toggle:: server in China
 
-  * `List File: list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
-  * `Subject 01: sub01.tar.gz <http://ddl.escience.cn/ff/emBl?func=download>`_ [87.1 MB]
-  * `Subject 02: sub02.tar.gz <http://ddl.escience.cn/ff/emBm?func=download>`_ [85.5 MB]
-  * `Brain Atlas: atlas.tar.gz <http://ddl.escience.cn/ff/emBo?func=download>`_ [1.57 MB]
+  * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+  * Subject 01: `sub01.tar.gz <http://ddl.escience.cn/ff/emBl?func=download>`_ [87.1 MB]
+  * Subject 02: `sub02.tar.gz <http://ddl.escience.cn/ff/emBm?func=download>`_ [85.5 MB]
+  * Brain Atlas: `atlas.tar.gz <http://ddl.escience.cn/ff/emBo?func=download>`_ [1.57 MB]
   * Test Script [ `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
     [ `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
