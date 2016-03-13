@@ -44,6 +44,10 @@ Latest Release (v1.2-r160310)
 Example Data and Test Script
 ----------------------------
 
+.. toggle_table::
+  :arg1: server in GitHub
+  :arg2: server in China
+
 .. toggle:: server in GitHub 
 
   * `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
@@ -92,7 +96,7 @@ And this is what we have in the data above::
 We recommand users to follow the `Tutorial Page <tutorial_intro.html#getting-started>`_ for 
 a step-by-step introduction of the functions within DiffutionKit.
 
- IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_  or `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_. These two scripts have exactly the same functions, except that the primary one is for those who don't have too much background in Bash scripting and the advanced one is Makefile-based which avoids repeatly compiling the unchaged data in multiple compiles. Or simply run the following commands to do everything.
+IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_  or `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_. These two scripts have exactly the same functions, except that the primary one is for those who don't have too much background in Bash scripting and the advanced one is Makefile-based which avoids repeatly compiling the unchaged data in multiple compiles. Or simply run the following commands to do everything (for Linux ONLY).
 
 .. toggle_table::
   :arg1: server in GitHub
@@ -125,7 +129,7 @@ a step-by-step introduction of the functions within DiffutionKit.
     # install DiffusionKit 
     kitv='v1.2-r160310' ## This line should be changed according to the version you desired.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
-    wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
+    wget http://ddl.escience.cn/ff/emBr?func=download -O ${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
     export PATH=$PATH:$(pwd)/${kitname}/bin
   
