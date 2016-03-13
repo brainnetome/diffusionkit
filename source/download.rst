@@ -44,12 +44,22 @@ Latest Release (v1.2-r160310)
 Example Data and Test Script
 ----------------------------
 
-* `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
-* `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
-* `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
-* `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
-* Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
-  [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
+.. toggle:: server in GitHub 
+
+  * `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+  * `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
+  * `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
+  * `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
+  * Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
+    [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
+
+.. toggle:: server in China
+  * `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+  * `Subject 01 <http://ddl.escience.cn/ff/emBl?func=download>`_ [87.1 MB]
+  * `Subject 02 <http://ddl.escience.cn/ff/emBm?func=download>`_ [85.5 MB]
+  * `Brain Atlas <http://ddl.escience.cn/ff/emBo?func=download>`_ [1.57 MB]
+  * Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
+    [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
 And this is what we have in the data above::
 
@@ -82,9 +92,7 @@ And this is what we have in the data above::
 We recommand users to follow the `Tutorial Page <tutorial_intro.html#getting-started>`_ for 
 a step-by-step introduction of the functions within DiffutionKit.
 
-IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
-`process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ,
-or simply run the following commands to do everything. 
+ IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_  or `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_. These two scripts have exactly the same functions, except that the primary one is for those who don't have too much background in Bash scripting and the advanced one is Makefile-based which avoids repeatly compiling the unchaged data in multiple compiles. Or simply run the following commands to do everything.
 
 .. toggle_table::
   :arg1: server in GitHub
