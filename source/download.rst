@@ -58,6 +58,7 @@ Example Data and Test Script
     [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
 .. toggle:: server in China
+
   * `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
   * `Subject 01 <http://ddl.escience.cn/ff/emBl?func=download>`_ [87.1 MB]
   * `Subject 02 <http://ddl.escience.cn/ff/emBm?func=download>`_ [85.5 MB]
