@@ -72,7 +72,7 @@ are provided in `Download Page <download.html>`_.
 This tutorial, however, we would go through the processing pipeline
 with the `Primary <_static/process_primary.sh>`_ bash script, which contains more
 features and options. It should be noted that both of the `Advanced <_static/process_advanced.sh>`_ and the
-`Primary <_static/process_primary.sh>`_ scripts can be run in simple Bash environment or emulation, since they utilize extremely basic Bash commands. So, even in MS Windows, you can run these two scripts by a Bash emulation, such as git for Windows (STRONGLY recommend), https://git-for-windows.github.io/, which provides a light but awesome Bash emulation. When you install this emulation, the `Primary <_static/process_primary.sh>`_ script can ben run directly once you prepared all the required data (DO remember to add the DiffusionKit installation path to your system search path). And the `Advanced <_static/process_advanced.sh>`_ script need an additional Makefile-based environment.
+`Primary <_static/process_primary.sh>`_ scripts can be run in simple Bash environment or emulation, since they utilize extremely basic Bash commands. So, even in MS Windows, you can run these two scripts by a Bash emulation, such as `git for Windows <https://git-for-windows.github.io>`_ (STRONGLY recommend), which provides a light but awesome Bash emulation. When you install this emulation, the `Primary <_static/process_primary.sh>`_ script can ben run directly once you prepared all the required data (DO remember to add the DiffusionKit installation path to your system search path). And the `Advanced <_static/process_advanced.sh>`_ script need an additional Makefile-based environment.
 
 Preprocessing
 -------------
