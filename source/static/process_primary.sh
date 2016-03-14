@@ -49,7 +49,7 @@ do
     bncalc -i eddy.nii.gz -roi_rect 0 -o b0
 
     #### Next: Get brain mask using the command of bet2 
-    bet2 b0.nii.gz nodif_brain -m
+    bet2 b0.nii.gz nodif_brain -m nodif_brain_mask.nii.gz
     bet2 t1.nii.gz brain -f 0.3
 
     #### Next: We can achieve DTI related indices using the command bndti_estimate
