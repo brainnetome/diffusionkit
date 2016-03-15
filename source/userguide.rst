@@ -204,7 +204,7 @@ The diffusion tensor D can be estimated from measured diffusion signal samples
 through a simple least square method or weighted least square 
 method `[12] <reference.html#id12>`_, or more complex methods that consider 
 positive deﬁnite constraint or Rician noise. If single b-value is used, the 
-optimal b-value for tensor estimation was reported to in the range of $(0.7~1.5) \times 10^{-3} s/mm^2$ , 
+optimal b-value for tensor estimation was reported to in the range of $(0.7\sim 1.5) \times 10^{-3} s/mm^2$ , 
 and normally about twenty DWI images are used in DTI in clinical study. ome 
 useful indices can be obtained from tensor D. The most important three indices 
 are fractional anisotropy (FA), mean diffusivity (MD) and relative anisotropy (RA) deﬁned as 
