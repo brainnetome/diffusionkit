@@ -43,7 +43,7 @@ For Chinese users
 If you prefer to use shell script, like Bash, you can also find some 
 entrances for tutorials. The shell script itself is easy to follow and it is 
 a powerful tool to concatenate the underlying execution functions. It should be 
-noted that the Bash script is only for *NUX system, so it is not 
+noted that the Bash script is only for *nix system, so it is not 
 suitable form cross-platforms. Several tutorial links are listed here:
 
 For English users
@@ -69,9 +69,10 @@ within a loop.
 The instructions for using the `Advanced <_static/process_advanced.sh>`_ bash script
 are provided in `Download Page <download.html>`_.
 
-This tutorial, however, we would go through the processing pipeline
+In this tutorial, however, we would go through the processing pipeline
 with the `Primary <_static/process_primary.sh>`_ bash script, which contains more
-features and options.
+features and options. It should be noted that both the `Advanced <_static/process_advanced.sh>`_ and the
+`Primary <_static/process_primary.sh>`_ scripts can be run in simple Bash environment or emulation, since they utilize extremely basic Bash commands. So, even in MS Windows, you can run these two scripts by a Bash emulation, such as `git for Windows <https://git-for-windows.github.io>`_ (STRONGLY recommend), which provides a light but awesome Bash emulation. When you install this emulation, the `Primary <_static/process_primary.sh>`_ script can ben run directly once you prepared all the required data (DO remember to add the DiffusionKit installation path to your system search path). And the `Advanced <_static/process_advanced.sh>`_ script need an additional Makefile-based environment.
 
 Preprocessing
 -------------

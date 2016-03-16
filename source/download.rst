@@ -44,12 +44,27 @@ Latest Release (v1.2-r160310)
 Example Data and Test Script
 ----------------------------
 
-* `List File <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
-* `Subject 01 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
-* `Subject 02 <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
-* `Brain Atlas <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
-* Test Script [ `advanced <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
-  [ `primary <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
+.. toggle_table::
+  :arg1: server in GitHub
+  :arg2: server in China
+
+.. toggle:: server in GitHub 
+
+  * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+  * Subject 01: `sub01.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub01.tar.gz>`_ [87.1 MB]
+  * Subject 02: `sub02.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/sub02.tar.gz>`_ [85.5 MB]
+  * Brain Atlas: `atlas.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/atlas.tar.gz>`_ [1.57 MB]
+  * Test Script [ `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
+    [ `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
+
+.. toggle:: server in China
+
+  * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt>`_ [12 Bytes]
+  * Subject 01: `sub01.tar.gz <http://ddl.escience.cn/ff/emBl?func=download>`_ [87.1 MB]
+  * Subject 02: `sub02.tar.gz <http://ddl.escience.cn/ff/emBm?func=download>`_ [85.5 MB]
+  * Brain Atlas: `atlas.tar.gz <http://ddl.escience.cn/ff/emBo?func=download>`_ [1.57 MB]
+  * Test Script [ `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
+    [ `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
 And this is what we have in the data above::
 
@@ -82,9 +97,7 @@ And this is what we have in the data above::
 We recommand users to follow the `Tutorial Page <tutorial_intro.html#getting-started>`_ for 
 a step-by-step introduction of the functions within DiffutionKit.
 
-IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
-`process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ,
-or simply run the following commands to do everything. 
+IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_  or `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_. These two scripts have exactly the same functions, except that the primary one is for those who don't have too much background in Bash scripting and the advanced one is Makefile-based which avoids repeatly compiling the unchaged data in multiple compiles. Or simply run the following commands to do everything (for Linux ONLY).
 
 .. toggle_table::
   :arg1: server in GitHub
@@ -117,7 +130,7 @@ or simply run the following commands to do everything.
     # install DiffusionKit 
     kitv='v1.2-r160310' ## This line should be changed according to the version you desired.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
-    wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
+    wget http://ddl.escience.cn/ff/emBr?func=download -O ${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
     export PATH=$PATH:$(pwd)/${kitname}/bin
   
