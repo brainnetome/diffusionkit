@@ -1,11 +1,11 @@
 # install DiffusionKit
-wget http://ddl.escience.cn/ff/emBr?func=download -O DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-tar zxvf DiffusionKitSetup-x86_64-v1.2-r160310.tar.gz
-export PATH=$PATH:$(pwd)/DiffusionKitSetup-x86_64-v1.2-r160310/bin
+wget http://ddl.escience.cn/ff/emBr?func=download -O DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz
+tar zxvf DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz
+export PATH=$PATH:$(pwd)/DiffusionKitSetup-x86_64-v1.3-r160618/bin
 
 # get the data and run!
 if [ ! -f list.txt ]; then
-  wget https://github.com/brainnetome/diffusionkit/releases/download/v1.2-r160310/list.txt
+  wget https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160618/list.txt
 fi
 if [ ! -f sub01.tar.gz ]; then
   wget http://ddl.escience.cn/ff/emBl?func=download -O sub01.tar.gz
