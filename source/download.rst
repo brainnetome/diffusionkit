@@ -36,10 +36,10 @@ Latest Release (v1.3-r160618)
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/emBq?func=download>`_ [11.9 MB]
+  <http://ddl.escience.cn/ff/emFE?func=download>`_ [12.7 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/emBr?func=download>`_ [36.4 MB]
+  <http://ddl.escience.cn/ff/emFD?func=download>`_ [41.8 MB]
 
 Example Data and Test Script
 ----------------------------
