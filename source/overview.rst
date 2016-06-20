@@ -4,11 +4,11 @@
    contain the root `toctree` directive.
 
 --------
-Overivew
+Overview
 --------
 
 .. meta::
-   :description: Overivew of Brainnetome DiffusionKit
+   :description: Overview of Brainnetome DiffusionKit
 
 
 .. toctree::
