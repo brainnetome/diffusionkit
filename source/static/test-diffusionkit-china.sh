@@ -1,5 +1,5 @@
 # install DiffusionKit
-wget http://ddl.escience.cn/ff/emBr?func=download -O DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz
+wget http://ddl.escience.cn/ff/emFD?func=download -O DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz
 tar zxvf DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz
 export PATH=$PATH:$(pwd)/DiffusionKitSetup-x86_64-v1.3-r160618/bin
 
