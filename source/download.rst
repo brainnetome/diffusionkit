@@ -130,7 +130,7 @@ IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
     # install DiffusionKit 
     kitv='v1.3-r160618' ## This line should be changed according to the version you desired.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
-    wget http://ddl.escience.cn/ff/emBr?func=download -O ${kitname}'.tar.gz'
+    wget http://ddl.escience.cn/ff/emFD?func=download -O ${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
     export PATH=$PATH:$(pwd)/${kitname}/bin
   
