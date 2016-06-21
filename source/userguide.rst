@@ -68,7 +68,7 @@ give the link of your data if it has big size beyond the email capability.
   dcm2nii -o "~/dir with spaces/dir" ~/dicomdir
   Example output filename: '/DTI.nii.gz'
 
-.. _Eddy_Current_Correction:
+.. _Data_Correction:
 
 Data correction
 --------------------------

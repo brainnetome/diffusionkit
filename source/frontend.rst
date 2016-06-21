@@ -33,7 +33,7 @@ Eddy Current Correction
 -----------------------
 
 This is the GUI front end for :code:`bneddy` program. Details can be found at 
-:ref:`Eddy_Current_Correction` section.
+:ref:`Data_Correction` section.
 
 .. figure:: images/gui_bneddy.png
   :align: center
