@@ -33,6 +33,10 @@ Reference
 .. [18] Ourselin S, Stefanescu R, Pennec X. Robust registration of multi-modal images: towards real-time clinical applications. Medical Image Computing and Computer Assisted Intervention. Springer Berlin Heidelberg, 2002: 140-147. 
 .. [19] Ourselin S, Roche A, Subsol G, et al. Reconstructing a 3D structure from serial histological section. Image and vision computing, 2001, 19(1): 25-31. 
 .. [20] Modat M, Ridgway G R, Taylor Z A, et al. Fast free-form deformation using graphics processing units. Computer methods and programs in biomedicine, 2010, 98(3): 278-284. 
+.. [21] Andersson JL, Sotiropoulos SN. An integrated approach to correction for off-resonance effects and subject movement in diffusion MR imaging. NeuroImage, 2016, 125: 1063-78.
+.. [22] Bernstein MA, King KF, Zhou ZJ. Handbook of MRI pulse sequences. Academic Press: Amsterdam,  Boston, 2004.
+.. [23] Andersson JLR, Skare S, Ashburner J. How to correct susceptibility distortions in spin-echo echo-planar images: application to diffusion tensor imaging. NeuroImage, 2003; 20: 870-88.
+.. [24] Smith SM, Jenkinson M, Woolrich MW, Beckmann CF, Behrens TEJ, Johansen-Berg H, Bannister PR, De Luca M, Drobnjak I, Flitney DE, Niazy RK, Saunders J, Vickers J, Zhang YY, De Stefano N, Brady JM, Matthews PM. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 2004; 23: S208-S19
 
 .. include:: common.txt
 
