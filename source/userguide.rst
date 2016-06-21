@@ -80,7 +80,8 @@ misalignment caused by subject motion. The off-resonance effects are usually
 caused by the eddy currents of switching the diffusion encoding gradients and 
 the susceptibility distribution of the imaged subjects, resulting in the deterioration 
 of images due to blurring, spatial distortion, local signal artifacts, etc. The 
-motion effects also cause image blurring and geometric misalignment `[21] <reference.html#id21>`_`[22] <reference.html#id22>`_. 
+motion effects also cause image blurring and geometric misalignment `[21] <reference.html#id21>`_ 
+`[22] <reference.html#id22>`_. 
 To correct the distortions induced by susceptibility and eddy current when the data is acquired with different 
 phase-encode parameters, we include the correction mechanism using different 
 phase-encode information. We exported the functions of :code:`topup`, :code:`applytopup`, :code:`eddy` and :code:`eddy_combine` 
