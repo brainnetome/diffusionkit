@@ -18,7 +18,7 @@ Preprocessing
 =============
 
 A set of command line tools for data preprocessing steps is described in this section, 
-which include data format conversion, eddy current correction and brain extraction.
+which include data format conversion, data correction and brain extraction.
 
 .. _DICOM_to_NIFTI:
 
@@ -70,20 +70,32 @@ give the link of your data if it has big size beyond the email capability.
 
 .. _Eddy_Current_Correction:
 
-Eddy and motion correction
+Data correction
 --------------------------
 
-During the MRI scanning, many factors can cause magnetic field inhomogeneity,
-including changing magnetic fields from the imaging gradients and the radiofrequency 
-(RF) coils and yielded biological effects. These effects usually degrade 
-the imaging quality, resulting in artifacts including shearing and blurring 
-(http://mri-q.com/eddy-current-problems.html). 
-Another type of artifacts is caused by head motion. Most of the artifacts 
-described above could be amended by post-processing. In the eddy correction 
-module, we apply a affine registration method to address most of the shearing 
-and motion artifacts. For the blurring artifacts, it still needs further 
-investigation. Additional solutions would be added to reduce the magnetic 
-field inhomogeneity by field mapping.
+During the MRI scanning, many factors can cause distortions and misalignment. 
+The diffusion weighted imaging (DWI) volume series (as a 4D zipped NIFTI file) 
+are then corrected for the distortions induced by off-resonance field and the 
+misalignment caused by subject motion. The off-resonance effects are usually 
+caused by the eddy currents of switching the diffusion encoding gradients and 
+the susceptibility distribution of the imaged subjects, resulting in the deterioration 
+of images due to blurring, spatial distortion, local signal artifacts, etc. The 
+motion effects also cause image blurring and geometric misalignment (Andersson 
+and Sotiropoulos, 2016; Bernstein et al., 2004). To correct the distortions 
+induced by susceptibility and eddy current when the data is acquired with different 
+phase-encode parameters, we include the correction mechanism using different 
+phase-encode information. We he functions of topup, applytopup, eddy and eddy_combine 
+from FSL (Andersson and Sotiropoulos, 2016; Andersson et al., 2003; Smith et al., 2004), 
+compiled them on both Linux and Windows platforms, and packed the executable files 
+into the latest version of DiffusionKit. The detailed usage information, please 
+refer to the website of FSL (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/).
+Unfortunately, most clinical acquisitions do not currently meet the requirement 
+(two or more acquisitions where the parameters are different so that the mapping 
+fields for distortion correction are different.) of topup. To handle this issue, 
+we implemented a function called bneddy to correct eddy-current induced distortion 
+and head movements efficiently. bneddy applies rigid and affine registrations to 
+amend the distortions and misalignment
+
 
 .. code-block:: bash
 
