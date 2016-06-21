@@ -84,7 +84,7 @@ motion effects also cause image blurring and geometric misalignment (Andersson
 and Sotiropoulos, 2016; Bernstein et al., 2004). To correct the distortions 
 induced by susceptibility and eddy current when the data is acquired with different 
 phase-encode parameters, we include the correction mechanism using different 
-phase-encode information. We he functions of topup, applytopup, eddy and eddy_combine 
+phase-encode information. We he functions of :code:'topup', :code:'applytopup', :code:'eddy' and :code:'eddy_combine' 
 from FSL (Andersson and Sotiropoulos, 2016; Andersson et al., 2003; Smith et al., 2004), 
 compiled them on both Linux and Windows platforms, and packed the executable files 
 into the latest version of DiffusionKit. The detailed usage information, please 
@@ -95,7 +95,7 @@ Unfortunately, most clinical acquisitions do not currently meet the requirement
 fields for distortion correction are different.) of topup. To handle this issue, 
 we implemented a function called bneddy to correct eddy-current induced distortion 
 and head movements efficiently. bneddy applies rigid and affine registrations to 
-amend the distortions and misalignment
+amend the distortions and misalignment.
 
 
 .. code-block:: bash
@@ -270,7 +270,7 @@ the diffusion signal  is represented by spherical polar Fourier (SPF) basis func
 .. raw:: html
 
  $$\begin{equation} \tag{7}
- E(q)=\prod_{n=0}^{N}\sum_{l=0}^{L}\sum_{m=-l}^{l} a_{lmn}R_{n}(||q||)Y_{l}^{m}(u)
+ E(q)=\sum_{n=0}^{N}\sum_{l=0}^{L}\sum_{m=-l}^{l} a_{lmn}R_{n}(||q||)Y_{l}^{m}(u)
  \end{equation}$$
 
 The SPF basis denoted by $R_{n}(||q||)Y_{l}^{m}(u)$ is a 3D orthonormal basis with 
