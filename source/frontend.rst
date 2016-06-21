@@ -10,7 +10,7 @@
    :maxdepth: 3
 
 -----------------------------------------
-GUI Fornt-end of Data Processing Pipeline
+GUI Front-end of Data Processing Pipeline
 -----------------------------------------
 
 Preprocessing
