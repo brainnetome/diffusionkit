@@ -39,6 +39,9 @@ Key functions of the software
 |            +----------------------+-------------------------------------------------------+
 |            | bneddy               | Reduce head motion and magnetic artifacts             |
 |            +----------------------+-------------------------------------------------------+
+|            | topup/eddy           | Correct eddy current and susceptibility induced       |
+|            |                      | distortion and head movements                         |
+|            +----------------------+-------------------------------------------------------+
 |            | bet2                 | Extract brain tissue (Smith, 2002)                    |
 |            +----------------------+-------------------------------------------------------+
 |            | bnsplit,bnmerge      | Split/merge the 4D image along the 4th dimension      |
