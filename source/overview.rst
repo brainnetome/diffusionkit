@@ -37,7 +37,8 @@ Key functions of the software
 +============+======================+=======================================================+
 | Preprocess | dcm2nii              | Convert DICOM to unified 4D NIFTI files               |
 |            +----------------------+-------------------------------------------------------+
-|            | bneddy               | Correct eddy current induced distortion and head moti |
+|            | bneddy               | Correct eddy current induced distortion and           |
+|            |                      | head motion                                           |
 |            +----------------------+-------------------------------------------------------+
 |            | topup/eddy           | Correct eddy current and susceptibility induced       |
 |            |                      | distortion and head movements                         |
