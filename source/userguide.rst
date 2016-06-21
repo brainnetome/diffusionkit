@@ -89,6 +89,7 @@ from FSL (Andersson and Sotiropoulos, 2016; Andersson et al., 2003; Smith et al.
 compiled them on both Linux and Windows platforms, and packed the executable files 
 into the latest version of DiffusionKit. The detailed usage information, please 
 refer to the website of FSL (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/).
+
 Unfortunately, most clinical acquisitions do not currently meet the requirement 
 (two or more acquisitions where the parameters are different so that the mapping 
 fields for distortion correction are different.) of topup. To handle this issue, 
