@@ -92,9 +92,9 @@ refer to the website of FSL (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/).
 
 Unfortunately, most clinical acquisitions do not currently meet the requirement 
 (two or more acquisitions where the parameters are different so that the mapping 
-fields for distortion correction are different.) of topup. To handle this issue, 
-we implemented a function called bneddy to correct eddy-current induced distortion 
-and head movements efficiently. bneddy applies rigid and affine registrations to 
+fields for distortion correction are different.) of :code:`topup`. To handle this issue, 
+we implemented a function called :code:`bneddy` to correct eddy-current induced distortion 
+and head movements efficiently. :code:`bneddy` applies rigid and affine registrations to 
 amend the distortions and misalignment.
 
 
