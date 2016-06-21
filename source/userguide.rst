@@ -85,7 +85,8 @@ motion effects also cause image blurring and geometric misalignment `[21] <refer
 To correct the distortions induced by susceptibility and eddy current when the data is acquired with different 
 phase-encode parameters, we include the correction mechanism using different 
 phase-encode information. We exported the functions of :code:`topup`, :code:`applytopup`, :code:`eddy` and :code:`eddy_combine` 
-from FSL `[21] <reference.html#id21>`_`[23] <reference.html#id23>`_`[24] <reference.html#id24>`_, 
+from FSL `[21] <reference.html#id21>`_ 
+`[23] <reference.html#id23>`_`[24] <reference.html#id24>`_, 
 compiled them on both Linux and Windows platforms, and packed the executable files 
 into the latest version of DiffusionKit. The detailed usage information, please 
 refer to the website of FSL (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/).
