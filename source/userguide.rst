@@ -108,7 +108,6 @@ into DiffusionKit. The detailed usage information, please refer to the website o
         --bvecs File containing the b-vectors for all volumes in --imain
         --bvals File containing the b-values for all volumes in --imain
         --out   Basename for output
-
 Optional arguments (You may optionally specify one or more of):
         --session       File containing session indices for all volumes in --imain
         --topup Base name for output files from topup
