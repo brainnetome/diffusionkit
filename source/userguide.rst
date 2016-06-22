@@ -93,6 +93,43 @@ into DiffusionKit. The detailed usage information, please refer to the website o
 
 .. code-block:: bash
 
+ $ ./topup -h
+ Part of FSL (build 504)
+ topup
+
+ Usage:
+ topup --imain=<some 4D image> --datain=<text file> --config=<text file with parameters> --coutname=my_field
+
+
+ Compulsory arguments (You MUST set one or more of):
+        --imain         name of 4D file with images
+        --datain        name of text file with PE directions/times
+
+ Optional arguments (You may optionally specify one or more of):
+        --out           base-name of output files (spline coefficients (Hz) and movement parameters)
+        --fout          name of image file with field (Hz)
+        --iout          name of 4D image file with unwarped images
+        --logout        Name of log-file
+        --warpres       (approximate) resolution (in mm) of warp basis for the different sub-sampling levels, default 10
+        --subsamp       sub-sampling scheme, default 1
+        --fwhm          FWHM (in mm) of gaussian smoothing kernel, default 8
+        --config        Name of config file specifying command line arguments
+        --miter         Max # of non-linear iterations, default 5
+        --lambda        Weight of regularisation, default depending on --ssqlambda and --regmod switches. See user documetation.
+        --ssqlambda     If set (=1), lambda is weighted by current ssq, default 1
+        --regmod        Model for regularisation of warp-field [membrane_energy bending_energy], default bending_energy
+        --estmov        Estimate movements if set, default 1 (true)
+        --minmet        Minimisation method 0=Levenberg-Marquardt, 1=Scaled Conjugate Gradient, default 0 (LM)
+        --splineorder   Order of spline, 2->Qadratic spline, 3->Cubic spline. Default=3
+        --numprec       Precision for representing Hessian, double or float. Default double
+        --interp        Image interpolation model, linear or spline. Default spline
+        --scale         If set (=1), the images are individually scaled to a common mean, default 0 (false)
+        --regrid        If set (=1), the calculations are done in a different grid, default 1 (true)
+        -v,--verbose    Print diagonostic information while running
+        -h,--help       display help info
+
+.. code-block:: bash
+
  $ ./eddy -h
  Part of FSL (build 504)
  eddy
@@ -108,6 +145,7 @@ into DiffusionKit. The detailed usage information, please refer to the website o
         --bvecs File containing the b-vectors for all volumes in --imain
         --bvals File containing the b-values for all volumes in --imain
         --out   Basename for output
+ 
  Optional arguments (You may optionally specify one or more of):
         --session       File containing session indices for all volumes in --imain
         --topup Base name for output files from topup
