@@ -89,8 +89,37 @@ from FSL `[21] <reference.html#id21>`_
 `[23] <reference.html#id23>`_
 `[24] <reference.html#id24>`_, 
 compiled them on both Linux and Windows platforms, and packed the executable files 
-into the latest version of DiffusionKit. The detailed usage information, please 
-refer to the website of FSL (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/).
+into DiffusionKit. The detailed usage information, please refer to the website of FSL (http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/).
+
+.. code-block:: bash
+
+ $ ./eddy -h
+ Part of FSL (build 504)
+ eddy
+ Copyright(c) 2011, University of Oxford (Jesper Andersson)
+ 
+ Usage: 
+ eddy --monsoon
+ Compulsory arguments (You MUST set one or more of):
+        --imain File containing all the images to estimate distortions for
+        --mask  Mask to indicate brain
+        --index File containing indices for all volumes in --imain into --acqp and --topup
+        --acqp  File containing acquisition parameters
+        --bvecs File containing the b-vectors for all volumes in --imain
+        --bvals File containing the b-values for all volumes in --imain
+        --out   Basename for output
+
+Optional arguments (You may optionally specify one or more of):
+        --session       File containing session indices for all volumes in --imain
+        --topup Base name for output files from topup
+        --flm   First level EC model (linear/quadratic/cubic)
+        --fwhm  FWHM for conditioning filter when estimating the parameters
+        --niter Number of iterations (default 5)
+        --resamp        Final resampling method (jac/lsr)
+        --repol Detect and replace outlier slices
+        -v,--verbose    switch on diagnostic messages
+        -h,--help       display this message
+
 
 Unfortunately, most clinical acquisitions do not currently meet the requirement 
 (two or more acquisitions where the parameters are different so that the mapping 
