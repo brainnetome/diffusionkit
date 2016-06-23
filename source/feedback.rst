@@ -32,4 +32,25 @@ Feedback
 If you encounter any problems or have any suggestions, 
 please feel free to get back to us, diffusion.kit@nlpr.ia.ac.cn .
 
+.. raw:: html
+ <div id="disqus_thread"></div>
+ <script>
+ /**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+ */
+ /*
+ var disqus_config = function () {
+ this.page.url = 'http://diffusion.brainnetome.org/en/latest/feedback.html';  // Replace PAGE_URL with your page's canonical URL variable
+ this.page.identifier = 'http://diffusion.brainnetome.org/en/latest/feedback.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+ };
+ */
+ (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+ var d = document, s = d.createElement('script');
+ s.src = '//liangfu.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+ s.setAttribute('data-timestamp', +new Date());
+ (d.head || d.body).appendChild(s);
+ })();
+ </script>
+
 .. include:: common.txt
