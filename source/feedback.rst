@@ -33,6 +33,7 @@ If you encounter any problems or have any suggestions,
 please feel free to get back to us, diffusion.kit@nlpr.ia.ac.cn .
 
 .. raw:: html
+
  <div id="disqus_thread"></div>
  <script>
  /**
