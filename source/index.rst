@@ -41,7 +41,7 @@ were adopted with improved interface and user experience.
 * Visit `Manual <document.html>`_ page for a complete list of usage instructions.
 * Visit `Tutorial <tutorials.html>`_ page to take a look at how DiffusionKit can solve your practical problems.
 * Visit `Screenshot <screenshot.html>`_ page to see how the GUI front-end looks like.
-* For additional problems, please feel free to email us at diffusion.kit@nlpr.ia.ac.cn .
+* Visit `Support <feedback.html>`_ page to submit comments, or email us at diffusion.kit@nlpr.ia.ac.cn .
 
 *Please see the navigation sidebar to the left to begin.*
 
