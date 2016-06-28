@@ -169,11 +169,13 @@ amend the distortions and misalignment.
 .. code-block:: bash
 
  $ ./bneddy -h
- bneddy: Head Motion Correction. 
-    -i                Input file.
-    -o                Output file.
+ bneddy: Eddy Currents and Head Motion Correction.
+ (Mar 10 2016, 16:20:52)
+
+    -i                Input file, 4D .nii.gz file.
+    -o                Prefix for output file, and it will also output the log file as Prefix.txt which will be called by bnrotate_bvec.
     -ref     0        Reference image.
-    -omp     2        Max number of threads.
+    -omp     2        Max number of threads
 
 Skull Stripping (Brain Extraction)
 ----------------------------------
@@ -262,8 +264,8 @@ reported that ADC D is dependent on gradient direction u and used two or
 three DWI images in different directions to detect the properties of tissues.
 Then Basser et al. introduced diffusion tensor `[12] <reference.html#id12>`_ to 
 represent ADC as $D(\\bf{u}) = {\\bf u^{T}}{\\bf D}\\bf{u}$, where ${\\bf D}$ 
-is called as the diffusion tensor, which is a 3 × 3 symmetric positive deﬁ
-nite matrix independent of u. This method is called as diffusion tensor 
+is called as the diffusion tensor, which is a 3 × 3 symmetric positive 
+definite matrix independent of ${\\bf u}$. This method is called as diffusion tensor 
 imaging (DTI) and is the most common method nowadays in dMRI technique. In 
 DTI, the signal E(b) is represented as 
 
@@ -315,16 +317,17 @@ where,  are the three eigenvalues of D and  is the mean eigenvalue. MD and FA ha
 
  $ ./bndti_estimate -h
  bndti_estimate: Diffusion Tensors Estimation.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Oct  9 2015, 19:26:40)
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:15)
+
  general arguments
-    -d                Input DWI Data, in NIFTI/Analyze format (4D)
-    -g                Gradients direction file
-    -b                b value file
-    -m                Brain mask : filein mask | OPTIONAL
-    -o                Result DTI : fileout DTI
-    -tensor  0        Save tensor : 0 - No; 1 - Yes; (Default: 0)
-    -eig     0        Save eigenvalues and eigenvectors : 0 - No; 1 - Yes; (Default: 0)
+    -d                    Input DWI Data, in NIFTI/Analyze format (4D)
+    -g                    Gradients direction file
+    -b                    b value file
+    -m                    Brain mask : filein mask | OPTIONAL
+    -o          dti       Result DTI : fileout prefix; 'dti' by default
+    -tensor     0         Save tensor : 0 - No; 1 - Yes; (Default: 0)
+    -eig        0         Save eigenvalues and eigenvectors : 0 - No; 1 - Yes; (Default: 0)
 
 .. _SPFI_Reconstruction:
 
@@ -363,23 +366,23 @@ and the second transforms the coefficients of $E(q)$ to the coefficients of ODF.
 
 .. code-block:: bash
 
-  $ bnhardi_ODF_estimate -h
-  bnhardi_ODF_estimate: Orientation Distribution Function Estimation (SPFI method).
-  DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
-  (Jul 15 2015, 11:50:20)
-    -d                        dwi data
-    -b                        text file contains b-value
-    -g                        text file contains grad direction
-    -m                        Brain mask.
-    -o                        output odf file
-    -scale           -1       if not given, a suggested scheme is used
-    -tau             0.02533  tar value to calculate the true pdf.
-    -outGFA          false    output GFA: true or false
-    -rdis            0.015    r value for pdf.
-    -sh              4        order of spherical harmonics
-    -ra              1        order of radial part
-    -lambda_sh       0        regualrization parameter for sh basis
-    -lambda_ra       0        regualrization parameter for ra basis
+ $ ./bnhardi_ODF_estimate -h
+ bnhardi_ODF_estimate: Orientation Distribution Function Estimation (SPFI method).
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:28)
+    -d                        Input DWI data (4D NIfTI file).
+    -b                        Text file for b-values.
+    -g                        Text file for grad directions.
+    -m                        Input brain mask.
+    -o                        Output prefix for EAP profile and ODF file.
+    -scale          -1        The scale parameter of Spherical Polar Fourier Basis. The default is calculated by the program.
+    -tau            0.02533   The diffusion time of DWI data.
+    -outGFA         false     Whether output generalized FA. True means Yes.
+    -rdis           0.015     The radius value for EAP profile.
+    -sh             4         Order of spherical basis
+    -ra             1         Order of radial basis
+    -lambda_sh      0         Regularization parameter for spherical basis
+    -lambda_ra      0         Regularization parameter for radial basis
 
 .. _CSD_Reconstruction:
 
@@ -432,6 +435,24 @@ which inspired an efficient C/C++ implementation.
     -hr           300             300/1000/5000. The later get more acurate estimation while more 
                                   time consuming, so use the first one unless your computer 
                                   is powerful !
+ bnhardi_FOD_estimate: Constraind Spherical Deconvolution (CSD) based HARDI reconstruciton.
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:29)
+ general arguments
+    -d                           Input DWI Data, in NIFTI/Analyze format (4D)
+    -g                           Gradients direction file
+    -b                           b value file
+    -m                           Brain mask : filein mask | OPTIONAL
+    -outFA          1            Whether to output the FA of DTI
+    -o                           Result CSD Estimate (.nii.gz)
+    -lmax           8            6/8/10, Max order of the adopted harmonical base
+    -fa             [0.75,0.95]  The FA thesshold considered as single fiber
+    -erode          -1           The unit is voxel: Remove the garbage near the boundary of FA image, for better estimating response function
+    -nIter          50           Max iteration number before aborting
+    -lambda         1            The regularization weight for optimization
+    -tau            0.1          The threshold on the FOD amplitude used to identify negative lobes
+    -hr             300          300/1000/5000. The later get more acurate estimation while more time consuming, so use the first one unless your computer is powerful !
+    -omp            2            Max number of threads
 
 .. _Fiber_Tracking:
 
@@ -457,17 +478,19 @@ deterministic streamline tractography `[15] <reference.html#id15>`_, as illustra
 
  $ ./bndti_tracking -h
  bndti_tracking: DTI Deterministic Fibertracking.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Oct  9 2015, 19:26:46)
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:29)
     -d                   Input DTI data.
     -m                   Mask Image.
     -s                   Seeds Image.
     -fa                  FA Image.
-    -ft        0.1       FA Threshold
-    -at        45        Angular Threshold.
-    -sl        0.5       Step Length (Voxel).
-    -min       10        Threshold the fiber (mm). (remove fibers shorter than the number)
-    -max       5000      Upper-threshold the fiber (mm). (remove fibers longer than the number)
+    -invert     0        Invert x: 1; Invert y: 2; Invert z: 3.
+    -swap       0        Swap x/y: 1; Swap x/z: 2; Swap y/z: 3.
+    -ft         0.1      FA Threshold.
+    -at         45       Angular Threshold.
+    -sl         0.5      Step Length (Voxel).
+    -min        10       Threshold the fiber (mm). (remove fibers shorter than the number)
+    -max        5000     Upper-threshold the fiber (mm). (remove fibers longer than the number)
     -o                   Output Fibers Filename (.trk file).
 
 The tracking module in the software for HARDI estimation is similar to the 
@@ -483,18 +506,22 @@ voxel, so it is not as fast as the traditional DTI tracking.
 
  $ ./bnhardi_tracking -h
  bnhardi_tracking: HARDI Deterministic Fibertracking.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Oct  9 2015, 19:26:46)
-   -d                HARDI spherical harmonic image.
-   -fa               Anisotropy image.
-   -m                Mask file.
-   -s                Seeds file.
-   -o                Fiber file (.trk file).
-   -sl     0.5       Step length (Voxel): float
-   -ft     0.1       FA threshold: float
-   -at     75        Angle threshold: float
-   -min    10        Threshold the fiber (mm). (remove fibers shorter than the number)
-   -max    5000      Upper-threshold the fiber (mm). (remove fibers longer than the number)
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:28)
+    -d                        HARDI spherical harmonic image.
+    -fa                       FA image.
+    -m                        Mask image.
+    -s                        Seeds image.
+    -sl           0.5         Step length (Voxel): float.
+    -ft           0.1         FA threshold: float.
+    -at           60          Angle threshold: float.
+    -min          10          Threshold the fiber (mm). (remove fibers shorter than the number)
+    -max          5000        Upper-threshold the fiber (mm). (remove fibers longer than the number)
+    -invert       0           Invert x: 1; Invert y: 2; Invert z: 3.
+    -swap         0           Swap x/y: 1; Swap x/z: 2; Swap y/z: 3.
+    -threshold    0.25        Threshold for the peaks of ODF.
+    -omp          1           Max number of threads.
+    -o                        Tract file (.trk file).
 
 Visualization for various images
 ================================
@@ -700,8 +727,8 @@ the origin and radius in a user-specified image space.
 
 .. code-block:: bash
 
- $ bncalc -h
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
+ $ ./bncalc -h
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
  This funciton provide basic process for the input data (NIFTI/Analyze format)
  Usage of bncalc:
     -i       image         The original file you want to manage.
@@ -709,15 +736,19 @@ the origin and radius in a user-specified image space.
     -sub     image/value   Subtract data from the last step.
     -mul     image/value   Multiply the data from the last step.
     -div     image/value   Divide the data from the last step.
-    -roi     x,y,z,r       Generate a ROI centered at [x,y,z](MNI mm) with radius r,
-                           in the input data space.
-    -mask    image         Mask the data from last step by this input one. 
-                           If this input is a binary, then it is the same as 
-                           -mul, otherwise it keep the voxels from the last step 
+    -roi     x,y,z,r       Generate a ROI centered at [x,y,z](MNI mm) with radius r, in the input data space.
+    -roi_rect  x1,x2,y1,y2,z1,z2  OR  i
+                           Generate a cuboid ROI by specifying left-bottom
+                           corner [x1,y1,z1] and right-up corner [x2,y2,z2].
+                           If only one integer is specified, we assume you
+                           want to get the i-the volume along the 4th dimension (from 0).
+    -mask    image         Mask the data from last step by this input one.
+                           If this input is a binary, then it is the same as
+                           -mul, otherwise it keep the voxels from the last step
                            when the new input is nonzero.
-    -bin     value         set 1 if >value, otherwise 0. 
-    -uthr    value         Set voxel=0 when it>=value. 
-    -dthr    value         Set voxel=0 when it<=value. 
+    -bin     value         set 1 if >value, otherwise 0.
+    -uthr    value         Set voxel=0 when it>value.
+    -dthr    value         Set voxel=0 when it<value.
     -o       image         output a NIFTI (.nii.gz) file
 
 Fiber manipulation
@@ -729,15 +760,16 @@ several tools to manipulate the fiber bundles. :code:`bnfiber_prune`, to
 split fiber bundles based on given ROIs.
 
 .. code-block:: bash
-
- bnfiber_prune: Merge or prune fiber bundles based on given ROIs.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Sep 17 2015, 14:47:12)
-    -fiber                                    fiber file
-    -and                                      AND file: ro1.nii.gz,roi2.nii.gz
-    -or                                       OR file: roi1.nii.gz,roi2.nii.gz
-    -not                                      NOT file: ro1.nii.gz,roi2.nii.gz
-    -o                                        Output file (.trk file).
+ 
+ $ ./bnfiber_prune
+ bnfiber_prune: Prune fiber bundles based on given ROIs. 
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:29)
+    -fiber          Tract file (.trk file)
+    -and            AND ROI file: ro1.nii.gz,roi2.nii.gz
+    -or             OR ROI file: roi1.nii.gz,roi2.nii.gz
+    -not            NOT ROI file: ro1.nii.gz,roi2.nii.gz
+    -o              Output Tract file (.trk file).
 
 :code:`bnfiber_end`, to cut the fiber bundles given start/stop ROIs, which is useful 
 to get the exact connections between two ROIs in constructing connectivity matrix.
@@ -746,12 +778,12 @@ to get the exact connections between two ROIs in constructing connectivity matri
 
  $ ./bnfiber_end -h
  bnfiber_end: Extract fibers which end in the two given rois.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Sep 17 2015, 14:47:12)
-    -fiber                                    fiber file
-    -roi1                                     roi1 file
-    -roi2                                     roi2 file
-    -o                                        Output file (.trk file)
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/. 
+ (Jun 24 2016, 09:40:29)
+    -fiber          Tract file (.trk file).
+    -roi1           ROI1 file
+    -roi2           ROI2 file
+    -o              Output tract file (.trk file)
 
 :code:`bnfiber_stats`, to extract statistical properties of the fiber bundle, such 
 as mean FA/MD and fiber numbers.
@@ -760,22 +792,21 @@ as mean FA/MD and fiber numbers.
 
  $ ./bnfiber_stats -h
  bnfiber_stats: Show fiber stats.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Sep 17 2015, 14:47:12)
-    -fiber                                    Input fiber file, then output mean FA/MD, number of fibers et al.
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/. 
+ (Jun 24 2016, 09:40:33)
+    -fiber          Input tract file (.trk file).
 
 :code:`bnfiber_map`, to compute the fiber density map which is used in track density imaging `[16] <reference.html#id16>`_.
 
 .. code-block:: bash
 
  $ ./bnfiber_map -h
- bnfiber_map: Calculate the fiber density according to the reference volume.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Sep 17 2015, 14:47:13)
-    -fiber                                    Fiber file
-    -ref                                      Reference file (NIfTI)
-    -o                                        Output file (NIfTI).
-    -nor             1                        Normalize fiber density: 1(yes) or 0(no).
+ bnfiber_map: Calculate the fiber density.
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ (Jun 24 2016, 09:40:29)
+    -fiber             Fiber file (.trk).
+    -o                 Output file (NIfTI).
+    -nor        1      Normalize fiber density: 1 (yes) or 0 (no).
 
 :code:`bnmerge` / :code:`bnsplit`, to merge the 3D volumes to 4D or split 4D to 3D volumes.
 
@@ -800,11 +831,12 @@ as mean FA/MD and fiber numbers.
 
 .. code-block:: bash
 
- $ bninfo -h
- bninfo: Show file header information.
- DiffusionKit (v1.2), http://diffusion.brainnetome.org/. 
- (Jul 15 2015, 11:50:01)
-    -i                                        Nifti/ANALYZE/DICOM file.
+ $ ./bninfo -h
+ Show file header information.
+ DiffusionKit (v1.3), http://diffusion.brainnetome.org/.
+ Options:
+   -h,--help           Print this help information
+   -c,--is-canonical   Check XFORM and parse whether transform matrix is canoical
 
 .. include:: common.txt
 
