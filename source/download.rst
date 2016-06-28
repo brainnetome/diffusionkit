@@ -28,10 +28,10 @@ Latest Release (v1.3-r160618)
 .. toggle:: server in GitHub
 
   |winlogo| `Windows Installer (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160618/DiffusionKitSetup-WIN64-v1.3-r160618.exe>`_ [11.9 MB]
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160618/DiffusionKitSetup-WIN64-v1.3-r160618.exe>`_ [12.7 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160618/DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz>`_ [36.4 MB]
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160618/DiffusionKitSetup-x86_64-v1.3-r160618.tar.gz>`_ [41.9 MB]
 
 .. toggle:: server in China
 
@@ -39,7 +39,7 @@ Latest Release (v1.3-r160618)
   <http://ddl.escience.cn/ff/emFE?func=download>`_ [12.7 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/emFD?func=download>`_ [41.8 MB]
+  <http://ddl.escience.cn/ff/emFD?func=download>`_ [41.9 MB]
 
 Example Data and Test Script
 ----------------------------
