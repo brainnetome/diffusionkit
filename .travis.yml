@@ -1,4 +1,4 @@
 script:
   - wget http://diffusion.brainnetome.org/en/latest/_static/test-diffusionkit.sh
   - chmod +x test-diffusionkit.sh
-  - ./test-diffusionkit.sh
+  - ./test-diffusionkit.sh 
