@@ -66,7 +66,7 @@ do
     bncalc -i seeds -bin 0 -o seeds
 
     #### Perform whole brain fibertracking with tensor or diffusion/fiber ODF.
-    bndti_tracking -d dti.nii.gz -m nodif_brain_mask.nii.gz -s seeds.nii.gz -fa dti_FA.nii.gz -o dti_wb.trk
+    bndti_tracking -d dti_tensor.nii.gz -m nodif_brain_mask.nii.gz -s seeds.nii.gz -fa dti_FA.nii.gz -o dti_wb.trk
     #### hardi_tracking is time consuming. It's not compulsory for constructing brain networks.
     #bnhardi_tracking -d spfi_EAP_profile.nii.gz -fa dti_FA.nii.gz -m nodif_brain_mask.nii.gz -s seeds.nii.gz -omp 1 -o spfi_wb.trk
     #bnhardi_tracking -d csd.nii.gz -fa dti_FA.nii.gz -m nodif_brain_mask.nii.gz -s seeds.nii.gz -omp 1 -o csd_wb.trk

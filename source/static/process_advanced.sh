@@ -91,7 +91,7 @@ dti.nii.gz: eddy.nii.gz rotated_bvecs nodif_brain_mask.nii.gz
 	bndti_estimate -d eddy.nii.gz -b dwi.bval -g rotated_bvecs -m nodif_brain_mask.nii.gz -o dti -tensor 1 -eig 1
 
 dti_wb.trk: dti.nii.gz nodif_brain_mask.nii.gz seeds.nii.gz 
-	bndti_tracking -d dti.nii.gz -m nodif_brain_mask.nii.gz -s seeds.nii.gz -fa dti_FA.nii.gz -o dti_wb.trk
+	bndti_tracking -d dti_tensor.nii.gz -m nodif_brain_mask.nii.gz -s seeds.nii.gz -fa dti_FA.nii.gz -o dti_wb.trk
 " > Makefile
 	make -j2
   cd ..
