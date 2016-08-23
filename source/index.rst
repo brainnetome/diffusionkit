@@ -46,6 +46,7 @@ were adopted with improved interface and user experience.
 *Please see the navigation sidebar to the left to begin.*
 
 The citation of DiffusionKit could be:
+
 * Sangma Xie, Liangfu Chen, Nianming Zuo and Tianzi Jiang, DiffusionKit: A Light One-Stop Solution for Diffusion MRI Data Analysis, *Journal of Neuroscience Methods*, 2016 (In press)
 
 .. toctree::
