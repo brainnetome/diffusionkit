@@ -194,6 +194,13 @@ You could add the path to the $PATH in the ~/.bashrc file, by adding the followi
 
 To uninstall the software, just manually remove the entire folder where you untar-ed the .tar.gz file.
 
+The citation for DiffusionKit could be:
+
+..
+
+ Sangma Xie, Liangfu Chen, Nianming Zuo and Tianzi Jiang, **DiffusionKit: A Light One-Stop Solution for Diffusion MRI Data Analysis**, *Journal of Neuroscience Methods*, 2016 (In press) `[PDF] <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/Xie_et_al_JNEUMETH_2016.pdf>`_
+
+
 .. include:: common.txt
 
 
