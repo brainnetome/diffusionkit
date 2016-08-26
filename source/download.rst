@@ -198,7 +198,7 @@ The citation for DiffusionKit could be:
 
 ..
 
- Sangma Xie, Liangfu Chen, Nianming Zuo and Tianzi Jiang, **DiffusionKit: A Light One-Stop Solution for Diffusion MRI Data Analysis**, *Journal of Neuroscience Methods*, 2016 (In press) `[PDF] <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/Xie_et_al_JNEUMETH_2016.pdf>`_
+ Sangma Xie, Liangfu Chen, Nianming Zuo and Tianzi Jiang, **DiffusionKit: A Light One-Stop Solution for Diffusion MRI Data Analysis**, *Journal of Neuroscience Methods*, doi:10.1016/j.jneumeth.2016.08.011, 2016. `[PDF] <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/Xie_et_al_JNEUMETH_2016.pdf>`_
 
 
 .. include:: common.txt
