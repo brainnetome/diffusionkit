@@ -36,10 +36,10 @@ Latest Release (v1.3-r160618)
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/emFE?func=download>`_ [12.7 MB]
+  <http://ddl.escience.cn/ff/emKx?func=download>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/emFD?func=download>`_ [41.9 MB]
+  <http://ddl.escience.cn/ff/emKy?func=download>`_ [41.8 MB]
 
 Example Data and Test Script
 ----------------------------
@@ -128,9 +128,9 @@ IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
   .. code-block:: bash
    
     # install DiffusionKit 
-    kitv='v1.3-r160618' ## This line should be changed according to the version you desired.
+    kitv='v1.3-r160923' ## CAUTION: This line should be changed according to the version.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
-    wget http://ddl.escience.cn/ff/emFD?func=download -O ${kitname}'.tar.gz'
+    wget http://ddl.escience.cn/ff/emKy?func=download -O ${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
     export PATH=$PATH:$(pwd)/${kitname}/bin
   
