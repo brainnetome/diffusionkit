@@ -14,7 +14,7 @@ Download Links
 .. |rellogo| image:: images/rellogo.png
 .. |linuxlogo| image:: images/linuxlogo.png
 
-Latest Release (v1.3-r160618)
+Latest Release (v1.3-r160923)
 ------------------------------
 
 .. sidebar:: Previous Release
