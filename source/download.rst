@@ -31,7 +31,7 @@ Latest Release (v1.3-r160923)
   <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/DiffusionKitSetup-WIN64-v1.4-r161127.exe>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/DiffusionKitSetup-x86_64-v1.4-r161127.tar.gz>`_ [41.8 MB]
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/DiffusionKitSetup-x86_64-v1.4-r161127.tar.gz>`_ [41.9 MB]
 
 .. toggle:: server in China
 
