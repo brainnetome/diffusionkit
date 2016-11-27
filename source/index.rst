@@ -46,8 +46,9 @@ were adopted with improved interface and user experience.
 *Please see the navigation sidebar to the left to begin.*
 
 .. important::
- *DiffusionKit v1.4 Released!*
- Add functions in fibertracking and fix bugs in *bnfiber_end* and *bnnetwork*. Please **Update** your DiffusionKit.
+ **DiffusionKit v1.4 Released!**Please **Update** your DiffusionKit.
+ *Add new functions in fibertracking.
+ *Fix bugs in *bnfiber_end* and *bnnetwork*. 
 
 The citation for DiffusionKit could be:
 
