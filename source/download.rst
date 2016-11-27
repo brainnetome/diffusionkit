@@ -28,10 +28,10 @@ Latest Release (v1.3-r160923)
 .. toggle:: server in GitHub
 
   |winlogo| `Windows Installer (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/DiffusionKitSetup-WIN64-v1.3-r160923.exe>`_ [12.9 MB]
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/DiffusionKitSetup-WIN64-v1.4-r161127.exe>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/DiffusionKitSetup-x86_64-v1.3-r160923.tar.gz>`_ [41.8 MB]
+  <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/DiffusionKitSetup-x86_64-v1.4-r161127.tar.gz>`_ [41.8 MB]
 
 .. toggle:: server in China
 
@@ -50,10 +50,10 @@ Example Data and Test Script
 
 .. toggle:: server in GitHub 
 
-  * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/list.txt>`_ [12 Bytes]
-  * Subject 01: `sub01.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/sub01.tar.gz>`_ [87.1 MB]
-  * Subject 02: `sub02.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/sub02.tar.gz>`_ [85.5 MB]
-  * Brain Atlas: `atlas.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/atlas.tar.gz>`_ [1.57 MB]
+  * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/list.txt>`_ [12 Bytes]
+  * Subject 01: `sub01.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/sub01.tar.gz>`_ [87.1 MB]
+  * Subject 02: `sub02.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/sub02.tar.gz>`_ [85.5 MB]
+  * Brain Atlas: `atlas.tar.gz <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/atlas.tar.gz>`_ [1.57 MB]
   * Test Script [ `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
     [ `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
@@ -108,17 +108,17 @@ IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
   .. code-block:: bash
    
     # install DiffusionKit
-    kitv='v1.3-r160923' ## This line should be changed according to the version you desired.
+    kitv='v1.4-r161127' ## This line should be changed according to the version you desired.
     kitname='DiffusionKitSetup-x86_64-'${kitv}
     wget https://github.com/brainnetome/diffusionkit/releases/download/${kitv}/${kitname}'.tar.gz'
     tar zxvf ${kitname}'.tar.gz'
     export PATH=$PATH:$(pwd)/${kitname}/bin
   
     # get the data and run!
-    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/list.txt
-    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/sub01.tar.gz
-    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/sub02.tar.gz
-    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/atlas.tar.gz
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/list.txt
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/sub01.tar.gz
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/sub02.tar.gz
+    wget https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/atlas.tar.gz
     wget https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh
     chmod +x process_advanced.sh
     ./process_advanced.sh	
@@ -171,7 +171,7 @@ If you encounter any dependency problem please DO `contact us <mailto:diffusion.
 For MS Windows OS
 -----------------
 
-Double click the ``DiffusionKitSetup-WIN64-v1.3-r160923.exe`` file and then choose the destination path 
+Double click the ``DiffusionKitSetup-WIN64-v1.4-r161127.exe`` file and then choose the destination path 
 according to the wizard. You may need to provide administrator permission 
 if you want to put the files into the system path. 
 Similarly, to uninstall you only need to hit the menu of “uninstall” in the MS Windows start menu.
@@ -179,12 +179,12 @@ Similarly, to uninstall you only need to hit the menu of “uninstall” in the 
 For Linux OS
 ------------
 
-:code:`Glibc>=2.2` is required. Download the ``DiffusionKitSetup-x86_64-v1.3-r160923.tar.gz``, and then
+:code:`Glibc>=2.2` is required. Download the ``DiffusionKitSetup-x86_64-v1.4-r161127.tar.gz``, and then
 
 .. code-block:: bash
 
- tar zxvf DiffusionKitSetup-x86_64-v1.3-r160923.tar.gz
- export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.3-r160923/bin
+ tar zxvf DiffusionKitSetup-x86_64-v1.4-r161127.tar.gz
+ export PATH=$PATH:`pwd`/DiffusionKitSetup-x86_64-v1.4-r161127/bin
 
 You could add the path to the $PATH in the ~/.bashrc file, by adding the following line,
 
