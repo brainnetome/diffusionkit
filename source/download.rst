@@ -99,7 +99,6 @@ IN A HURRY? Download all the data files (REQUIRED) above and run the Bash script
 
 .. toggle_table::
   :arg1: server in GitHub
-  :arg2: server in China
 
 .. toggle:: server in GitHub
 
