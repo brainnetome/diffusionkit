@@ -23,6 +23,7 @@ Latest Release (v1.4-r161127)
 
 .. toggle_table::
   :arg1: server in GitHub
+  :arg2: server in China
 
 .. toggle:: server in GitHub
 
@@ -35,10 +36,10 @@ Latest Release (v1.4-r161127)
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/emKx?func=download>`_ [12.9 MB]
+  <http://ddl.escience.cn/ff/emPQ?func=download>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/emKy?func=download>`_ [41.8 MB]
+  <http://ddl.escience.cn/ff/emPR?func=download>`_ [41.9 MB]
 
 Example Data and Test Script
 ----------------------------
