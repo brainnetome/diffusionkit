@@ -15,6 +15,7 @@ Tutorials
 
    tutorial_intro.rst
    tutorial_generateroi.rst
+   tutorial_mapROI.rst
 
 .. include:: common.txt
 
