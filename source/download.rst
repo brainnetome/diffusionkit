@@ -23,7 +23,6 @@ Latest Release (v1.4-r161127)
 
 .. toggle_table::
   :arg1: server in GitHub
-  :arg2: server in China
 
 .. toggle:: server in GitHub
 
