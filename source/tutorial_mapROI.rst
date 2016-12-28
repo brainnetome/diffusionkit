@@ -60,7 +60,7 @@ and `list_dp.txt` is the name list of the subjects as (the column other than the
 
 .. code-block:: bash
 
-  ccm@:dp_classify$ cat list_dp.txt 
+  nmzuo@:dp_classify$ cat list_dp.txt 
   DP_0001
   DP_0002 #no cerebellum
   ......
