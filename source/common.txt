@@ -27,6 +27,9 @@
    :width: 300
    :target: _images/4A.png
 
+.. |4A_large| image:: images/4A.png
+   :width: 300
+
 .. |banner| image:: images/web_banner-thumb.png
    :width: 800
    :target: _images/web_banner.png
@@ -45,9 +48,15 @@
    :width: 300
    :target: _images/sticks.png
 
+.. |sticks_large| image:: images/sticks.png
+   :width: 300
+
 .. |slices| image:: images/slices-thumb.png
    :width: 310
    :target: _images/slices.png
+
+.. |slices_large| image:: images/slices.png
+   :width: 310
 
 .. |fibers| image:: images/fibers-thumb.png
    :width: 300
