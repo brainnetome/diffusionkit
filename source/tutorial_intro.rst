@@ -12,8 +12,12 @@
 Programming in Bash/Python
 ==========================
 
-If you want to use script for batch processing, we strongly recommend using Python, 
-since it has nice grammar style and is portable for cross platform. 
+Basically the DiffusionKit is a well self-contained package which implements 
+most of the required modules for diffusion MRI processing and analysis. 
+Additionally, if you want to use script for batch processing for a cohort of subjects, 
+we recommend using Python or Bash. Both of them are inherited for Linux system,
+and for MS/Windows one can use `Anaconda <https://www.continuum.io/downloads>`_ 
+and `Git-bash <https://git-scm.com/downloads>`_, separately.
 
 The Python is easy to learn for basic use as a script language, 
 although its powerful functions largely depend on 3rd party packages. To this 
