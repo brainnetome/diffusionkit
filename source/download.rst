@@ -14,7 +14,7 @@ Download Links
 .. |rellogo| image:: images/rellogo.png
 .. |linuxlogo| image:: images/linuxlogo.png
 
-Latest Release (v1.4-r161127)
+Latest Release (Oct. 18, 2017)
 ------------------------------
 
 .. sidebar:: Previous Release
@@ -28,7 +28,7 @@ Latest Release (v1.4-r161127)
 .. toggle:: server in GitHub
 
   |winlogo| `Windows Installer (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/releases/download/v1.4-r161127/DiffusionKitSetup-WIN64-v1.4-r161127.exe>`_ [12.9 MB]
+  <https://github.com/brainnetome/diffusionkit/raw/master/DiffusionKitSetup-WIN64-v1.4-r171018.exe>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
   <https://github.com/brainnetome/diffusionkit/raw/master/DiffusionKitSetup-x86_64-v1.4-r171018.tar.gz>`_ [41.9 MB]
@@ -36,7 +36,7 @@ Latest Release (v1.4-r161127)
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/emPQ?func=download>`_ [12.9 MB]
+  <http://ddl.escience.cn/ff/em5F?func=download>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
   <http://ddl.escience.cn/ff/em5E?func=download>`_ [41.9 MB]
