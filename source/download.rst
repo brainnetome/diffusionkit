@@ -39,7 +39,7 @@ Latest Release (v1.4-r161127)
   <http://ddl.escience.cn/ff/emPQ?func=download>`_ [12.9 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/emPR?func=download>`_ [41.9 MB]
+  <http://ddl.escience.cn/ff/em5E?func=download>`_ [41.9 MB]
 
 Example Data and Test Script
 ----------------------------
