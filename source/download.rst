@@ -14,7 +14,7 @@ Download Links
 .. |rellogo| image:: images/rellogo.png
 .. |linuxlogo| image:: images/linuxlogo.png
 
-Latest Release (Oct. 18, 2017)
+Latest Release (Sept. 28, 2018)
 ------------------------------
 
 .. sidebar:: Previous Release
@@ -28,18 +28,25 @@ Latest Release (Oct. 18, 2017)
 .. toggle:: server in GitHub
 
   |winlogo| `Windows Installer (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/raw/master/DiffusionKitSetup-WIN64-v1.4-r171022.exe>`_ [12.9 MB]
+  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKitSetup-WIN64-v1.5.0-r180928.exe>`_ [14 MB]
+
+  |winlogo| `Windows (x86-64) (Extract and use. No installation required) 
+  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKit-WIN64-v1.5.0928.zip>`_ [41 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/raw/master/DiffusionKitSetup-x86_64-v1.4-r171018.tar.gz>`_ [41.9 MB]
+  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKitSetup-x86_64-v1.5-r180928.tar.gz>`_ [50 MB]
 
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/em5L?func=download>`_ [12.9 MB]
+  <http://ddl.escience.cn/ff/enaz?func=download>`_ [14 MB]
 
+  |winlogo| `Windows (x86-64) (Extract and use. No installation required) 
+  <http://ddl.escience.cn/ff/enaA?func=download>`_ [41 MB]
+
+  
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/em5E?func=download>`_ [41.9 MB]
+  <http://ddl.escience.cn/ff/enay?func=download>`_ [50 MB]
 
 Example Data and Test Script
 ----------------------------
