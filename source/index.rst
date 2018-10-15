@@ -47,6 +47,7 @@ were adopted with improved interface and user experience.
 
 .. important::
  **DiffusionKit v1.5 Released!** Please **Update** your DiffusionKit.
+
  * Fix bugs.
  * Add features in 2D image display.
  * Add functions to transform fiber track format between DiffusionKit and MRTrix.
