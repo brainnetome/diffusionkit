@@ -28,10 +28,10 @@ Latest Release (Sept. 28, 2018)
 .. toggle:: server in GitHub
 
   |winlogo| `Windows Installer (x86-64) 
-  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKitSetup-WIN64-v1.5.0-r180928.exe>`_ [14 MB]
+  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKitSetup-WIN64-v1.5.0-r181113.exe>`_ [14 MB]
 
   |winlogo| `Windows (x86-64) (Extract and use. No installation required) 
-  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKit-WIN64-v1.5.0928.zip>`_ [41 MB]
+  <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKit-v1.5_20181113.zip>`_ [41 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
   <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKitSetup-x86_64-v1.5-r180928.tar.gz>`_ [50 MB]
@@ -39,10 +39,10 @@ Latest Release (Sept. 28, 2018)
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/enaz?func=download>`_ [14 MB]
+  <http://ddl.escience.cn/ff/enaS?func=download>`_ [14 MB]
 
   |winlogo| `Windows (x86-64) (Extract and use. No installation required) 
-  <http://ddl.escience.cn/ff/enaA?func=download>`_ [41 MB]
+  <http://ddl.escience.cn/ff/enaR?func=download>`_ [41 MB]
 
   
   |linuxlogo| `Linux Binary Package (x86-64) 
