@@ -30,7 +30,7 @@ Latest Release (Sept. 28, 2018)
   |winlogo| `Windows Installer (x86-64) 
   <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKitSetup-WIN64-v1.5.0-r181113.exe>`_ [14 MB]
 
-  |winlogo| `Windows (x86-64) (Extract and use. No installation required) 
+  |winlogo| `Windows (x86-64) (Extract then use. No installation required) 
   <https://github.com/brainnetome/diffusionkit/blob/master/DiffusionKit-v1.5_20181113.zip>`_ [41 MB]
 
   |linuxlogo| `Linux Binary Package (x86-64) 
@@ -39,14 +39,14 @@ Latest Release (Sept. 28, 2018)
 .. toggle:: server in China
 
   |winlogo| `Windows Installer (x86-64) 
-  <http://ddl.escience.cn/ff/enaS?func=download>`_ [14 MB]
+  <https://pan.cstcloud.cn/s/2bRBisQQTY>`_ [14 MB]
 
-  |winlogo| `Windows (x86-64) (Extract and use. No installation required) 
-  <http://ddl.escience.cn/ff/enaR?func=download>`_ [41 MB]
+  |winlogo| `Windows (x86-64) (Extract then use. No installation required) 
+  <https://pan.cstcloud.cn/s/VUWXjddQz4>`_ [41 MB]
 
   
   |linuxlogo| `Linux Binary Package (x86-64) 
-  <http://ddl.escience.cn/ff/enay?func=download>`_ [50 MB]
+  <https://pan.cstcloud.cn/s/9SCnIHQc8>`_ [50 MB]
 
 Example Data and Test Script
 ----------------------------
