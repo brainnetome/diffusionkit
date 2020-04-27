@@ -67,9 +67,9 @@ Example Data and Test Script
 .. toggle:: server in China
 
   * List File: `list.txt <https://github.com/brainnetome/diffusionkit/releases/download/v1.3-r160923/list.txt>`_ [12 Bytes]
-  * Subject 01: `sub01.tar.gz <http://ddl.escience.cn/ff/emBl?func=download>`_ [87.1 MB]
-  * Subject 02: `sub02.tar.gz <http://ddl.escience.cn/ff/emBm?func=download>`_ [85.5 MB]
-  * Brain Atlas: `atlas.tar.gz <http://ddl.escience.cn/ff/emBo?func=download>`_ [1.57 MB]
+  * Subject 01: `sub01.tar.gz <https://pan.cstcloud.cn/s/N2gCpJU1Sp0>`_ [87.1 MB]
+  * Subject 02: `sub02.tar.gz <https://pan.cstcloud.cn/s/JeHUJkJmSAE>`_ [85.5 MB]
+  * Brain Atlas: `atlas.tar.gz <https://pan.cstcloud.cn/s/XHWLx0o4RnU>`_ [1.57 MB]
   * Test Script [ `process_advanced.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_advanced.sh>`_ ] 
     [ `process_primary.sh <https://raw.githubusercontent.com/brainnetome/diffusionkit/master/source/static/process_primary.sh>`_ ] 
 
